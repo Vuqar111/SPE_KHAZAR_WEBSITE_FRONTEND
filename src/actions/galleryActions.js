@@ -22,7 +22,7 @@ export const listGalleries = () => async (dispatch) => {
     type: GALLERY_LIST_REQUEST,
   });
   try {
-    const { data } = await Axios.get(`/api/galleries`);
+    const { data } = await Axios.get(`https://spekhazarwebsitebackend.vercel.app/api/galleries`);
     dispatch({ type: GALLERY_LIST_SUCCESS, payload: data.galleries });
     console.log(data.galleries)
   } catch (error) {
@@ -33,7 +33,7 @@ export const listGalleries = () => async (dispatch) => {
 export const detailsGallery = (galleryId) => async (dispatch) => {
   dispatch({ type: GALLERY_DETAILS_REQUEST, payload: galleryId });
   try {
-    const { data } = await Axios.get(`/api/galleries/${galleryId}`);
+    const { data } = await Axios.get(`https://spekhazarwebsitebackend.vercel.app/api/galleries/${galleryId}`);
     dispatch({ type: GALLERY_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -52,7 +52,7 @@ export const createGallery = () => async (dispatch, getState) => {
   } = getState();
   try {
     const { data } = await Axios.post(
-      "/api/galleries",
+      "https://spekhazarwebsitebackend.vercel.app/api/galleries",
       {},
       {
         headers: { Authorization: `Bearer ${userInfo.token}` },
@@ -76,7 +76,7 @@ export const updateGallery = (gallery) => async (dispatch, getState) => {
     userSignin: { userInfo },
   } = getState();
   try {
-    const { data } = await Axios.put(`/api/galleries/${gallery._id}`, gallery, {
+    const { data } = await Axios.put(`https://spekhazarwebsitebackend.vercel.app/api/galleries/${gallery._id}`, gallery, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: GALLERY_UPDATE_SUCCESS, payload: data });
@@ -94,7 +94,7 @@ export const deleteGallery = (galleryId) => async (dispatch, getState) => {
     userSignin: { userInfo },
   } = getState();
   try {
-    const { data } = Axios.delete(`/api/galleries/${galleryId}`, {
+    const { data } = Axios.delete(`https://spekhazarwebsitebackend.vercel.app/api/galleries/${galleryId}`, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: GALLERY_DELETE_SUCCESS });

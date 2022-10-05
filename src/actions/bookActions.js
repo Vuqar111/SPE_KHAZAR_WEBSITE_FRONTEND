@@ -25,7 +25,7 @@ export const listBooks = () => async (
   });
   try {
     const { data } = await Axios.get(
-      `/api/books`
+      `https://spekhazarwebsitebackend.vercel.app/api/books`
     );
     dispatch({ type: BOOK_LIST_SUCCESS, payload: data.books });
   } catch (error) {
@@ -40,7 +40,7 @@ export const listBooks = () => async (
 export const detailsBook = (bookId) => async (dispatch) => {
   dispatch({ type: BOOK_DETAILS_REQUEST, payload: bookId });
   try {
-    const { data } = await Axios.get(`/api/books/${bookId}`);
+    const { data } = await Axios.get(`https://spekhazarwebsitebackend.vercel.app/api/books/${bookId}`);
     dispatch({ type: BOOK_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -59,7 +59,7 @@ export const createBook = () => async (dispatch, getState) => {
   } = getState();
   try {
     const { data } = await Axios.post(
-      '/api/books',
+      'https://spekhazarwebsitebackend.vercel.app/api/books',
       {},
       {
         headers: { Authorization: `Bearer ${userInfo.token}` },
@@ -83,7 +83,7 @@ export const updateBook = (book) => async (dispatch, getState) => {
     userSignin: { userInfo },
   } = getState();
   try {
-    const { data } = await Axios.put(`/api/books/${book._id}`, book, {
+    const { data } = await Axios.put(`https://spekhazarwebsitebackend.vercel.app/api/books/${book._id}`, book, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: BOOK_UPDATE_SUCCESS, payload: data });
@@ -101,7 +101,7 @@ export const deleteBook = (bookId) => async (dispatch, getState) => {
     userSignin: { userInfo },
   } = getState();
   try {
-    const { data } = Axios.delete(`/api/books/${bookId}`, {
+    const { data } = Axios.delete(`https://spekhazarwebsitebackend.vercel.app/api/books/${bookId}`, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: BOOK_DELETE_SUCCESS });

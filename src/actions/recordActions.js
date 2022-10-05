@@ -25,7 +25,7 @@ export const listRecords = () => async (
   });
   try {
     const { data } = await Axios.get(
-      `/api/records`
+      `https://spekhazarwebsitebackend.vercel.app/api/records`
     );
     dispatch({ type: RECORD_LIST_SUCCESS, payload: data.records });
   } catch (error) {
@@ -40,7 +40,7 @@ export const listRecords = () => async (
 export const detailsRecord = (recordId) => async (dispatch) => {
   dispatch({ type: RECORD_DETAILS_REQUEST, payload: recordId });
   try {
-    const { data } = await Axios.get(`/api/records/${recordId}`);
+    const { data } = await Axios.get(`https://spekhazarwebsitebackend.vercel.app/api/records/${recordId}`);
     dispatch({ type: RECORD_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -59,7 +59,7 @@ export const createRecord = () => async (dispatch, getState) => {
   } = getState();
   try {
     const { data } = await Axios.post(
-      '/api/records',
+      'https://spekhazarwebsitebackend.vercel.app/api/records',
       {},
       {
         headers: { Authorization: `Bearer ${userInfo.token}` },
@@ -83,7 +83,7 @@ export const updateRecord = (record) => async (dispatch, getState) => {
     userSignin: { userInfo },
   } = getState();
   try {
-    const { data } = await Axios.put(`/api/records/${record._id}`, record, {
+    const { data } = await Axios.put(`https://spekhazarwebsitebackend.vercel.app/api/records/${record._id}`, record, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: RECORD_UPDATE_SUCCESS, payload: data });
@@ -101,7 +101,7 @@ export const deleteRecord = (recordId) => async (dispatch, getState) => {
     userSignin: { userInfo },
   } = getState();
   try {
-    const { data } = Axios.delete(`/api/records/${recordId}`, {
+    const { data } = Axios.delete(`https://spekhazarwebsitebackend.vercel.app/api/records/${recordId}`, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: RECORD_DELETE_SUCCESS });

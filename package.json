@@ -1,6 +1,5 @@
 {
   "name": "frontend",
-  "proxy": "https://spekhazarwebsitebackend.vercel.app",
   "version": "0.1.0",
   "dependencies": {
     "@mui/icons-material": "^5.5.1",
