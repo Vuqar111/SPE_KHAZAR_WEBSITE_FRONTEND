@@ -62,25 +62,6 @@ export default function BookEditScreen(props) {
 
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
-  const uploadFileHandler = async (e) => {
-    const file = e.target.files[0];
-    const bodyFormData = new FormData();
-    bodyFormData.append("image", file);
-    setLoadingUpload(true);
-    try {
-      const { data } = await Axios.post("https://mernspeapplicaton.herokuapp.com/api/uploads", bodyFormData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-          Authorization: `Bearer ${userInfo.token}`,
-        },
-      });
-      setImage(data);
-      setLoadingUpload(false);
-    } catch (error) {
-      setErrorUpload(error.message);
-      setLoadingUpload(false);
-    }
-  };
 
   return (
     <div>
@@ -128,19 +109,7 @@ export default function BookEditScreen(props) {
                   onChange={(e) => setImage(e.target.value)}
                 ></input>
               </div>
-              <div>
-                <label htmlFor="imageFile">Image File</label>
-                <input
-                  type="file"
-                  id="imageFile"
-                  label="Choose Image"
-                  onChange={uploadFileHandler}
-                ></input>
-                {loadingUpload && <LoadingBox></LoadingBox>}
-                {errorUpload && (
-                  <MessageBox variant="danger">{errorUpload}</MessageBox>
-                )}
-              </div>
+            
               <div>
                 <label htmlFor="category">Category</label>
                 <input
