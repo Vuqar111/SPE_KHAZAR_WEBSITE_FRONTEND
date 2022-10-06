@@ -9,7 +9,7 @@ const SubHeader = () => {
   return (
     <Wrapper>
   <div>
-      <div className="subnavbar bg-[white]">
+      <div className="subnavbar">
         <nav>
           <div className="flex w-[35%] mainsubheader font-bold">
             <div className="w-[100%] flex justify-between subheader">
