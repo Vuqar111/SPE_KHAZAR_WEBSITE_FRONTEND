@@ -11,24 +11,24 @@ const SubHeader = () => {
   <div>
       <div className="subnavbar">
         <nav>
-          <div className="flex w-[35%] mainsubheader font-bold">
+          <div className="mainsubheader font-bold">
             <div className="w-[100%] flex justify-between subheader">
-              <div>
+              <div className="subLink">
                 <Link to="/products">Events</Link>
               </div>
-              <div>
+              <div div className="subLink">
                 <Link to="/blogs">Blogs</Link>
               </div>
-              <div>
+              <div div className="subLink">
                 <Link to="/records">Records</Link>
               </div>
-              <div>
+              <div div className="subLink">
                 <Link to="/books">Library</Link>
               </div>
-              <div>
+              <div div className="subLink">
                 <Link to="/galleries">Gallery</Link>
               </div>
-              <div>
+              <div div className="subLink">
                 <Link to="/teams">Team</Link>
               </div>
             </div>

@@ -22,8 +22,8 @@ export const Navbar = () => {
     const signoutHandler = () => {
         dispatch(signout());
     };
-    const button = <Button style={{width: "100%", padding: "5px 8px", backgroundColor: "#44abe4", color: "#fff", fontWeight: "bold", borderRadius: "5px", display: "flex", justifyContent: "center", alignItems: "center"}}>Admin <AiFillCaretDown className="buttondownIcon" /></Button>
-    const userButton = <Button style={{width: "100%", minWidth: "130px", padding: "5px 10px", backgroundColor: "#44abe4", color: "#fff", fontWeight: "bold", borderRadius: "5px", display: "flex", justifyContent: "center", alignItems: "center"}}>Hi, {userInfo?.name} <AiFillCaretDown className="buttondownIcon" /></Button>
+    const button = <Button style={{width: "100%", padding: "5px 8px", backgroundColor: "#0067B1", color: "#fff", fontWeight: "bold", borderRadius: "5px", display: "flex", justifyContent: "center", alignItems: "center"}}>Admin <AiFillCaretDown className="buttondownIcon" /></Button>
+    const userButton = <Button style={{width: "100%", minWidth: "130px", padding: "5px 10px", backgroundColor: "#0067B1", color: "#fff", fontWeight: "bold", borderRadius: "5px", display: "flex", justifyContent: "center", alignItems: "center"}}>Hi, {userInfo?.name} <AiFillCaretDown className="buttondownIcon" /></Button>
 
     useEffect(() => { }, [dispatch]);
     const [showlink, setshowlink] = useState(false);
@@ -34,7 +34,7 @@ export const Navbar = () => {
                     <div className="firstnav">
                         <img src={logo} className="siteLogo"/>
                         <Link to="/">
-                            <div className="font-bold">SPE Khazar</div>
+                            <div className="siteName">SPE Khazar</div>
                         </Link>
                     </div>
                     <div
@@ -66,7 +66,7 @@ export const Navbar = () => {
                                 </div>
                             ) : (
                                 <Link
-                                    className="bg-[#44abe4] text-[white] rounded-[5px] pl-[8px]  pr-[8px] pt-[5px] pb-[5px] "
+                                    className="bg-[#0067B1] text-[white] rounded-[5px] pl-[8px]  pr-[8px] pt-[5px] pb-[5px] "
                                     to="/signin"
                                 >
                                     Log In
