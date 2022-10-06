@@ -581,8 +581,6 @@ textarea {
     margin-top: 65px;
     background-color: #f8f8f8;
     z-index: 1000;
-    /* border-top: 1px solid var(--black-color); */
-    /* transition: all 0.5s ease; */
     padding-bottom: 10px;
     animation-name: fadeIn;
     animation-duration: 0.4s;
