@@ -23,8 +23,7 @@ export default function Product(props) {
 
 const Wrapper = styled.div`
  .card {
-  width: 100%;
-  max-width: 410px;
+  width: 27vw;
   height: 350px;
   /* background: #f5f5f5; */
   padding: .5em;
@@ -68,9 +67,8 @@ img {
 }
 @media (max-width: 768px) {
   .card {
-    margin: 10px;
-    width: 100%;
-    max-width: 370px;
+    width: 90vw;
+    margin: 10px 5px;
   }
 }
 `;
