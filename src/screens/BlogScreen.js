@@ -61,38 +61,40 @@ export default function ProductScreen(props) {
                   alt={blog.title}
                 ></img>
               </div>
-              <div className="p-[20px] eventtitle">
-                <h2 className="font-bold text-[30px] blogtitle">{blog.title}</h2>
-                <p>{blog.description}</p>
-              </div>
-              <hr />
-              <div className="w-[100%] p-[15px] m-[auto]  flex justify-between datesection ">
+              <div className="eventtitle">
                 <div className="flex items-center justify-between w-[auto] date">
-                  <div>
+                  <h2>{blog.name}</h2>
+                </div>
+              </div>
+              <div className="w-[100%] pl-[15px] pr-[15px] m-[auto]  flex justify-between datesection ">
+                <div className="flex items-center w-[auto] date">
+                  <div className="eventDetailDate">
                     <MdDateRange />
                   </div>
-                  <div className="font-bold">{blog.createdAt.slice(0,10)}</div>
-            
+                  <div className="eventDetailDate">{new Date(blog.createdAt).toDateString()}</div>
                 </div>
-
                 <div className="flex justify-between  items-center  sharecontainer    text-[white]">
-                  <div className="applybtn cursor-pointer  pointer">
+                  <div className="ml-[5px] cursor-pointer  pointer">
                     <FacebookShareButton url={url}>
                       <FacebookIcon size="30px" />
                     </FacebookShareButton>
                   </div>
-                  <div className="applybtn cursor-pointer  pointer">
+                  <div className="ml-[5px] cursor-pointer  pointer">
                     <TwitterShareButton url={url}>
-                      <TwitterIcon size="30px"  />
+                      <TwitterIcon size="30px" />
                     </TwitterShareButton>
                   </div>
-                  <div className="applybtn cursor-pointer  pointer">
+                  <div className="ml-[5px] cursor-pointer  pointer">
                     <WhatsappShareButton url={url}>
                       <WhatsappIcon size="30px" />
                     </WhatsappShareButton>
                   </div>
                 </div>
               </div>
+              <hr/>
+              <p className="eventdesc">
+                {blog.description}
+              </p>
             </div>
           </div>
         )}
@@ -102,42 +104,60 @@ export default function ProductScreen(props) {
 }
 
 const Wrapper = styled.div`
-  .sharecontainer {
-    width: 10%;
+  width: 100%;
+  min-height: 60vh;
+  .productname {
+    font-size: 45px;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+  }
+  .eventdesc { 
+    font-size: 18px;
+    width: 100%;
+    margin: 20px 5px;
+   }
+  .productprice {
+    font-weight: bold;
+    font-size: 40px;
   }
   .blogimage {
     width: 100%;
     max-height: 500px;
     height: 100%;
+    border-radius: 5px;
     background-size: cover;
     object-fit: cover;
   }
+  .eventtitle {
+    padding: 15px;
+  }
+  .eventtitle h2 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .applybtn {
+    border: 2px solid #0067B1;
+    color: #0067B1;
+    padding: 5px 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  .applybtn:hover {
+    background-color: #0067B1;
+    color: white;
+    transition: all 0.3s ease;
+  }
   @media (max-width: 768px) {
-    .content {
-      margin-top: 10px;
-    }
-    .blogtitle {
-      font-size: 20px;
-    }
     .center {
       width: 95%;
     }
-    .contentsection {
-      width: 70%;
-    }
-    .eventtitle {
-      padding: 0px;
-    }
-    .datesection {
-      margin-top: 15px;
-      padding: 0px;
-    }
-    .date {
+    .productname {
       font-size: 15px;
-      width: auto;
     }
-    .sharecontainer {
-      width: 30%;
+    .eventtitle h2{
+      font-size: 18px;
     }
   }
 `;
+

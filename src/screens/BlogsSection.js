@@ -9,6 +9,7 @@ export default function HomeScreen() {
   const blogList = useSelector((state) => state.blogList);
   const { loading, error, blogs } = blogList;
 
+  
   useEffect(() => {
     dispatch(listBlogs());
   }, [dispatch]);
@@ -16,11 +17,11 @@ export default function HomeScreen() {
   console.log(blogs);
 
   return (
-    <div>
-      <div className="flex justify-center items-center bg-[#C4C4C4] text-center text-5xl font-bold p-[10px] titleof">
-        <p className="text-center">Blogs</p>
+    <div className="eventsContainer">
+      <div className="flex justify-center items-center bg-[#f5f5f5] text-center text-5xl font-bold p-[10px] titleof">
+        <p className="text-center eventHeader">Blogs</p>
       </div>
-      <div className="w-[90%] m-[auto] flex justify-between mt-[20px] events">
+      <div className="w-[100%] m-[auto] flex justify-between mt-[20px] events">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
