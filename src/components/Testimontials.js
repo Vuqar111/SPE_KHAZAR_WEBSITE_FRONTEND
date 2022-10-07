@@ -26,16 +26,6 @@ function Testimontials() {
     });
   };
 
-  // useEffect(() => {
-  //   const lastIndex = people.length - 1
-  //   if (index < 0) {
-  //     setIndex(lastIndex)
-  //   }
-  //   if (index > lastIndex) {
-  //     setIndex(0)
-  //   }
-  // }, [index, people])
-
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex((oldIndex) => {
@@ -102,7 +92,7 @@ Variables
 margin-top: 30px;
   /* section */
   .section {
-    width: 90%;
+    width: 95vw;
     height: auto;
     margin: auto;
     padding: 0px;
@@ -112,6 +102,7 @@ margin-top: 30px;
   .testimontial {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   h4 {
@@ -140,10 +131,10 @@ margin-top: 30px;
     position: relative;
     display: flex;
     overflow: hidden;
-    background-color: #256f98;
+    background-color: #0067B1;
   }
   .person-img {
-    width: 100%;
+    width: 60%;
     height: 100%;
     object-fit: cover;
     background-size: cover;
@@ -165,7 +156,10 @@ margin-top: 30px;
     font-size: 15px;
     border-radius: var(--radius);
     cursor: pointer;
+    margin: 5px;
     transition: all 0.3s linear;
+    background: #fff;
+    color: #0067B1;
   }
 
   .prev,
@@ -187,7 +181,6 @@ margin-top: 30px;
       text-align: center;
       position: relative;
       display: flex;
-      background-color: #256f98;
     }
     .person-img {
       width: 100%;
