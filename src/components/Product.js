@@ -69,7 +69,8 @@ img {
 @media (max-width: 768px) {
   .card {
     margin: 10px;
-    width: auto;
+    width: 100%;
+    max-width: 370px;
   }
 }
 `;
