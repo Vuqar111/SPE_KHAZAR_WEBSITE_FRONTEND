@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div className="bg-[#256F98] flex w-[100%]  text-[white] mt-[50px] ">
+    <div className="bg-[#0067B1] flex w-[100%]  text-[white] mt-[50px] footerCont">
       <div className="flex justify-between m-[auto]  w-[80%] mt-[20px] mb-[30px] footer">
         <div className="font-bold text-[35px]">SPE-KHAZAR</div>
         <div>

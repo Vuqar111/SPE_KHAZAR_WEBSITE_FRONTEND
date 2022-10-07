@@ -56,10 +56,10 @@ export default function ProductListScreen(props) {
 
   console.log(products)
   return (
-    <div>
+    <div style={{minHeight: "60vh"}}>
       <div className="row">
-        <h1>Salam Guys</h1>
-        <button type="button" className="primary p-[1rem]" onClick={createHandler}>
+        <h1>Event Edit/Create</h1>
+        <button type="button" className="bg-[#0067B1] m-[10px] text-white p-[10px]" onClick={createHandler}>
           Create Event
         </button>
       </div>

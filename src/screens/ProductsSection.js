@@ -16,11 +16,11 @@ export default function HomeScreen() {
   console.log(products);
 
   return (
-    <div>
-      <div className="flex justify-center items-center bg-[#C4C4C4] text-center text-5xl font-bold p-[10px]  titleof">
-        <p className="text-center">Events</p>
+    <div className="eventsContainer">
+      <div className="flex justify-center items-center bg-[#f5f5f5] text-center text-5xl font-bold p-[10px]  titleof">
+        <p className="text-center eventHeader">Events</p>
       </div>
-      <div className="w-[90%] m-[auto] flex justify-between mt-[20px] events">
+      <div className="w-[90] m-[auto] flex justify-center mt-[10px] events">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (

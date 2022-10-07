@@ -67,10 +67,10 @@ export default function ProductEditScreen(props) {
   const { userInfo } = userSignin;
 
   return (
-    <div>
+    <div style={{minHeight: "60vh"}}>
       <form className="form" onSubmit={submitHandler}>
-        <div>
-          <h1>Edit Product {productId}</h1>
+        <div style={{padding: "10px"}}>
+          <h1>Edit Event ID: {productId}</h1>
         </div>
         {loadingUpdate && <LoadingBox></LoadingBox>}
         {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
@@ -87,11 +87,9 @@ export default function ProductEditScreen(props) {
                   id="name"
                   type="text"
                   placeholder="Enter name"
-                  value={name}
                   onChange={(e) => setName(e.target.value)}
                 ></input>
               </div>
-
               <div>
                 <label htmlFor="image">Image</label>
                 <input
@@ -102,15 +100,13 @@ export default function ProductEditScreen(props) {
                   onChange={(e) => setImage(e.target.value)}
                 ></input>
               </div>
-             
-
               <div>
                 <label htmlFor="author">Author</label>
                 <input
                   id="author"
                   type="text"
                   placeholder="Enter author name"
-                  value={author}
+                  value="SPE Khazar"
                   onChange={(e) => setAuthor(e.target.value)}
                 ></input>
               </div>
@@ -121,7 +117,7 @@ export default function ProductEditScreen(props) {
                   id="category"
                   type="text"
                   placeholder="Enter category"
-                  value={category}
+                  value="event"
                   onChange={(e) => setCategory(e.target.value)}
                 ></input>
               </div>
@@ -148,12 +144,6 @@ export default function ProductEditScreen(props) {
                   onChange={(e) => setType(e.target.value)}
                 ></input>
               </div>
-
-
-
-
-
-
               <div>
                 <label htmlFor="description">Description</label>
                 <textarea
