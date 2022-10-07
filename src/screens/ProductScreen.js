@@ -132,7 +132,7 @@ const Wrapper = styled.div`
   .applybtn {
     border: 2px solid #0067B1;
     color: #0067B1;
-    padding: 0;
+    padding: 5px 8px;
     font-weight: bold;
     transition: all 0.3s ease;
   }
