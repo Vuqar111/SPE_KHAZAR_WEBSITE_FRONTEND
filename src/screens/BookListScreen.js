@@ -51,9 +51,9 @@ export default function BookListScreen(props) {
 
   console.log(books);
   return (
-    <div>
+    <div style={{minHeight: "60vh"}}>
       <div className="row">
-        <h1>Salam Guys</h1>
+        <h1>Book Edit/Create</h1>
         <button type="button" className="primary p-[1rem]" onClick={createHandler}>
           Create Book
         </button>
@@ -72,14 +72,14 @@ export default function BookListScreen(props) {
         <>
           <table className="table">
             <thead>
-              <tr>
+              <tr className="tableHeader">
                 <th>TITLE</th>
                 <th>AUTHOR</th>
                 <th>CATEGORY</th>
                 <th>ACTIONS</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="tableBody">
               {books.map((book) => (
                 <tr key={book._id}>
                   <td>{book.title}</td>

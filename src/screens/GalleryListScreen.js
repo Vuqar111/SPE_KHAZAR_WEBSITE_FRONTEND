@@ -55,7 +55,7 @@ export default function GalleryListScreen(props) {
 
   console.log(galleries);
   return (
-    <div>
+    <div style={{minHeight: "60vh"}}>
       <div className="row">
         <h1> Galleries</h1>
         <button type="button" className="primary p-[1rem]" onClick={createHandler}>
@@ -73,17 +73,16 @@ export default function GalleryListScreen(props) {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <>
+        <div className="allList">
           <table className="table">
             <thead>
-              <tr>
-             
+              <tr className="tableHeader">
                 <th>TITLE</th>
                 <th>IMAGE</th>
                 <th>ACTIONS</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="tableBody">
               {galleries.map((gallery) => (
                 <tr key={gallery._id}>
                 
@@ -111,7 +110,7 @@ export default function GalleryListScreen(props) {
               ))}
             </tbody>
           </table>
-        </>
+        </div>
       )}
     </div>
   );

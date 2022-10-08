@@ -6,12 +6,11 @@ export default function Gallery(props) {
   return (
     <Wrapper>
       <div key={gallery._id} className="card">
-      <div key={gallery.id} className="card">
-      <a href={`/gallery/${gallery._id}`}>
-        <img className="medium" src={gallery.image} alt={gallery.title} />
-      </a>
-    </div>
-    
+        <div key={gallery.id} className="card">
+          <a href={`/gallery/${gallery._id}`}>
+            <img className="medium" src={gallery.image} alt={gallery.title} />
+          </a>
+        </div>
       </div>
     </Wrapper>
   );
@@ -19,9 +18,9 @@ export default function Gallery(props) {
 
 const Wrapper = styled.div`
 .card {
-  width: 370px;
+  width: 350px;
   height: auto;
-  background: blue
+  background: blue;
   margin-top: 20px;
   padding: 10px;
 }

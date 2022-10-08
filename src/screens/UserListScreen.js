@@ -29,57 +29,59 @@ export default function UserListScreen(props) {
     }
   };
   return (
-    <div className='row'>
-      {loadingDelete && <LoadingBox></LoadingBox>}
-      {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
-      {successDelete && (
-        <MessageBox variant="success">User Deleted Successfully</MessageBox>
-      )}
-      {loading ? (
-        <LoadingBox></LoadingBox>
-      ) : error ? (
-        <MessageBox variant="danger">{error}</MessageBox>
-      ) : (
-        <table className="table">
-          <thead>
-            <tr>
-              <th>NAME</th>
-              <th>EMAIL</th>
-              <th>UNIVERSITY</th>
-              <th>FACULTY</th>
-              <th>IS ADMIN</th>
-              <th>ACTIONS</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map((user) => (
-              <tr key={user._id}>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>{user.university}</td>
-                <td>{user.faculty}</td>
-                <td>{user.isAdmin ? 'YES' : 'NO'}</td>
-                <td>
-                  <button
-                    type="button"
-                    className="small edit p-[1rem]"
-                    onClick={() => props.history.push(`/user/${user._id}/edit`)}
-                  >
-                    Edit
-                  </button>
-                  <button
-                    type="button"
-                    className="small delete p-[1rem]"
-                    onClick={() => deleteHandler(user)}
-                  >
-                    Delete
-                  </button>
-                </td>
+    <div style={{ minHeight: "60vh" }}>
+      <div className='row'>
+        {loadingDelete && <LoadingBox></LoadingBox>}
+        {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
+        {successDelete && (
+          <MessageBox variant="success">User Deleted Successfully</MessageBox>
+        )}
+        {loading ? (
+          <LoadingBox></LoadingBox>
+        ) : error ? (
+          <MessageBox variant="danger">{error}</MessageBox>
+        ) : (
+          <table className="table">
+            <thead className='tableHeader'>
+              <tr>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>UNIVERSITY</th>
+                <th>FACULTY</th>
+                <th>IS ADMIN</th>
+                <th>ACTIONS</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+            </thead>
+            <tbody className='tableBody'>
+              {users.map((user) => (
+                <tr key={user._id}>
+                  <td>{user.name}</td>
+                  <td>{user.email}</td>
+                  <td>{user.university}</td>
+                  <td>{user.faculty}</td>
+                  <td>{user.isAdmin ? 'YES' : 'NO'}</td>
+                  <td>
+                    <button
+                      type="button"
+                      className="small edit p-[1rem]"
+                      onClick={() => props.history.push(`/user/${user._id}/edit`)}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      className="small delete p-[1rem]"
+                      onClick={() => deleteHandler(user)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
     </div>
   );
 }

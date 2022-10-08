@@ -53,7 +53,7 @@ export default function GalleryEditScreen(props) {
 
 
   return (
-    <div>
+    <div style={{minHeight: "60vh"}}>
       <form className="form" onSubmit={submitHandler}>
         <div>
           <h1>Create / Edit Gallery {galleryId}</h1>

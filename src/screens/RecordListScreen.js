@@ -51,9 +51,9 @@ export default function RecordListScreen(props) {
 
   console.log(records);
   return (
-    <div>
+    <div style={{minHeight: "60vh"}}>
       <div className="row">
-        <h1>Salam Guys - RECORDS</h1>
+        <h1>Records Edit/Create</h1>
         <button type="button" className="primary p-[1rem]" onClick={createHandler}>
           Create Record
         </button>
@@ -71,7 +71,7 @@ export default function RecordListScreen(props) {
       ) : (
         <>
           <table className="table">
-            <thead>
+            <thead className="tableHeader">
               <tr>
                 <th>TITLE</th>
                 <th>AUTHOR</th>
@@ -80,7 +80,7 @@ export default function RecordListScreen(props) {
                 <th>ACTIONS</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="tableBody">
               {records.map((record) => (
                 <tr key={record._id}>
                   <td>{record.title}</td>
