@@ -1,4 +1,4 @@
-import aqsin from  './assets/images/aqsin.jpg';
+import aqsin from './assets/images/aqsin.jpg';
 import resad from './assets/images/resad.jpg';
 import naibe from './assets/images/naibe.jpg';
 import seymur from './assets/images/seymur.jpg';
@@ -33,96 +33,75 @@ export const slider = [
 export const teams = [
   {
     id: 1,
-  name: "Diana Ismayilova",
-  status: "President", 
-  description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
-  img: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    name: "Diana Ismayilova",
+    status: "President",
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
+    img: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   },
   {
     id: 2,
-  name: "Aqsin Qarashli",
-  status: "Vice-President", 
-  img: aqsin
+    name: "Aqsin Qarashli",
+    status: "Vice-President",
+    img: aqsin
   },
   {
     id: 3,
-  name: "Resad Musayev",
-  status: "Chief Excutifer", 
-  description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
-  img: resad
+    name: "Resad Musayev",
+    status: "Chief Excutifer",
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
+    img: resad
   },
   {
     id: 4,
-  name: "Leyla Ismayilova",
-  status: "President", 
-  description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
-  img: leyla,
+    name: "Leyla Ismayilova",
+    status: "President",
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
+    img: leyla,
   },
   {
     id: 5,
-  name: "Salman Musayev",
-  status: "Vice-President", 
-  description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
-  img: salman,
+    name: "Salman Musayev",
+    status: "Vice-President",
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
+    img: salman,
   },
   {
     id: 6,
-  name: "Lamiye Semedova",
-  description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
-  status: "Chief Excutifer", 
-  img: lamiye
+    name: "Lamiye Semedova",
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
+    status: "Chief Excutifer",
+    img: lamiye
   },
   {
     id: 7,
-  name: "Naibe Garayeva",
-  status: "Designer", 
-  description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
-  img: naibe
+    name: "Naibe Garayeva",
+    status: "Designer",
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
+    img: naibe
   },
-  
+
   {
     id: 8,
-  name: "Vugar Hasanov",
-  status: "Vice-President", 
-  img: vugar
+    name: "Vugar Hasanov",
+    status: "Vice-President",
+    img: vugar
   },
   {
     id: 9,
-  name: "Seymur Mirzeliyev",
-  status: "Chief Excutifer", 
-  description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
-  img: seymur
-  },
-  {
-    id: 10,
-  name: "Diana Ismayilova",
-  status: "President", 
-  description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
-  img: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-  },
-  {
-    id: 11,
-  name: "Aqsin Qarashli",
-  status: "Vice-President", 
-  description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
-  img: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-  },
-  {
-    id: 12,
-  name: "Resad Musayev",
-  description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
-  status: "Chief Excutifer", 
-  img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    name: "Seymur Mirzeliyev",
+    status: "Chief Excutifer",
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
+    img: seymur
   },
   {
     id: 13,
-  name: "Sems Qarayave",
-  status: "Designer", 
-  description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
-  img: sems
+    name: "Sems Gadirli",
+    status: "Designer",
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
+    img: sems
   },
 
-  
+
 ]
 
 
@@ -132,7 +111,7 @@ export const people = [
     image:
       'https://images.pexels.com/photos/8971176/pexels-photo-8971176.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     name: 'maria ferguson',
-    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
     title: 'office manager',
     quote:
       'Fingerstache umami squid, kinfolk subway tile selvage tumblr man braid viral kombucha gentrify fanny pack raclette pok pok mustache.',
@@ -142,7 +121,7 @@ export const people = [
     image:
       'https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     name: 'john doe',
-    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
     title: 'regular guy',
     quote:
       'Gastropub sustainable tousled prism occupy. Viral XOXO roof party brunch actually, chambray listicle microdosing put a bird on it paleo subway tile squid umami.',
@@ -152,7 +131,7 @@ export const people = [
     image:
       'https://images.pexels.com/photos/2113566/pexels-photo-2113566.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     name: 'peter smith',
-    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
     title: 'product designer',
     quote:
       'Drinking vinegar polaroid street art echo park, actually semiotics next level butcher master cleanse hammock flexitarian ethical paleo.',
@@ -162,15 +141,15 @@ export const people = [
     image:
       'https://images.pexels.com/photos/3293148/pexels-photo-3293148.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     name: 'susan andersen',
-    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
     title: 'the boss',
     quote:
       'Marfa af yr 3 wolf moon kogi, readymade distillery asymmetrical seitan kale chips fingerstache cloud bread mustache twee messenger bag. ',
   },
   {
     id: 5,
-    image:  'https://images.pexels.com/photos/8971176/pexels-photo-8971176.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
+    image: 'https://images.pexels.com/photos/8971176/pexels-photo-8971176.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
     name: 'maria ferguson',
     title: 'office manager',
     quote:
@@ -180,7 +159,7 @@ export const people = [
     id: 6,
     image:
       'https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-      description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",  
+    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
     name: 'john doe',
     title: 'regular guy',
     quote:
@@ -206,7 +185,7 @@ export const people = [
   },
 ];
 
-export const universities =[
+export const universities = [
   "Khazar University",
   "Azerbaijan Architecture and Construction University",
   "ADA University",
@@ -252,39 +231,38 @@ export const universities =[
   "Odlar Yurdu University",
   "Western University",
   "Baku Islam University"
-  ]
-  
+]
 
-  export const faculties = [
-    "Computer Science",
-    "Computer Engineering",
-    "Petroleum Engineering",
-    "Civil Engineering",
-    "Electronics, Telecommunications, and Radio Engineering",
-    "Physics Education",
-    "Biomedical Technology Education",
-    "Biology Education",
-    "Chemistry and Biology Education",
-    "Chemistry Education",
-    "Chemical Engineering",
-    "Mathematics Education",
-    "Mechanical Engineering",
-    "Geography Education",
-    "Veterinary Medicine",
-    "Process Automation Engineering",
-    "Mechanical & Aerospace Engineering",
-    "Electrical Engineering and Power Engineering",
-    "Transport",
-    "Technological Machines",
-    "Radio engineering and communication",
-    "Metallurgy",
-    "Machine-building",
-    "Automation and Computer Technology",
-    "Bio & Biomedical Engineering",
-    "Materials Science & Engineering",
-    "Industrial Engineering",
-    "System Engineering",
-    "Mechatronics"
-    ]
-    
-    
+
+export const faculties = [
+  "Computer Science",
+  "Computer Engineering",
+  "Petroleum Engineering",
+  "Civil Engineering",
+  "Electronics, Telecommunications, and Radio Engineering",
+  "Physics Education",
+  "Biomedical Technology Education",
+  "Biology Education",
+  "Chemistry and Biology Education",
+  "Chemistry Education",
+  "Chemical Engineering",
+  "Mathematics Education",
+  "Mechanical Engineering",
+  "Geography Education",
+  "Veterinary Medicine",
+  "Process Automation Engineering",
+  "Mechanical & Aerospace Engineering",
+  "Electrical Engineering and Power Engineering",
+  "Transport",
+  "Technological Machines",
+  "Radio engineering and communication",
+  "Metallurgy",
+  "Machine-building",
+  "Automation and Computer Technology",
+  "Bio & Biomedical Engineering",
+  "Materials Science & Engineering",
+  "Industrial Engineering",
+  "System Engineering",
+  "Mechatronics"
+]
+

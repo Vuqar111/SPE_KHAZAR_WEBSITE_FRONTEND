@@ -33,18 +33,17 @@ const Wrapper = styled.div`
 .card {
   width: 30vw;
   height: 360px;
-  background: #f5f5f5;
   padding: .5em;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   margin: 15px 20px;
+  transition: all 0.5s;
 }
 
-/* .card:hover {
-  transform: scale(0.95);
-  transition: all 0.3s;
-  border: #0067B1 0.2em solid;
-} */
+.card:hover {
+  transform: scale(0.96);
+  transition: all 0.5s;
+}
 
 .blog-icon {
   display: flex;
