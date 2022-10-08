@@ -8,7 +8,7 @@ import { GrGallery } from "react-icons/gr";
 import { FaSignOutAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { signout } from "../actions/userActions";
+import { signout } from "../common/actions/userActions";
 import { AiFillCaretDown } from "react-icons/ai";
 import { GrClose } from "react-icons/gr";
 import logo from "../assets/images/spekhazarlogo.png";

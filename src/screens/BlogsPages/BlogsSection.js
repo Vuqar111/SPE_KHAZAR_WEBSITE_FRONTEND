@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
+import LoadingBox from "../../components/LoadingBox";
+import MessageBox from "../../components/MessageBox";
 import { useDispatch, useSelector } from "react-redux";
-import { listBlogs } from "../actions/blogActions";
-import Blog from "../components/Blog";
+import { listBlogs } from "../../common/actions/blogActions";
+import Blog from "../../components/Blog";
 export default function HomeScreen() {
   const dispatch = useDispatch();
   const blogList = useSelector((state) => state.blogList);

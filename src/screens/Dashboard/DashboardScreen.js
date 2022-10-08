@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
+import LoadingBox from "../../components/LoadingBox";
+import MessageBox from "../../components/MessageBox";
 import { useDispatch, useSelector } from "react-redux";
-import { listUsers } from "../actions/userActions";
-import { listProducts } from "../actions/productActions";
-import { listBooks } from "../actions/bookActions";
-import { listBlogs } from "../actions/blogActions";
-import { listGalleries } from "../actions/galleryActions";
-import { listRecords } from "../actions/recordActions";
+import { listUsers } from "../../common/actions/userActions";
+import { listProducts } from "../../common/actions/productActions";
+import { listBooks } from "../../common/actions/bookActions";
+import { listBlogs } from "../../common/actions/blogActions";
+import { listGalleries } from "../../common/actions/galleryActions";
+import { listRecords } from "../../common/actions/recordActions";
 
 import { AiOutlineUser } from "react-icons/ai";
 import { FaBlogger } from "react-icons/fa";

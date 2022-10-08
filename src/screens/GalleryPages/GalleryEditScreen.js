@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Axios from "axios";
-import { detailsGallery, updateGallery } from "../actions/galleryActions";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
-import { GALLERY_UPDATE_RESET } from "../constants/galleryConstants";
+import { detailsGallery, updateGallery } from "../../common/actions/galleryActions";
+import LoadingBox from "../../components/LoadingBox";
+import MessageBox from "../../components/MessageBox";
+import { GALLERY_UPDATE_RESET } from "../../common/constants/galleryConstants";
 
 export default function GalleryEditScreen(props) {
   const galleryId = props.match.params.id;

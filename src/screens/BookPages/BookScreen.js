@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { detailsBook } from "../actions/bookActions";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
-import { BOOK_REVIEW_CREATE_RESET } from "../constants/bookConstants";
+import { detailsBook } from "../../common/actions/bookActions";
+import LoadingBox from "../../components/LoadingBox";
+import MessageBox from "../../components/MessageBox";
+import { BOOK_REVIEW_CREATE_RESET } from "../../common/constants/bookConstants";
 import { MdDateRange } from "react-icons/md";
 
 export default function ProductScreen(props) {

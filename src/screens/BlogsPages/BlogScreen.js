@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { detailsProduct, createReview } from "../actions/productActions";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
-import { PRODUCT_REVIEW_CREATE_RESET } from "../constants/productConstants";
+import { detailsBlog } from "../../common/actions/blogActions";
+import { BsFillShareFill } from "react-icons/bs";
+import LoadingBox from "../../components/LoadingBox";
+import MessageBox from "../../components/MessageBox";
+import { BLOG_REVIEW_CREATE_RESET } from "../../common/constants/blogConstants";
 import { MdDateRange } from "react-icons/md";
 import {
   FacebookShareButton,
@@ -17,19 +18,31 @@ import {
   WhatsappShareButton,
   WhatsappIcon,
 } from "react-share";
-
 export default function ProductScreen(props) {
-  const url = window.location.href;
   const dispatch = useDispatch();
-  const productId = props.match.params.id;
-  const productDetails = useSelector((state) => state.productDetails);
-  const { loading, error, product } = productDetails;
+  const blogId = props.match.params.id;
+  const blogDetails = useSelector((state) => state.blogDetails);
+  const { loading, error, blog } = blogDetails;
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
 
   useEffect(() => {
-    dispatch(detailsProduct(productId));
-  }, [dispatch, productId]);
+    dispatch(detailsBlog(blogId));
+  }, [dispatch, blogId]);
+
+
+  const [width, setWidth] = useState(0);
+  const url = window.location.href;
+  const pagewith = window.innerWidth;
+  console.log(url);
+  useEffect(() => {
+    if (pagewith > 768) {
+      setWidth(30);
+    } else {
+      setWidth(20);
+    }
+  });
+  console.log(width)
 
   return (
     <Wrapper>
@@ -41,16 +54,16 @@ export default function ProductScreen(props) {
         ) : (
           <div className="">
             <div>
-              <div className="mt-[20px] eventimgdiv">
+              <div className="w-[100%] mt-[20px]">
                 <img
                   className="blogimage"
-                  src={product.image}
-                  alt={product.name}
+                  src={blog.image}
+                  alt={blog.title}
                 ></img>
               </div>
               <div className="eventtitle">
                 <div className="flex items-center justify-between w-[auto] date">
-                  <h2>{product.name}</h2>
+                  <h2>{blog.name}</h2>
                 </div>
               </div>
               <div className="w-[100%] pl-[15px] pr-[15px] m-[auto]  flex justify-between datesection ">
@@ -58,7 +71,7 @@ export default function ProductScreen(props) {
                   <div className="eventDetailDate">
                     <MdDateRange />
                   </div>
-                  <div className="eventDetailDate">{new Date(product.createdAt).toDateString()}</div>
+                  <div className="eventDetailDate">{new Date(blog.createdAt).toDateString()}</div>
                 </div>
                 <div className="flex justify-between  items-center  sharecontainer    text-[white]">
                   <div className="ml-[5px] cursor-pointer  pointer">
@@ -80,14 +93,8 @@ export default function ProductScreen(props) {
               </div>
               <hr/>
               <p className="eventdesc">
-                {product.description}
+                {blog.description}
               </p>
-              <hr />
-              <div className="w-[100%] p-[15px] m-[auto]  flex justify-between datesection ">
-                <div className="applybtn">
-                  <button>Apply Event</button>
-                </div>
-              </div>
             </div>
           </div>
         )}
@@ -153,3 +160,4 @@ const Wrapper = styled.div`
     }
   }
 `;
+

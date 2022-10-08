@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
+import LoadingBox from "../../components/LoadingBox";
+import MessageBox from "../../components/MessageBox";
 import { useDispatch, useSelector } from "react-redux";
-import { listBooks } from "../actions/bookActions";
-import aboutimg from "../assets/images/library.jpg";
+import { listBooks } from "../../common/actions/bookActions";
+import aboutimg from "../../assets/images/library.jpg";
 import styled from "styled-components";
 import {Link} from 'react-router-dom';
 export default function HomeScreen() {
@@ -21,7 +21,7 @@ export default function HomeScreen() {
     <Wrapper>
       <div>
         <div className="imgdiv">
-          <img className="img" src={aboutimg} />
+          <img className="img" src={aboutimg} alt="aboutImage" />
           <div className="abouttext">
             <h2>Accelerating research discovery to shape a better future</h2>
             <h1>Today's research, tomorrow's innovation</h1>

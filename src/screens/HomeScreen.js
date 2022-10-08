@@ -5,8 +5,8 @@ import MessageBox from "../components/MessageBox";
 import Subscribe from "../components/Subscribe";
 import Blog from "../components/Blog";
 import { useDispatch, useSelector } from "react-redux";
-import { listProducts } from "../actions/productActions";
-import { listBlogs } from "../actions/blogActions";
+import { listProducts } from "../common/actions/productActions";
+import { listBlogs } from "../common/actions/blogActions";
 import Testimontials from "../components/Testimontials";
 import Slider from "../components/HomeSlider/Slider";
 

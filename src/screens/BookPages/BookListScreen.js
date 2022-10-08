@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { createBook, deleteBook, listBooks } from "../actions/bookActions";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
+import { createBook, deleteBook, listBooks } from "../../common/actions/bookActions";
+import LoadingBox from "../../components/LoadingBox";
+import MessageBox from "../../components/MessageBox";
 import {
   BOOK_CREATE_RESET,
   BOOK_DELETE_RESET,
-} from "../constants/bookConstants";
+} from "../../common/constants/bookConstants";
 
 export default function BookListScreen(props) {
   const bookList = useSelector((state) => state.bookList);

@@ -1,58 +1,55 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Axios from "axios";
-import { detailsBook, updateBook } from "../actions/bookActions";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
-import { BOOK_UPDATE_RESET } from "../constants/bookConstants";
+import { detailsRecord, updateRecord } from "../../common/actions/recordActions";
+import LoadingBox from "../../components/LoadingBox";
+import MessageBox from "../../components/MessageBox";
+import { RECORD_UPDATE_RESET } from "../../common/constants/recordConstants";
 
-export default function BookEditScreen(props) {
-  const bookId = props.match.params.id;
+export default function RecordEditScreen(props) {
+  const recordId = props.match.params.id;
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
-  const [image, setImage] = useState("");
   const [category, setCategory] = useState("");
-  const [description, setDescription] = useState("");
+  const [image, setImage] = useState("");
   const [url, setUrl] = useState("");
 
-  const bookDetails = useSelector((state) => state.bookDetails);
-  const { loading, error, book } = bookDetails;
+  const recordDetails = useSelector((state) => state.recordDetails);
+  const { loading, error, record } = recordDetails;
 
-  const bookUpdate = useSelector((state) => state.bookUpdate);
+  const recordUpdate = useSelector((state) => state.recordUpdate);
   const {
     loading: loadingUpdate,
     error: errorUpdate,
     success: successUpdate,
-  } = bookUpdate;
+  } = recordUpdate;
 
   const dispatch = useDispatch();
   useEffect(() => {
     if (successUpdate) {
-      props.history.push("/booklist");
+      props.history.push("/recordlist");
     }
-    if (!book || book._id !== bookId || successUpdate) {
-      dispatch({ type: BOOK_UPDATE_RESET });
-      dispatch(detailsBook(bookId));
+    if (!record || record._id !== recordId || successUpdate) {
+      dispatch({ type: RECORD_UPDATE_RESET });
+      dispatch(detailsRecord(recordId));
     } else {
-      setTitle(book.title);
-      setAuthor(book.author);
-      setImage(book.image);
-      setCategory(book.category);
-      setDescription(book.description);
-      setUrl(book.url);
+      setTitle(record.title);
+      setAuthor(record.author);
+      setImage(record.image);
+      setCategory(record.category);
+      setUrl(record.url);
     }
-  }, [book, dispatch, bookId, successUpdate, props.history]);
+  }, [record, dispatch, recordId, successUpdate, props.history]);
   const submitHandler = (e) => {
     e.preventDefault();
-    // TODO: dispatch update product
+    // TODO: dispatch update record
     dispatch(
-      updateBook({
-        _id: bookId,
+      updateRecord({
+        _id: recordId,
         title,
         author,
         image,
         category,
-        description,
         url,
       })
     );
@@ -62,13 +59,13 @@ export default function BookEditScreen(props) {
 
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
+ 
 
   return (
     <div>
       <form className="form" onSubmit={submitHandler}>
         <div>
-          <h1>Create / Edit Book {bookId}</h1>
-          <p className="text-center">Description calisin 190 sozden artiq olmasin</p>
+          <h1>Create / Edit Record {recordId}</h1>
         </div>
         {loadingUpdate && <LoadingBox></LoadingBox>}
         {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
@@ -80,11 +77,11 @@ export default function BookEditScreen(props) {
           <>
             <div className="editmainform">
               <div>
-                <label htmlFor="name">Title</label>
+                <label htmlFor="title">Title</label>
                 <input
                   id="title"
                   type="text"
-                  placeholder="Enter name"
+                  placeholder="Enter Title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                 ></input>
@@ -109,45 +106,32 @@ export default function BookEditScreen(props) {
                   onChange={(e) => setImage(e.target.value)}
                 ></input>
               </div>
-            
+             
               <div>
-                <label htmlFor="category">Category</label>
+                <label htmlFor="category">category</label>
                 <input
                   id="category"
                   type="text"
-                  placeholder="Enter category"
+                  placeholder="Enter Category"
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
                 ></input>
               </div>
-
-
               <div>
-                <label htmlFor="category">URL</label>
+                <label htmlFor="url">Url</label>
                 <input
                   id="url"
                   type="text"
-                  placeholder="Enter url"
+                  placeholder="Enter Url"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                 ></input>
               </div>
 
               <div>
-                <label htmlFor="description">Description</label>
-                <textarea
-                  id="description"
-                  rows="3"
-                  type="text"
-                  placeholder="Enter description"
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                ></textarea>
-              </div>
-              <div>
                 <label></label>
-                <button className="primary" type="submit">
-                  Update/Create Book
+                <button className="primary w-[100%]" type="submit">
+                  Update/Create Record
                 </button>
               </div>
             </div>
