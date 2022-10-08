@@ -1,61 +1,66 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { createRecord, deleteRecord, listRecords } from "../actions/recordActions";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
 import {
-  RECORD_CREATE_RESET,
-  RECORD_DELETE_RESET,
-} from "../constants/recordConstants";
+  createProduct,
+  deleteProduct,
+  listProducts,
+} from "../../common/actions/productActions";
+import LoadingBox from "../../components/LoadingBox";
+import MessageBox from "../../components/MessageBox";
+import {
+  PRODUCT_CREATE_RESET,
+  PRODUCT_DELETE_RESET,
+} from "../../common/constants/productConstants";
 
-export default function RecordListScreen(props) {
-  const recordList = useSelector((state) => state.recordList);
-  const { loading, error, records } = recordList;
+export default function ProductListScreen(props) {
+  const productList = useSelector((state) => state.productList);
+  const { loading, error, products } = productList;
 
-  const recordCreate = useSelector((state) => state.recordCreate);
+  const productCreate = useSelector((state) => state.productCreate);
   const {
     loading: loadingCreate,
     error: errorCreate,
     success: successCreate,
-    record: createdRecord,
-  } = recordCreate;
+    product: createdProduct,
+  } = productCreate;
 
-  const recordDelete = useSelector((state) => state.recordDelete);
+  const productDelete = useSelector((state) => state.productDelete);
   const {
     loading: loadingDelete,
     error: errorDelete,
     success: successDelete,
-  } = recordDelete;
+  } = productDelete;
 
   const dispatch = useDispatch();
   useEffect(() => {
     if (successCreate) {
-      dispatch({ type: RECORD_CREATE_RESET });
-      props.history.push(`/record/${createdRecord._id}/edit`);
+      dispatch({ type: PRODUCT_CREATE_RESET });
+      props.history.push(`/product/${createdProduct._id}/edit`);
     }
     if (successDelete) {
-      dispatch({ type: RECORD_DELETE_RESET });
+      dispatch({ type: PRODUCT_DELETE_RESET });
     }
-    dispatch(listRecords());
-  }, [createdRecord, dispatch, props.history, successCreate, successDelete]);
+    dispatch(listProducts());
+  }, [createdProduct, dispatch, props.history, successCreate, successDelete]);
 
-  const deleteHandler = (record) => {
+  const deleteHandler = (product) => {
     if (window.confirm("Are you sure to delete?")) {
-      dispatch(deleteRecord(record._id));
+      dispatch(deleteProduct(product._id));
     }
   };
   const createHandler = () => {
-    dispatch(createRecord());
+    dispatch(createProduct());
   };
 
-  console.log(records);
+
+  console.log(products)
   return (
     <div style={{minHeight: "60vh"}}>
       <div className="row">
-        <h1>Records Edit/Create</h1>
-        <button type="button" className="primary p-[1rem]" onClick={createHandler}>
-          Create Record
+        <h1>Event Edit/Create</h1>
+        <button type="button" className="bg-[#0067B1] m-[10px] text-white p-[10px]" onClick={createHandler}>
+          Create Event
         </button>
       </div>
 
@@ -71,28 +76,30 @@ export default function RecordListScreen(props) {
       ) : (
         <>
           <table className="table">
-            <thead className="tableHeader">
-              <tr>
-                <th>TITLE</th>
+            <thead>
+              <tr className="tableHeader">
+                <th>NAME</th>
                 <th>AUTHOR</th>
+                <th>LOCATION</th>
+                <td>TYPE</td>
                 <th>CATEGORY</th>
-                <th>URL</th>
                 <th>ACTIONS</th>
               </tr>
             </thead>
             <tbody className="tableBody">
-              {records.map((record) => (
-                <tr key={record._id}>
-                  <td>{record.title}</td>
-                  <td>{record.author}</td>
-                  <td>{record.category}</td>
-                  <td>{record.url}</td>
+              {products.map((product) => (
+                <tr key={product._id}>
+                  <td>{product.name}</td>
+                  <td>{product.author}</td>
+                  <td>{product.location}</td>
+                  <td>{product.type}</td>
+                  <td>{product.category}</td>
                   <td>
                     <button
                       type="button"
                       className="small edit p-[1rem]"
                       onClick={() =>
-                        props.history.push(`/record/${record._id}/edit`)
+                        props.history.push(`/product/${product._id}/edit`)
                       }
                     >
                       Edit
@@ -100,7 +107,7 @@ export default function RecordListScreen(props) {
                     <button
                       type="button"
                       className="small delete p-[1rem]"
-                      onClick={() => deleteHandler(record)}
+                      onClick={() => deleteHandler(product)}
                     >
                       Delete
                     </button>
@@ -109,6 +116,8 @@ export default function RecordListScreen(props) {
               ))}
             </tbody>
           </table>
+
+        
         </>
       )}
     </div>

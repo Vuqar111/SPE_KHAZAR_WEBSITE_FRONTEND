@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { detailsUser, updateUserProfile } from "../actions/userActions";
-import avatarimg from "../assets/images/avatarimg.png";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
-import { universities } from "../data";
-import { faculties } from "../data";
-import { USER_UPDATE_PROFILE_RESET } from "../constants/userConstants";
+import { detailsUser, updateUserProfile } from "../../common/actions/userActions";
+import LoadingBox from "../../components/LoadingBox";
+import MessageBox from "../../components/MessageBox";
+import { universities } from "../../data";
+import { faculties } from "../../data";
+import { USER_UPDATE_PROFILE_RESET } from "../../common/constants/userConstants";
 
 export default function ProfileScreen() {
   const [name, setName] = useState("");

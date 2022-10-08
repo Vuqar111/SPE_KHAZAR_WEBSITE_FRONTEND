@@ -8,7 +8,7 @@ import {
   productUpdateReducer,
   productCategoryListReducer,
   productReviewCreateReducer,
-} from "./reducers/productReducers";
+} from "./common/reducers/productReducers";
 import {
   userDeleteReducer,
   userDetailsReducer,
@@ -17,14 +17,14 @@ import {
   userSigninReducer,
   userUpdateProfileReducer,
   userUpdateReducer,
-} from "./reducers/userReducers";
+} from "./common/reducers/userReducers";
 import {
   blogCreateReducer,
   blogDeleteReducer,
   blogDetailsReducer,
   blogListReducer,
   blogUpdateReducer,
-} from "./reducers/blogReducers";
+} from "./common/reducers/blogReducers";
 
 import {
   recordCreateReducer,
@@ -32,7 +32,7 @@ import {
   recordDetailsReducer,
   recordListReducer,
   recordUpdateReducer,
-} from "./reducers/recordReducers";
+} from "./common/reducers/recordReducers";
 
 import {
   bookCreateReducer,
@@ -40,7 +40,7 @@ import {
   bookDetailsReducer,
   bookListReducer,
   bookUpdateReducer,
-} from "./reducers/bookReducers";
+} from "./common/reducers/bookReducers";
 
 import {
   galleryCreateReducer,
@@ -48,7 +48,7 @@ import {
   galleryDetailsReducer,
   galleryListReducer,
   galleryUpdateReducer,
-} from "./reducers/galleryReducers";
+} from "./common/reducers/galleryReducers";
 
 const initialState = {
   userSignin: {

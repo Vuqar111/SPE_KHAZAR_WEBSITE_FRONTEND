@@ -1,61 +1,65 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { createBlog, deleteBlog, listBlogs } from "../actions/blogActions";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
 import {
-  BLOG_CREATE_RESET,
-  BLOG_DELETE_RESET,
-} from "../constants/blogConstants";
+  createGallery,
+  deleteGallery,
+  listGalleries,
+} from "../../common/actions/galleryActions";
+import LoadingBox from "../../components/LoadingBox";
+import MessageBox from "../../components/MessageBox";
+import {
+  GALLERY_CREATE_RESET,
+  GALLERY_DELETE_RESET,
+} from "../../common/constants/galleryConstants";
 
-export default function BlogListScreen(props) {
-  const blogList = useSelector((state) => state.blogList);
-  const { loading, error, blogs } = blogList;
+export default function GalleryListScreen(props) {
+  const galleryList = useSelector((state) => state.galleryList);
+  const { loading, error, galleries } = galleryList;
 
-  const blogCreate = useSelector((state) => state.blogCreate);
+  const galleryCreate = useSelector((state) => state.galleryCreate);
   const {
     loading: loadingCreate,
     error: errorCreate,
     success: successCreate,
-    blog: createdBlog,
-  } = blogCreate;
+    gallery: createdGallery,
+  } = galleryCreate;
 
-  const blogDelete = useSelector((state) => state.blogDelete);
+  const galleryDelete = useSelector((state) => state.galleryDelete);
   const {
     loading: loadingDelete,
     error: errorDelete,
     success: successDelete,
-  } = blogDelete;
+  } = galleryDelete;
 
   const dispatch = useDispatch();
   useEffect(() => {
     if (successCreate) {
-      dispatch({ type: BLOG_CREATE_RESET });
-      props.history.push(`/blog/${createdBlog._id}/edit`);
+      dispatch({ type: GALLERY_CREATE_RESET });
+      props.history.push(`/gallery/${createdGallery._id}/edit`);
     }
     if (successDelete) {
-      dispatch({ type: BLOG_DELETE_RESET });
+      dispatch({ type: GALLERY_DELETE_RESET });
     }
-    dispatch(listBlogs());
-  }, [createdBlog, dispatch, props.history, successCreate, successDelete]);
+    dispatch(listGalleries());
+  }, [createdGallery, dispatch, props.history, successCreate, successDelete]);
 
-  const deleteHandler = (blog) => {
+  const deleteHandler = (gallery) => {
     if (window.confirm("Are you sure to delete?")) {
-      dispatch(deleteBlog(blog._id));
+      dispatch(deleteGallery(gallery._id));
     }
   };
   const createHandler = () => {
-    dispatch(createBlog());
+    dispatch(createGallery());
   };
 
-  console.log(blogs);
+  console.log(galleries);
   return (
-    <div>
+    <div style={{minHeight: "60vh"}}>
       <div className="row">
-        <h1>Salam Guys</h1>
+        <h1> Galleries</h1>
         <button type="button" className="primary p-[1rem]" onClick={createHandler}>
-          Create Blog
+          Create Gallery-Image
         </button>
       </div>
 
@@ -69,29 +73,27 @@ export default function BlogListScreen(props) {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <>
+        <div className="allList">
           <table className="table">
             <thead>
-              <tr>
+              <tr className="tableHeader">
                 <th>TITLE</th>
-                <th>AUTHOR</th>
-                <th>CATEGORY</th>
+                <th>IMAGE</th>
                 <th>ACTIONS</th>
               </tr>
             </thead>
-            <tbody>
-              {blogs.map((blog) => (
-                <tr key={blog._id}>
-                  <td>{blog.title}</td>
-                  <td>{blog.author}</td>
-                  <td>{blog.category}</td>
-
+            <tbody className="tableBody">
+              {galleries.map((gallery) => (
+                <tr key={gallery._id}>
+                
+                  <td>{gallery.title}</td>
+                  <td>{gallery.image}</td>
                   <td>
                     <button
                       type="button"
                       className="small edit p-[1rem]"
                       onClick={() =>
-                        props.history.push(`/blog/${blog._id}/edit`)
+                        props.history.push(`/gallery/${gallery._id}/edit`)
                       }
                     >
                       Edit
@@ -99,7 +101,7 @@ export default function BlogListScreen(props) {
                     <button
                       type="button"
                       className="small delete p-[1rem]"
-                      onClick={() => deleteHandler(blog)}
+                      onClick={() => deleteHandler(gallery)}
                     >
                       Delete
                     </button>
@@ -108,7 +110,7 @@ export default function BlogListScreen(props) {
               ))}
             </tbody>
           </table>
-        </>
+        </div>
       )}
     </div>
   );
