@@ -21,7 +21,7 @@ export default function GalleriesSection() {
   };
   return (
     <>
-      <h1 className="font-bold text-[30px] w-[100%] p-[10px] text-center mb-[10px] bg-[#f5f5f5] eventHeader">Teams</h1>
+      <h1 className="font-bold text-[30px] w-[100%] p-[10px] text-center mb-[10px] bg-[#f5f5f5] eventHeader">Gallery</h1>
       <Wrapper>
         {loading ? (
           <LoadingBox></LoadingBox>
