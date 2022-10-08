@@ -11,12 +11,11 @@ const About = () => {
             <h1>ABOUT US</h1>
           </div>
         </div>
-
-        <div className="w-[80%] m-[auto] p-[20px] bg-[#EBF1F8] contentabout text-[#6798C9] font-bold mt-[50px] rounded-[20px] sm:[bg-[res]]">
+        <div className="w-[80%] m-[auto] p-[20px] contentabout font-bold mt-[50px] rounded-[20px] sm:[bg-[res]]">
           <p>
-            SPE has student chapters around the world that provide an operating
-            framework for society activities at a university level. SPE Khazar
-            University Student Chapter was established on 1st of January in 2
+          <spam className="specialText">SPE</spam> has student chapters around the world that provide an operating
+            framework for society activities at a university level. <spam className="specialText">SPE Khazar
+            University Student Chapter</spam>  was established on 1st of January in 2
             2005. The mission of the chapter is to provide students with SPE
             membership which gives them access to the technical and
             non-technical knowledge besides will keep them in touch with the
@@ -27,7 +26,7 @@ const About = () => {
             <br />
             <br />
             <br />
-            Our achievements:
+            <spam className="specialText">Our achievements:</spam>
             <br />
             <br />
             SPE has Student chapter awards and recognition recognize those that
@@ -53,22 +52,34 @@ const Wrapper = styled.div`
   width: 95%;
   padding: 10px;
   margin-bottom: 50px;
+  color: #242424;
 }
-  .imgdiv {
-    position: relative;
-  }
-  img {
-    width: 100%;
-    max-height: 500px;
-    height: 100%;
-    object-fit: cover;
-  }
-  .abouttext {
-    position: absolute;
-    font-size: 85px;
-    color: white;
-    font-weight: bold;
-  }
+.imgdiv {
+  position: relative;
+}
+img {
+  width: 100%;
+  height: 100%;
+  max-height: 60vh;
+  object-fit: cover;
+}
+.abouttext {
+  position: absolute;
+  font-size: 85px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  top: 50%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.438);
+}
+.specialText {
+  color: #0067B1;
+  font-weight: 800;
+}
   @media (max-width: 768px) {
     .abouttext {
       font-size: 20px;
