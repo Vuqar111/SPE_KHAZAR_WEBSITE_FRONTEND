@@ -1,61 +1,27 @@
 import React from "react";
-import styled from "styled-components";
 const RecordItem = ({ record }) => {
   return (
-    <Container>
-      <Image src={record.image}></Image>
-      <InfoContainer>{record.title} - {record.author}</InfoContainer>
-      <a href={record.url}>
-      <PlayContainer>PLay</PlayContainer>
-      </a>
-    </Container>
+    <React.Fragment>
+      <div className="w-[400px] cardModel">
+        <div className="w-[100%] h-[230px] relative">
+          <img
+            className="w-[100%] h-[100%] object-cover"
+            src={record.image}
+            alt=""
+          />
+          <a href={record.url}>
+            <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[white] bg-[#0067B1] p-[20px] rounded-[30px] hover:scale-[1.1] hover:transition-[1.1s] transition-[1.1s] cursor-pointer">
+              Play
+            </div>
+          </a>
+        </div>
+        <div className="p-[10px]">
+          <h2 className="font-bold text-[18px]  p-[5px]">{record.title}</h2>
+          <p className="text-[15px] pl-[5px] opacity-[0.7] font-bold">{record.author}</p>
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
-const Container = styled.div`
-  width: 400px;
-  height: 230px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  margin: 20px;
-  position: relative;
-  :hover {
-    cursor: pointer;
-  }
-  @media (max-width: 768px) {
-    margin-top: 45px;
-  }
-`;
-const Image = styled.img`
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-`;
-
-const PlayContainer = styled.div`
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  top: 50%;
-  left: 50%;
-  font-size: 20px;
-  color: white;
-  padding-top: 25px;
-  background: #256f98;
-  border-radius: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  :hover {
-    background: #0492c4;
-  }
-`;
-const InfoContainer = styled.div`
-  padding: 10px;
-  width: 100%;
-  background: #256f98;
-  color: white;
-  font-weight: 500;
-`;
 
 export default RecordItem;
