@@ -1,12 +1,20 @@
-import aqsin from './assets/images/aqsin.jpg';
-import resad from './assets/images/resad.jpg';
-import naibe from './assets/images/naibe.jpg';
-import seymur from './assets/images/seymur.jpg';
-import vugar from './assets/images/vugar.jpg';
-import lamiye from './assets/images/lamiye.jpg';
-import salman from './assets/images/salman.jpeg';
-import leyla from './assets/images/leyla.jpeg';
-import sems from './assets/images/semsimage.jpg';
+import aqsin from './assets/images/teamImages/aqsin.jpg';
+import resad from './assets/images/teamImages/resad.jpg';
+import naibe from './assets/images/teamImages/naibe.jpeg';
+import seymur from './assets/images/teamImages/seymur.jpg';
+import vugar from './assets/images/teamImages/vugar.jpg';
+import sems from './assets/images/teamImages/semsimage.jpg';
+import anar from './assets/images/teamImages/anar.jpeg';
+import nuray from './assets/images/teamImages/nuray.jpg';
+import aynur from './assets/images/teamImages/aynur.jpg';
+import amina from './assets/images/teamImages/AminaAliyeva.jpg';
+import asim from './assets/images/teamImages/AsimMakhmudov.jpg';
+import elgun from './assets/images/teamImages/ElgunAsgarov.jpeg';
+import elmar from './assets/images/teamImages/ElmarSuleymanov.jpg';
+import meryem from './assets/images/teamImages/MeryemMovlanova.jpg';
+import jahid from './assets/images/teamImages/JahidFaramazanov.jpg';
+import diana from './assets/images/teamImages/diana.jpeg';
+import mahammad from './assets/images/teamImages/mehemmed.jpg';
 export const slider = [
   {
     image:
@@ -34,71 +42,111 @@ export const teams = [
   {
     id: 1,
     name: "Diana Ismayilova",
-    status: "President",
-    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
-    img: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    status: "Senior Advisor",
+    img: diana,
   },
   {
     id: 2,
     name: "Aqsin Qarashli",
-    status: "Vice-President",
+    status: "Former Vice-President",
     img: aqsin
   },
   {
     id: 3,
     name: "Resad Musayev",
-    status: "Chief Excutifer",
-    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
+    status: "Former Chief Excutifer",
     img: resad
   },
   {
     id: 4,
-    name: "Leyla Ismayilova",
+    name: "Mahammad Sadigov",
     status: "President",
-    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
-    img: leyla,
+    img: mahammad,
   },
   {
     id: 5,
-    name: "Salman Musayev",
+    name: "Vugar Hasanov",
     status: "Vice-President",
-    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
-    img: salman,
+    img: vugar,
   },
   {
     id: 6,
-    name: "Lamiye Semedova",
-    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
-    status: "Chief Excutifer",
-    img: lamiye
+    name: "Seymur Mirzeliyev",
+    status: "Hussuz",
+    img: seymur,
   },
   {
     id: 7,
     name: "Naibe Garayeva",
-    status: "Designer",
-    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
-    img: naibe
+    status: "Project Manager",
+    img: naibe,
   },
 
   {
     id: 8,
-    name: "Vugar Hasanov",
-    status: "Vice-President",
-    img: vugar
+    name: "Sems Aliyeva",
+    status: "Senior Designer",
+    img: sems,
   },
   {
     id: 9,
-    name: "Seymur Mirzeliyev",
-    status: "Chief Excutifer",
-    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
-    img: seymur
+    name: "Asim Mahmudov",
+    status: "Webmaster",
+    img: asim,
   },
   {
     id: 13,
-    name: "Sems Gadirli",
+    name: "Amina Aliyeva",
     status: "Designer",
-    description: "Web camera and microphone — Let’s talk about this devices. Although the webcam and microphone are not very important in computer use, both are important devices. It is important that both devices are of good quality. But no matter how good your camera is, if you h",
-    img: sems
+    img: amina,
+  },
+  {
+    id: 14,
+    name: "Jahid Faramazanov",
+    status: "Treasurer",
+    img: jahid,
+  },
+  {
+    id: 15,
+    name: "Nuray Qedirli",
+    status: "Designer",
+    img: nuray,
+  },
+  {
+    id: 16,
+    name: "Elmar Suleymanov",
+    status: "Officer",
+    img: elmar,
+  },
+  {
+    id: 17,
+    name: "Elgun Suleymanov",
+    status: "Officer",
+    img: elgun,
+  },
+  {
+    id: 18,
+    name: "Meryem Movlanova",
+    status: "Officer",
+    img: meryem,
+  },
+  {
+    id: 19,
+    name: "Aynur Huseynzade",
+    status: "Officer",
+    img: aynur,
+  },
+  {
+    id: 20,
+    name: "Nuray Aliyeva",
+    status: "Officer",
+    img: nuray,
+  },
+  {
+    id: 21,
+    name: "Anar Kamilovic",
+    status: "Simpatya",
+    img: anar,
   },
 
 
