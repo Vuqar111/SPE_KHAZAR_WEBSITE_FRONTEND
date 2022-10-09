@@ -16,17 +16,17 @@ export default function HomeScreen() {
 
 
   return (
-    <div className="eventsContainer">
+    <div className="wrapper">
       <div className="flex justify-center items-center bg-[#f5f5f5] text-center text-5xl font-bold p-[10px] titleof">
         <p className="text-center eventHeader">Blogs</p>
       </div>
-      <div className="w-[100%] m-[auto] flex justify-between mt-[20px] events">
+      <div className="w-[90%] m-[auto] flex justify-between mt-[20px] w-[100%] h-[auto] p-[0px]">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <div className="recordcontainer">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-[15px]">
             {blogs.map((blog) => (
               <Blog key={blog._id} blog={blog} />
             ))}

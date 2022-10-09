@@ -16,17 +16,17 @@ export default function HomeScreen() {
   console.log(products);
 
   return (
-    <div className="eventsContainer">
+    <div>
       <div className="flex justify-center items-center bg-[#f5f5f5] text-center text-5xl font-bold p-[10px]  titleof">
         <p className="text-center eventHeader">Events</p>
       </div>
-      <div className="w-[90] m-[auto] flex justify-center mt-[10px] events">
+      <div className="w-[90%] m-[auto] flex justify-center mt-[10px] w-[100%] h-[auto] p-[0px]">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <div className="recordcontainer">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-[15px]">
             {products.map((product) => (
               <Product key={product._id} product={product} />
             ))}

@@ -72,7 +72,7 @@ export default function SigninScreen(props) {
             </div>
             <div>
               <label />
-              <div className="loginfooter">
+              <div className="mt-[10px]">
                 New User?{" "}
                 <Link
                   to={`/register?redirect=${redirect}`}

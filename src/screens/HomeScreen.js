@@ -31,7 +31,7 @@ export default function HomeScreen() {
         <Slider />
       </div>
       <div className="w-[90%] m-[auto] mt-[25px] text-[20px] hometitle">Our Latest Events</div>
-      <div className="w-[100%] m-[auto] flex justify-between mt-[20px] events">
+      <div className="w-[100%] m-[auto] flex justify-between mt-[20px] w-[100%] h-[auto]">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
@@ -45,7 +45,7 @@ export default function HomeScreen() {
         )}
       </div>
       <div className="w-[90%] m-[auto] mt-[25px] text-[20px] hometitle">Our Latest Blogs</div>
-      <div className="w-[100%] m-[auto] flex justify-between mt-[20px] events">
+      <div className="w-[100%] m-[auto] flex justify-between mt-[20px] w-[100%] h-[auto] p-[0px]">
         {loadingblog ? (
           <LoadingBox></LoadingBox>
         ) : errorblog ? (

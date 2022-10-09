@@ -139,7 +139,6 @@ button {
   font-size: 18px;
 }
 
-
 nav {
   width: 90%;
   margin: 0 auto;
@@ -147,8 +146,6 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-
-
 
 .links-container {
   display: flex;
@@ -177,11 +174,6 @@ ul li {
 
 .hamburger {
   display: none;
-}
-
-/* LoginFooter */
-.loginfooter {
-  margin-top: 10px;
 }
 
 /* Card */
@@ -269,26 +261,6 @@ ul li {
   font-style: italic;
 }
 
-/* Footer */
-.footerCont {
-  position: relative;
-}
-
-.footer {
-  position: relative;
-}
-
-.footerul li {
-  margin-top: 5px;
-}
-
-/* About-Us */
-
-.abouttext {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 /* FAQ */
 .wrapper {
@@ -330,23 +302,10 @@ ul li {
   transition: 3s ease-in-out;
 }
 
-/* RecordsScreen */
-
-.recordcontainer {
-  width: auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: auto;
-}
-
 .eventHeader {
   color: #0067b1;
 }
 
-.eventsContainer {
-  min-height: 60vh;
-}
 
 /* Slider */
 
@@ -390,8 +349,6 @@ ul li {
 .slideshowDot.active {
   background-color: #6a0dad;
 }
-
-/* SubHeader */
 
 /* LISTOFADMINPRODUCTS */
 
@@ -552,7 +509,7 @@ textarea {
   top: 0;
   left: 0;
   transition: opacity 0.4s ease, visibility 0.4s ease,
-    transform 0.5s ease-in-out;
+  transform 0.5s ease-in-out;
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
@@ -599,13 +556,6 @@ textarea {
   cursor: pointer;
 }
 
-.subLink {
-  margin-left: 10px;
-}
-
-.subheader {
-  width: 100%;
-}
 
 .siteName {
   font-size: 20px;
@@ -731,37 +681,10 @@ textarea {
     background-clip: padding-box;
   }
 
-  .subLink {
-    margin: 5px;
-    font-size: 13px !important;
-  }
 
-  .subheader {
-    width: 100%;
-  }
 
-  /* Footer */
-  .footer {
-    flex-direction: column;
-  }
 
-  /* Events */
-  .events {
-    width: 100%;
-    height: auto;
-    padding: 0px;
-  }
 
-  /* Record Section */
-  .recordscontainer {
-    width: 100%;
-  }
-
-  .recordcontainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
   .editmainform {
     width: 100%;

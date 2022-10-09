@@ -18,13 +18,13 @@ export default function RecordsSection() {
       <div className="flex justify-center items-center bg-[#C4C4C4] text-center text-5xl font-bold p-[10px] titleof">
         <p className="text-center">Records</p>
       </div>
-      <div className="w-[90%] h-[100%] m-[auto] flex justify-center mt-[20px] recordscontainer">
+      <div className="w-[90%] h-[100%] m-[auto] flex justify-center mt-[20px] ">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <div className="recordcontainer">
+          <div className="">
             {records.map((record) => (
               <Record key={record._id} record={record} />
             ))}

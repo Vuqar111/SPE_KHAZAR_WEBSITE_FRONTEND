@@ -1,17 +1,16 @@
 import React from "react";
-import styled from "styled-components";
 import aboutimg from "../assets/images/speimageabout.jpeg";
 const About = () => {
   return (
-    <Wrapper>
+    <React.Fragment>
       <div>
-        <div className="imgdiv">
-          <img className="img" src={aboutimg} />
-          <div className="abouttext">
+        <div className="relative">
+          <img className="w-[100%] h-[100%] max-h-[60vh] object-cover" src={aboutimg} alt="" />
+          <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[85px] text-[white] flex items-center justify-center w-[100%] h-[100%] font-bold">
             <h1>ABOUT US</h1>
           </div>
         </div>
-        <div className="w-[80%] m-[auto] p-[20px] contentabout font-bold mt-[50px] rounded-[20px] sm:[bg-[res]]">
+        <div className="w-[80%] m-[auto] p-[20px] text-[#242424] font-bold mt-[50px] rounded-[20px] sm:[bg-[res]]">
           <p>
           <spam className="specialText">SPE</spam> has student chapters around the world that provide an operating
             framework for society activities at a university level. <spam className="specialText">SPE Khazar
@@ -41,48 +40,9 @@ const About = () => {
           </p>
         </div>
       </div>
-    </Wrapper>
+    </React.Fragment>
   );
 };
 
 export default About;
 
-const Wrapper = styled.div`
-.contentabout {
-  width: 95%;
-  padding: 10px;
-  margin-bottom: 50px;
-  color: #242424;
-}
-.imgdiv {
-  position: relative;
-}
-img {
-  width: 100%;
-  height: 100%;
-  max-height: 60vh;
-  object-fit: cover;
-}
-.abouttext {
-  position: absolute;
-  font-size: 85px;
-  color: white;
-  font-weight: bold;
-  display: flex;
-  top: 50%;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.438);
-}
-.specialText {
-  color: #0067B1;
-  font-weight: 800;
-}
-  @media (max-width: 768px) {
-    .abouttext {
-      font-size: 20px;
-    }
-  }
-`;

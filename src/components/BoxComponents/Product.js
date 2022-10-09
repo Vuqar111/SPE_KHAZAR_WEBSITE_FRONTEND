@@ -23,12 +23,11 @@ export default function Product(props) {
 
 const Wrapper = styled.div`
  .card {
-  width: 30vw;
+  width: 29vw;
   height: 360px;
   padding: .5em;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  margin: 15px 20px;
   transition: all 0.5s;
 }
 

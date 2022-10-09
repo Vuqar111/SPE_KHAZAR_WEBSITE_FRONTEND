@@ -148,7 +148,7 @@ export default function RegisterScreen(props) {
             </div>
             <div>
               <label />
-              <div className="loginfooter">
+              <div className="mt-[10px]">
                 Already have an account?{" "}
                 <Link
                   className="text-[#0067B1] font-bold"
