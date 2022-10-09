@@ -6,7 +6,6 @@ import Blog from "../components/BoxComponents/Blog";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../common/actions/productActions";
 import { listBlogs } from "../common/actions/blogActions";
-// import Testimontials from "../components/Testimontials";
 import Slider from "../components/HomeSlider/Slider";
 
 export default function HomeScreen() {
@@ -29,7 +28,7 @@ export default function HomeScreen() {
         <Slider />
       </div>
       <div className="w-[90%] m-[auto] mt-[25px] text-[20px] lg:text-[24px] text-center font-bold text-[#0067b1]">
-        Our Latest Events
+        Our Latest events
       </div>
       <div className="w-[90%] m-[auto] flex justify-between mt-[20px] w-[100%] h-[auto]">
         {loading ? (

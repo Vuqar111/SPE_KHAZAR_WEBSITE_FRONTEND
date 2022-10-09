@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 const PageNotFound = () => {
   return (
     <div id="not-found">
-    <div id="title">Simple Pure CSS3 &bull; 404 Error Page</div>
     <div class="circles">
       <p>404 <br/>
        <small>PAGE NOT FOUND</small>

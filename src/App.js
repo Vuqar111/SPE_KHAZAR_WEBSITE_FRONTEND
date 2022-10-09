@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AdminRoute from "./components/Routes/AdminRoute";
 import PrivateRoute from "./components/Routes/PrivateRoute";
 import Footer from "./components/FeatureComponents/Footer";
@@ -30,7 +30,6 @@ import UserEditScreen from "./screens/ProfilePages/UserEditScreen";
 import SubHeader from "./components/FeatureComponents/SubHeader";
 import About from "./components/About";
 import {Contact} from "./components/Contact";
-import Error from "./components/HelperComponents/Error";
 import FAQ from './components/FAQ';
 import PageNotFound from "./components/HelperComponents/PageNotFound";
 import Teams from "./components/BoxComponents/Teams.js";
@@ -42,7 +41,7 @@ function App() {
     <BrowserRouter>
         <Navbar/>
         <SubHeader />
-        <main>
+        <Switch>
 
           <Route path="/events" component={ProductsSection} exact></Route>
           <Route path="/event/:id" component={ProductScreen} exact></Route>
@@ -86,7 +85,6 @@ function App() {
           <Route path="/contact" component={Contact} exact></Route>
           <Route path="/faq" component={FAQ} exact></Route>
           <Route path="/teams" component={Teams} exact></Route>
-          <Route path="/*" component={PageNotFound} />
 
           <PrivateRoute
             path="/profile"
@@ -112,8 +110,8 @@ function App() {
             component={UserEditScreen}
           ></AdminRoute>
           <Route path="/" component={HomeScreen} exact></Route>
-          <Route path='*' element={<Error />} />
-        </main>
+          <Route path="/*" component={PageNotFound} />
+        </Switch>``
         <Footer />
     </BrowserRouter>
   );
