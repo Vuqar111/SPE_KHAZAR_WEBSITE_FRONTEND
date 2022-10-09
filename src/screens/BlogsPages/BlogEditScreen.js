@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Axios from "axios";
 import { detailsBlog, updateBlog } from "../../common/actions/blogActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
@@ -54,12 +53,6 @@ export default function BlogEditScreen(props) {
       })
     );
   };
-  const [loadingUpload, setLoadingUpload] = useState(false);
-  const [errorUpload, setErrorUpload] = useState("");
-
-  const userSignin = useSelector((state) => state.userSignin);
-  const { userInfo } = userSignin;
-
 
   return (
     <div>
