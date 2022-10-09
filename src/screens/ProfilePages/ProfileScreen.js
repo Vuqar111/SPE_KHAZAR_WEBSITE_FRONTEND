@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import styled from "styled-components";
-import { detailsUser, updateUserProfile } from "../../common/actions/userActions";
+import {
+  detailsUser,
+  updateUserProfile,
+} from "../../common/actions/userActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { universities } from "../../data";
@@ -56,15 +58,13 @@ export default function ProfileScreen() {
     }
   };
 
-
-
   return (
-    <Wrapper>
-      <div className="w-[90%] flex flex-wrap justify-between items-center m-[auto]  mainuser">
-        <div className="userformdiv">
-          <form className="userform" onSubmit={submitHandler}>
+    <React.Fragment>
+      <div className="flex flex-wrap justify-between items-center m-[auto] pt-[30px] w-[100%] lg:w-[70%] mainuser">
+        <div className="flex justify-center items-center w-[100%]">
+          <form className="w-[100%] p-[10px]" onSubmit={submitHandler}>
             <div>
-              <h1>User Profile</h1>
+              <h1 className="font-bold text-[25px]">User Profile</h1>
             </div>
             {loading ? (
               <LoadingBox></LoadingBox>
@@ -81,37 +81,50 @@ export default function ProfileScreen() {
                     Profile Updated Successfully
                   </MessageBox>
                 )}
-                <div className="editprofile">
-                  <div>
-                    <label htmlFor="name">Name</label>
+                <div className="w-[100%] flex flex-col mt-[10px]">
+                  <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px]">
+                    <label
+                      className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]"
+                      htmlFor="name"
+                    >
+                      Name
+                    </label>
                     <input
                       id="name"
                       type="text"
-                      className="w-[100%] bg-[#E8F0FE] p-[10px] "
+                      className="w-[100%] bg-[#E8F0FE] p-[10px] mt-[5px] outline-1 outline-[#0067B1] outline-solid"
                       placeholder="Enter name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                     ></input>
                   </div>
-                  <div>
-                    <label htmlFor="email">Email</label>
+                  <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
+                    <label
+                      className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]"
+                      htmlFor="email"
+                    >
+                      Email
+                    </label>
                     <input
                       id="email"
                       type="email"
-                      className="w-[100%] bg-[#E8F0FE] p-[10px] "
+                      className="w-[100%] bg-[#E8F0FE] p-[10px] mt-[5px] outline-1 outline-[#0067B1] outline-solid"
                       placeholder="Enter email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     ></input>
                   </div>
-                  <div className="mt-[10px]">
-                    <label className="mt-[15px]" htmlFor="university">
+                  <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
+                    <label
+                      className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]"
+                      htmlFor="university"
+                    >
                       University
                     </label>
                     <select
                       type="text"
                       id="university"
-                      className="w-[100%] bg-[#E8F0FE] text-[black] p-[10px] "
+                      className="w-[100%] bg-[#E8F0FE] text-[black] mt-[5px] p-[10px] outline-1 outline-[#0067B1] outline-solid"
                       placeholder="Enter University"
                       value={university}
                       required
@@ -122,14 +135,17 @@ export default function ProfileScreen() {
                       })}
                     </select>
                   </div>
-                  <div className="mt-[10px]">
-                    <label className="mt-[15px]" htmlFor="faculty">
+                  <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
+                    <label
+                      className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]"
+                      htmlFor="faculty"
+                    >
                       Faculty
                     </label>
                     <select
                       type="text"
                       id="faculty"
-                      className="w-[100%] bg-[#E8F0FE] text-[black] p-[10px] "
+                      className="w-[100%] bg-[#E8F0FE] text-[black] mt-[5px] p-[10px] outline-1 outline-[#0067B1] outline-solid"
                       placeholder="Enter Faculty"
                       required
                       value={faculty}
@@ -140,28 +156,38 @@ export default function ProfileScreen() {
                       })}
                     </select>
                   </div>
-                  <div>
-                    <label htmlFor="password">Password</label>
+                  <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
+                    <label
+                      className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]"
+                      htmlFor="password"
+                    >
+                      Password
+                    </label>
                     <input
                       id="password"
                       type="password"
-                      className="w-[100%] bg-[#E8F0FE] p-[10px] "
+                      className="w-[100%] bg-[#E8F0FE] p-[10px] mt-[5px] outline-1 outline-[#0067B1] outline-solid"
                       placeholder="Enter password"
                       onChange={(e) => setPassword(e.target.value)}
                     ></input>
                   </div>
-                  <div>
-                    <label htmlFor="confirmPassword">Confirm Password</label>
+                  <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
+                    <label
+                      className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]"
+                      htmlFor="confirmPassword"
+                    >
+                      Confirm Password
+                    </label>
                     <input
                       id="confirmPassword"
                       type="password"
-                      className="w-[100%] bg-[#E8F0FE] p-[10px] "
+                      className="w-[100%] bg-[#E8F0FE] lg:p-[10px] mt-[5px] outline-1 outline-[#0067B1] outline-solid"
                       placeholder="Enter confirm password"
                       onChange={(e) => setConfirmPassword(e.target.value)}
                     ></input>
                   </div>
-                  <div>
-                    <button className="primary p-[10px]"  type="submit">
+                  <div className="w-[100%]">
+                    <button className="primary p-[10px] w-[100%]" type="submit">
                       Update
                     </button>
                   </div>
@@ -171,109 +197,6 @@ export default function ProfileScreen() {
           </form>
         </div>
       </div>
-    </Wrapper>
+    </React.Fragment>
   );
 }
-
-const Wrapper = styled.div`
-  width: 90%;
-  margin: auto;
-  background: #f3f0f0;
-
-  .userformdiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .userform {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .userform button {
-    width: 100%;
-  }
-  .editprofile {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-  }
-  .editprofile div {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-  }
-  .editprofile div label {
-    width: 30%;
-  }
-  .userform h1 {
-    font-size: 25px;
-    font-weight: bold;
-  }
-
-  .userform div {
-    min-width: 300px;
-    margin-top: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    background: #f3f0f0;
-    .mainuser {
-      width: 100%;
-     
-    }
-  
-    .mainuser select,
-    input {
-      width: 100%;
-      padding: 5px;
-    }
-    .userformdiv {
-      width: 100%;
-      padding: 0px;
-      margin: 0px;
-    }
-    .userform div {
-      width: 100%;
-    min-width: 200px;
-    margin-top: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-   
-  }
-  .userform div label {
-    width: 10%;
-  }
-    .editprofile div label {
-      width: 100%;
-      text-align: left;  
-    }
-    .editprofile {
-      display: flex;
-      flex-direction: column;
-      width: 30%;
-      margin: auto;
-      padding: 0;
-     
-    }
-    .editprofile div {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      align-items: center;
-      text-align: left;
-    }
-  }
-`;

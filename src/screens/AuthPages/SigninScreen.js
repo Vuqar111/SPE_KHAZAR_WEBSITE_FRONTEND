@@ -49,7 +49,7 @@ export default function SigninScreen(props) {
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
             </div>
-            <div>
+            <div className="mt-[15px]">
               <label className="mt-[15px]" htmlFor="password">
                 Password
               </label>
@@ -74,10 +74,10 @@ export default function SigninScreen(props) {
             <div>
               <label />
               <div className="loginfooter">
-                New customer?{" "}
+                New User?{" "}
                 <Link
                   to={`/register?redirect=${redirect}`}
-                  className="text-[blue] font-bold"
+                  className="text-[#0067B1] font-bold"
                 >
                   Create your account
                 </Link>

@@ -11,7 +11,7 @@ export default function RegisterScreen(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [university, setUniversity] = useState("");
-  const [faculty, setFaculty] = useState("Chemistry");
+  const [faculty, setFaculty] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -27,7 +27,8 @@ export default function RegisterScreen(props) {
     e.preventDefault();
     if (password !== confirmPassword) {
       alert("Password and confirm password are not match");
-    } else {
+    } 
+    else {
       dispatch(register(name, email, university, faculty, password));
     }
   };
@@ -41,11 +42,11 @@ export default function RegisterScreen(props) {
 
   return (
     <Wrapper>
-      <div className=" w-[100%] h-[85vh] flex justify-between mainlogin">
+      <div className=" w-[100%] mt-[30px] flex justify-between mainlogin">
         <div className="w-[100%]  flex items-center justify-center input">
           <form className="form" onSubmit={submitHandler}>
             <div>
-              <h1 className="font-bold text-[60px] text-center">SIGN UP</h1>
+              <h1 className="font-bold text-[40px] text-center">Hey, Welcome to SPE Family</h1>
             </div>
             {loading && <LoadingBox></LoadingBox>}
             {error && <MessageBox variant="danger">{error}</MessageBox>}
@@ -56,7 +57,7 @@ export default function RegisterScreen(props) {
               <input
                 type="text"
                 id="name"
-                className="w-[100%] bg-[#E8F0FE] p-[10px] "
+                className="w-[100%] bg-[#E8F0FE] p-[10px] outline-1 outline-[#0067B1] outline-solid"
                 placeholder="Enter name"
                 required
                 onChange={(e) => setName(e.target.value)}
@@ -69,46 +70,20 @@ export default function RegisterScreen(props) {
               <input
                 type="email"
                 id="email"
-                className="w-[100%] bg-[#E8F0FE] p-[10px] "
+                className="w-[100%] bg-[#E8F0FE] p-[10px] outline-1 outline-[#0067B1] outline-solid"
                 placeholder="Enter email"
                 required
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
             </div>
             <div className="mt-[10px]">
-              <label className="mt-[15px]" htmlFor="email">
-                University
-              </label>
-              <input
-                type="text"
-                id="university"
-                className="w-[100%] bg-[#E8F0FE] p-[10px] "
-                placeholder="Enter uni"
-                required
-                onChange={(e) => setUniversity(e.target.value)}
-              ></input>
-            </div>
-            <div className="mt-[10px]">
-              <label className="mt-[15px]" htmlFor="faculty">
-              Faculty
-              </label>
-              <input
-                type="text"
-                id="faculty"
-                className="w-[100%] bg-[#E8F0FE] p-[10px] "
-                placeholder="Enter Faculty"
-                required
-                onChange={(e) => setFaculty(e.target.value)}
-              ></input>
-            </div>
-            {/* <div className="mt-[10px]">
               <label className="mt-[15px]" htmlFor="university">
                 University
               </label>
               <select
                 type="text"
                 id="university"
-                className="w-[100%] bg-[#E8F0FE] text-[black] p-[10px] "
+                className="w-[100%] bg-[#E8F0FE] text-[black] p-[10px] outline-1 outline-[#0067B1] outline-solid"
                 placeholder="Enter University"
                 required
                 value={university}
@@ -126,7 +101,7 @@ export default function RegisterScreen(props) {
               <select
                 type="text"
                 id="faculty"
-                className="w-[100%] bg-[#E8F0FE] text-[black] p-[10px] "
+                className="w-[100%] bg-[#E8F0FE] text-[black] p-[10px] outline-1 outline-[#0067B1] outline-solid"
                 placeholder="Enter Faculty"
                 value={faculty}
                 required
@@ -136,7 +111,7 @@ export default function RegisterScreen(props) {
                   return <option value={item}>{item}</option>;
                 })}
               </select>
-            </div> */}
+            </div>
             <div className="mt-[10px]">
               <label className="mt-[15px]" htmlFor="password">
                 Password
@@ -144,7 +119,7 @@ export default function RegisterScreen(props) {
               <input
                 type="password"
                 id="password"
-                className="w-[100%] bg-[#E8F0FE] p-[10px] "
+                className="w-[100%] bg-[#E8F0FE] p-[10px] outline-1 outline-[#0067B1] outline-solid"
                 placeholder="Enter password"
                 required
                 onChange={(e) => setPassword(e.target.value)}
@@ -157,7 +132,7 @@ export default function RegisterScreen(props) {
               <input
                 type="password"
                 id="confirmPassword"
-                className="w-[100%] bg-[#E8F0FE] p-[10px]"
+                className="w-[100%] bg-[#E8F0FE] p-[10px]  outline-1 outline-[#0067B1] outline-solid"
                 placeholder="Enter confirm password"
                 required
                 onChange={(e) => setConfirmPassword(e.target.value)}
@@ -177,7 +152,7 @@ export default function RegisterScreen(props) {
               <div className="loginfooter">
                 Already have an account?{" "}
                 <Link
-                  className="text-[blue] font-bold"
+                  className="text-[#0067B1] font-bold"
                   to={`/signin?redirect=${redirect}`}
                 >
                   Sign-In
