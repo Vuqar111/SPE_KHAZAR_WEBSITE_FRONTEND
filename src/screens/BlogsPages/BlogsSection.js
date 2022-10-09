@@ -26,7 +26,7 @@ export default function HomeScreen() {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-[15px]">
+          <div className="w-[100%] grid grid-cols-1 lg:grid-cols-3 gap-[15px]">
             {blogs.map((blog) => (
               <Blog key={blog._id} blog={blog} />
             ))}

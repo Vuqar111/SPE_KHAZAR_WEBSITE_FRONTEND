@@ -13,7 +13,7 @@ import {
   WhatsappShareButton,
   WhatsappIcon,
 } from "react-share";
-export default function ProductScreen(props) {
+export default function BlogScreen(props) {
   const dispatch = useDispatch();
   const blogId = props.match.params.id;
   const blogDetails = useSelector((state) => state.blogDetails);
