@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Axios from "axios";
-import { detailsProduct, updateProduct } from "../../common/actions/productActions";
+import {
+  detailsProduct,
+  updateProduct,
+} from "../../common/actions/productActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { PRODUCT_UPDATE_RESET } from "../../common/constants/productConstants";
@@ -13,8 +15,8 @@ export default function ProductEditScreen(props) {
   const [image, setImage] = useState("");
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
-  const [location, setLocation] = useState("")
-  const [type, setType] = useState("") 
+  const [location, setLocation] = useState("");
+  const [type, setType] = useState("");
 
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
@@ -29,7 +31,7 @@ export default function ProductEditScreen(props) {
   const dispatch = useDispatch();
   useEffect(() => {
     if (successUpdate) {
-      props.history.push("/productlist");
+      props.history.push("/eventlist");
     }
     if (!product || product._id !== productId || successUpdate) {
       dispatch({ type: PRODUCT_UPDATE_RESET });
@@ -38,15 +40,14 @@ export default function ProductEditScreen(props) {
       setName(product.name);
       setAuthor(product.author);
       setImage(product.image);
-      setLocation(product.location)
-      setType(product.type)
+      setLocation(product.location);
+      setType(product.type);
       setCategory(product.category);
       setDescription(product.description);
     }
   }, [product, dispatch, productId, successUpdate, props.history]);
   const submitHandler = (e) => {
     e.preventDefault();
-    // TODO: dispatch update product
     dispatch(
       updateProduct({
         _id: productId,
@@ -60,17 +61,14 @@ export default function ProductEditScreen(props) {
       })
     );
   };
-  const [loadingUpload, setLoadingUpload] = useState(false);
-  const [errorUpload, setErrorUpload] = useState("");
 
-  const userSignin = useSelector((state) => state.userSignin);
-  const { userInfo } = userSignin;
+
 
   return (
-    <div style={{minHeight: "60vh"}}>
+    <div style={{ minHeight: "60vh" }}>
       <form className="w-[90%] m-[auto]" onSubmit={submitHandler}>
-        <div style={{padding: "10px"}}>
-          <h1>Edit Event ID: {productId}</h1>
+        <div style={{ padding: "10px" }}>
+          <h1 className="text-center text-[24px] font-bold">Edit Event ID: {productId}</h1>
         </div>
         {loadingUpdate && <LoadingBox></LoadingBox>}
         {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
@@ -87,6 +85,7 @@ export default function ProductEditScreen(props) {
                   id="name"
                   type="text"
                   placeholder="Enter name"
+                  value={name}
                   onChange={(e) => setName(e.target.value)}
                 ></input>
               </div>
@@ -106,7 +105,7 @@ export default function ProductEditScreen(props) {
                   id="author"
                   type="text"
                   placeholder="Enter author name"
-                  value="SPE Khazar"
+                  value={author}
                   onChange={(e) => setAuthor(e.target.value)}
                 ></input>
               </div>
@@ -117,11 +116,10 @@ export default function ProductEditScreen(props) {
                   id="category"
                   type="text"
                   placeholder="Enter category"
-                  value="event"
+                  value={category}
                   onChange={(e) => setCategory(e.target.value)}
                 ></input>
               </div>
-
 
               <div>
                 <label htmlFor="category">Location</label>
@@ -136,13 +134,15 @@ export default function ProductEditScreen(props) {
 
               <div>
                 <label htmlFor="category">Type</label>
-                <input
-                  id="type"
-                  type="text"
-                  placeholder="Enter type"
+                <select
+                  placeholder="Enter Type"
                   value={type}
                   onChange={(e) => setType(e.target.value)}
-                ></input>
+                >
+                  <option value="">Choose your event type</option>
+                  <option value="offline">Offline</option>
+                  <option value="online">Online</option>
+                </select>
               </div>
               <div>
                 <label htmlFor="description">Description</label>

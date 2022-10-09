@@ -276,7 +276,7 @@ ul li {
 
 /* EDIT FORM */
 .editFormContainer {
-  width: 50%;
+  width: 60%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -294,7 +294,7 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .editFormContainer > label {
@@ -303,10 +303,12 @@ ul li {
 
 .editFormContainer div input,
 select,
+option,
 textarea {
   width: 70%;
   background-color: #fff;
   color: var(--black-color);
+  outline: 1px solid #0067b1;
 }
 
 .editFormContainer div button {

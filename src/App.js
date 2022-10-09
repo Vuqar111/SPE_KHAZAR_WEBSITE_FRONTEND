@@ -89,7 +89,7 @@ function App() {
             component={ProfileScreen}
           ></PrivateRoute>
           <AdminRoute
-            path="/productlist"
+            path="/eventlist"
             component={ProductListScreen}
           ></AdminRoute>
           <AdminRoute path="/bloglist" component={BlogListScreen}></AdminRoute>

@@ -36,7 +36,7 @@ export default function ProductListScreen(props) {
   useEffect(() => {
     if (successCreate) {
       dispatch({ type: PRODUCT_CREATE_RESET });
-      props.history.push(`/product/${createdProduct._id}/edit`);
+      props.history.push(`/event/${createdProduct._id}/edit`);
     }
     if (successDelete) {
       dispatch({ type: PRODUCT_DELETE_RESET });
@@ -53,13 +53,16 @@ export default function ProductListScreen(props) {
     dispatch(createProduct());
   };
 
-
-  console.log(products)
+  console.log(products);
   return (
-    <div style={{minHeight: "60vh"}}>
+    <div style={{ minHeight: "60vh" }}>
       <div className="row">
         <h1>Event Edit/Create</h1>
-        <button type="button" className="bg-[#0067B1] m-[10px] text-white p-[10px]" onClick={createHandler}>
+        <button
+          type="button"
+          className="bg-[#0067B1] m-[10px] text-white p-[10px]"
+          onClick={createHandler}
+        >
           Create Event
         </button>
       </div>
@@ -99,7 +102,7 @@ export default function ProductListScreen(props) {
                       type="button"
                       className="small edit p-[1rem]"
                       onClick={() =>
-                        props.history.push(`/product/${product._id}/edit`)
+                        props.history.push(`/event/${product._id}/edit`)
                       }
                     >
                       Edit
@@ -116,8 +119,6 @@ export default function ProductListScreen(props) {
               ))}
             </tbody>
           </table>
-
-        
         </>
       )}
     </div>

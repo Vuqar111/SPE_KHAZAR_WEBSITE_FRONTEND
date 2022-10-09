@@ -14,8 +14,6 @@ export default function HomeScreen() {
     dispatch(listBooks());
   }, [dispatch]);
 
-  console.log(books);
-
   return (
     <React.Fragment>
       {loading ? (
@@ -42,7 +40,7 @@ export default function HomeScreen() {
                 onChange={(event) => {
                   setSearchTerm(event.target.value);
                 }}
-                className="w-[100%]  px-[10px]  py-[5px] text-[16px] border-none outline-none"
+                className="w-[100%]  px-[10px] text-[black] py-[15px] text-[16px] outline-none"
                 placeholder="Search books by name"
               />
             </div>

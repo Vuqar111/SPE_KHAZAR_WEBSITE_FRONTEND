@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import './drop-down.css'
+import '../../assets/css/drop-down.css'
 
 export class Item extends Component {
   render() {

@@ -1,19 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { detailsProduct, createReview } from "../../common/actions/productActions";
+import { detailsProduct } from "../../common/actions/productActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
-import { PRODUCT_REVIEW_CREATE_RESET } from "../../common/constants/productConstants";
 import { MdDateRange } from "react-icons/md";
 import {
   FacebookShareButton,
   FacebookIcon,
   TwitterShareButton,
   TwitterIcon,
-  TelegramShareButton,
-  TelegramIcon,
   WhatsappShareButton,
   WhatsappIcon,
 } from "react-share";
@@ -24,8 +20,6 @@ export default function ProductScreen(props) {
   const productId = props.match.params.id;
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
-  const userSignin = useSelector((state) => state.userSignin);
-  const { userInfo } = userSignin;
 
   useEffect(() => {
     dispatch(detailsProduct(productId));
@@ -46,7 +40,7 @@ export default function ProductScreen(props) {
                   className="blogimage"
                   src={product.image}
                   alt={product.name}
-                ></img>
+                />
               </div>
               <div className="eventtitle">
                 <div className="flex items-center justify-between w-[auto] date">
@@ -58,7 +52,9 @@ export default function ProductScreen(props) {
                   <div className="eventDetailDate">
                     <MdDateRange />
                   </div>
-                  <div className="eventDetailDate">{new Date(product.createdAt).toDateString()}</div>
+                  <div className="eventDetailDate">
+                    {new Date(product.createdAt).toDateString()}
+                  </div>
                 </div>
                 <div className="flex justify-between  items-center  sharecontainer    text-[white]">
                   <div className="ml-[5px] cursor-pointer  pointer">
@@ -78,14 +74,12 @@ export default function ProductScreen(props) {
                   </div>
                 </div>
               </div>
-              <hr/>
-              <p className="eventdesc">
-                {product.description}
-              </p>
+              <hr />
+              <p className="eventdesc">{product.description}</p>
               <hr />
               <div className="w-[100%] p-[15px] m-[auto]  flex justify-between datesection ">
                 <div className="applybtn">
-                  <button>Apply Event</button>
+                  <button>Register for event</button>
                 </div>
               </div>
             </div>
@@ -105,11 +99,11 @@ const Wrapper = styled.div`
     padding: 0px;
     margin: 0px;
   }
-  .eventdesc { 
+  .eventdesc {
     font-size: 18px;
     width: 100%;
     margin: 20px 5px;
-   }
+  }
   .productprice {
     font-weight: bold;
     font-size: 40px;
@@ -130,14 +124,14 @@ const Wrapper = styled.div`
     font-weight: bold;
   }
   .applybtn {
-    border: 2px solid #0067B1;
-    color: #0067B1;
+    border: 2px solid #0067b1;
+    color: #0067b1;
     padding: 5px 8px;
     font-weight: bold;
     transition: all 0.3s ease;
   }
   .applybtn:hover {
-    background-color: #0067B1;
+    background-color: #0067b1;
     color: white;
     transition: all 0.3s ease;
   }
@@ -148,7 +142,7 @@ const Wrapper = styled.div`
     .productname {
       font-size: 15px;
     }
-    .eventtitle h2{
+    .eventtitle h2 {
       font-size: 18px;
     }
   }

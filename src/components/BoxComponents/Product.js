@@ -6,11 +6,11 @@ export default function Product(props) {
   return (
     <Wrapper>
       <div key={product.id} className="card">
-        <Link to={`/product/${product._id}`}>
+        <Link to={`/event/${product._id}`}>
           <img src={product.image} alt={product.name} />
         </Link>
         <div className="card-body">
-          <Link to={`/product/${product._id}`}>
+          <Link to={`/event/${product._id}`}>
             <h2 className="font-bold text-[25px]">{product.name}</h2>
           </Link>
           <div className="card-date">{new Date(product.createdAt).toDateString()}</div>
