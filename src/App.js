@@ -16,7 +16,7 @@ import BlogScreen from "./screens/BlogsPages/BlogScreen";
 import BlogEditScreen from "./screens/BlogsPages/BlogEditScreen";
 import BlogListScreen from "./screens/BlogsPages/BlogListScreen";
 import BooksSection from "./screens/BookPages/BooksSection";
-import BookScreen from "./screens/BookPages/BookScreen";
+import BookDetailsScreen from "./screens/BookPages/BookDetailsScreen";
 import BookEditScreen from "./screens/BookPages/BookEditScreen";
 import BookListScreen from "./screens/BookPages/BookListScreen";
 import RecordsSection from "./screens/RecordPages/RecordsSection";
@@ -67,7 +67,7 @@ function App() {
           {/* Books */}
 
           <Route path="/books" component={BooksSection} exact></Route>
-          <Route path="/book/:id" component={BookScreen} exact></Route>
+          <Route path="/book/:id" component={BookDetailsScreen} exact></Route>
           <Route path="/book/:id/edit" component={BookEditScreen} exact></Route>
 
           {/* Gallery */}

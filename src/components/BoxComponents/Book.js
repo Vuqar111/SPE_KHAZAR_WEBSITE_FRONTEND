@@ -1,55 +1,33 @@
 import React from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
 export default function Book(props) {
   const { book } = props;
   return (
-    <Wrapper>
-      <div key={book.id} className="bookcard">
-        <Link to={`/book/${book._id}`}>
-          <img src={book.image} alt={book.title} />
-        </Link>
+    <React.Fragment>
+      <div
+        key={book.id}
+        className="w-[180px] lg:w-[320px]  mt-[10px] p-[10px] cardModel cursor-pointer"
+      >
+        <div className="w-[160px] lg:w-[300px] h-[250px] lg:h-[350px]">
+          <img
+            src={book.image}
+            alt={book.title}
+            className="w-[100%] h-[100%]"
+          />
+        </div>
+
         <div>
-          <h2 className="font-bold text-[20px]">{book.title}</h2>
-          <div className="text-[15px] p-[10px] bg-[#256F98] text-[white] w-[100%]">
-            Download Now {book.title}
+          <h2 className="font-bold text-[16px] lg:text-[20px] pt-[5px]">
+            {book.title}
+          </h2>
+          <p className="text-[12px] lg:text-[16px] font-italic opacity-[0.7]">
+            Adventure
+          </p>
+          <div className="text-[15px] mt-[5px] p-[10px] bg-[#256F98] text-[white] w-[100%] downloadbtn">
+            <Link to={`/book/${book._id}`}>See Details</Link>
           </div>
         </div>
       </div>
-    </Wrapper>
+    </React.Fragment>
   );
 }
-
-const Wrapper = styled.div`
-.bookcard {
-  width: 370px;
-  height: 100%;
-  max-heigth: 280px;
-  background: 
-  margin-top: 20px;
-  padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-img {
-  width: 370px;
-  height: 200px;
-}
-
-
-@media (max-width: 768px) {
-  .card {
-    min-width: 300px;
-    width: 100%;
-  }
-
-  img {
-    width: 100%;
-    height: 200px;
-  }
-  h2 {
-    font-size: 20px;
-  }
-}
- 
-
-`;
