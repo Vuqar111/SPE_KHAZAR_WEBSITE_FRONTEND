@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
-import Product from "../components/Product";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
-import Subscribe from "../components/Subscribe";
-import Blog from "../components/Blog";
+import Product from "../components/BoxComponents/Product";
+import LoadingBox from "../components/HelperComponents/LoadingBox";
+import MessageBox from "../components/HelperComponents/MessageBox";
+import Blog from "../components/BoxComponents/Blog";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../common/actions/productActions";
 import { listBlogs } from "../common/actions/blogActions";
@@ -60,7 +59,6 @@ export default function HomeScreen() {
           </div>
         )}
       </div>
-      <Subscribe />
     </div>
   );
 }

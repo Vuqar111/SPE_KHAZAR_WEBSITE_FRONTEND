@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import LoadingBox from "../../components/LoadingBox";
-import MessageBox from "../../components/MessageBox";
+import LoadingBox from "../../components/HelperComponents/LoadingBox";
+import MessageBox from "../../components/HelperComponents/MessageBox";
 import { useDispatch, useSelector } from "react-redux";
 import { listRecords } from "../../common/actions/recordActions";
-import Record from "../../components/Record";
+import Record from "../../components/BoxComponents/Record";
 export default function RecordsSection() {
   const dispatch = useDispatch();
   const recordList = useSelector((state) => state.recordList);

@@ -14,7 +14,7 @@ const SubHeader = () => {
           <div className="mainsubheader font-bold">
             <div className="w-[100%] flex justify-between subheader">
               <div className="subLink">
-                <Link to="/products">Events</Link>
+                <Link to="/events">Events</Link>
               </div>
               <div div className="subLink">
                 <Link to="/blogs">Blogs</Link>

@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import AdminRoute from "./components/AdminRoute";
-import PrivateRoute from "./components/PrivateRoute";
-import Footer from "./components/Footer";
+import AdminRoute from "./components/Routes/AdminRoute";
+import PrivateRoute from "./components/Routes/PrivateRoute";
+import Footer from "./components/FeatureComponents/Footer";
 import HomeScreen from "./screens/HomeScreen";
 import ProductListScreen from "./screens/ProductPages/ProductListScreen";
 import ProductScreen from "./screens/ProductPages/ProductScreen";
@@ -19,7 +19,7 @@ import BooksSection from "./screens/BookPages/BooksSection";
 import BookScreen from "./screens/BookPages/BookScreen";
 import BookEditScreen from "./screens/BookPages/BookEditScreen";
 import BookListScreen from "./screens/BookPages/BookListScreen";
-import RecordsSection from "./screens/ProductPages/RecordsSection";
+import RecordsSection from "./screens/RecordPages/RecordsSection";
 import RecordEditScreen from "./screens/RecordPages/RecordEditScreen";
 import RecordListScreen from "./screens/RecordPages/RecordListScreen";
 import GalleriesSection from "./screens/GalleryPages/GalleriesSection";
@@ -27,12 +27,12 @@ import GalleryEditScreen from "./screens/GalleryPages/GalleryEditScreen";
 import GalleryListScreen from "./screens/GalleryPages/GalleryListScreen";
 import UserListScreen from "./screens/ProfilePages/UserListScreen";
 import UserEditScreen from "./screens/ProfilePages/UserEditScreen";
-import SubHeader from "./components/SubHeader";
+import SubHeader from "./components/FeatureComponents/SubHeader";
 import About from "./components/About";
-import Error from "./components/Error";
+import Error from "./components/HelperComponents/Error";
 import FAQ from './components/FAQ';
-import Teams from './components/Teams';
-import { Navbar } from "./components/Navbar";
+import Teams from './components/BoxComponents/Teams';
+import { Navbar } from "./components/FeatureComponents/Navbar";
 
 
 function App() {
@@ -42,10 +42,10 @@ function App() {
         <SubHeader />
         <main>
 
-          <Route path="/products" component={ProductsSection} exact></Route>
-          <Route path="/product/:id" component={ProductScreen} exact></Route>
+          <Route path="/events" component={ProductsSection} exact></Route>
+          <Route path="/event/:id" component={ProductScreen} exact></Route>
           <Route
-            path="/product/:id/edit"
+            path="/event/:id/edit"
             component={ProductEditScreen}
             exact
           ></Route>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import LoadingBox from "../../components/LoadingBox";
-import MessageBox from "../../components/MessageBox";
+import LoadingBox from "../../components/HelperComponents/LoadingBox";
+import MessageBox from "../../components/HelperComponents/MessageBox";
 import { useDispatch, useSelector } from "react-redux";
 import { listGalleries } from "../../common/actions/galleryActions";
 import styled from "styled-components";

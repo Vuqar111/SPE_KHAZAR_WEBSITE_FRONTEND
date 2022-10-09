@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Axios from "axios";
 import { detailsRecord, updateRecord } from "../../common/actions/recordActions";
-import LoadingBox from "../../components/LoadingBox";
-import MessageBox from "../../components/MessageBox";
+import LoadingBox from "../../components/HelperComponents/LoadingBox";
+import MessageBox from "../../components/HelperComponents/MessageBox";
 import { RECORD_UPDATE_RESET } from "../../common/constants/recordConstants";
 
 export default function RecordEditScreen(props) {

@@ -6,8 +6,8 @@ import {
   deleteGallery,
   listGalleries,
 } from "../../common/actions/galleryActions";
-import LoadingBox from "../../components/LoadingBox";
-import MessageBox from "../../components/MessageBox";
+import LoadingBox from "../../components/HelperComponents/LoadingBox";
+import MessageBox from "../../components/HelperComponents/MessageBox";
 import {
   GALLERY_CREATE_RESET,
   GALLERY_DELETE_RESET,

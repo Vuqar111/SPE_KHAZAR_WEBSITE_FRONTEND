@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Axios from "axios";
 import { detailsProduct, updateProduct } from "../../common/actions/productActions";
-import LoadingBox from "../../components/LoadingBox";
-import MessageBox from "../../components/MessageBox";
+import LoadingBox from "../../components/HelperComponents/LoadingBox";
+import MessageBox from "../../components/HelperComponents/MessageBox";
 import { PRODUCT_UPDATE_RESET } from "../../common/constants/productConstants";
 
 export default function ProductEditScreen(props) {

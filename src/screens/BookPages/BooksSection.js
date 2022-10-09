@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import LoadingBox from "../../components/LoadingBox";
-import MessageBox from "../../components/MessageBox";
+import LoadingBox from "../../components/HelperComponents/LoadingBox";
+import MessageBox from "../../components/HelperComponents/MessageBox";
 import { useDispatch, useSelector } from "react-redux";
 import { listBooks } from "../../common/actions/bookActions";
 import aboutimg from "../../assets/images/library.jpg";

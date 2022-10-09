@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="font-bold text-[16px] mt-[10px]">Resources</div>
           <div className="footerul">
             <li>
-              <Link to="/products">Events</Link>
+              <Link to="/events">Events</Link>
             </li>
             <li>
               <Link to="/blogs">Blogs</Link>
@@ -18,7 +18,7 @@ const Footer = () => {
               <Link to="/records">Records</Link>
             </li>
             <li>
-              <Link to="/records">Library</Link>
+              <Link to="/library">Library</Link>
             </li>
             <li>
               <Link to="/galleries">Gallery</Link>

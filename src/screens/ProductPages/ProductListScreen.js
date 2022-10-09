@@ -6,8 +6,8 @@ import {
   deleteProduct,
   listProducts,
 } from "../../common/actions/productActions";
-import LoadingBox from "../../components/LoadingBox";
-import MessageBox from "../../components/MessageBox";
+import LoadingBox from "../../components/HelperComponents/LoadingBox";
+import MessageBox from "../../components/HelperComponents/MessageBox";
 import {
   PRODUCT_CREATE_RESET,
   PRODUCT_DELETE_RESET,

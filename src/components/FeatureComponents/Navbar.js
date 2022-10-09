@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Dropdown, { Item } from './dropdown/Dropdown';
+import Dropdown, { Item } from '../DropDown/Dropdown.js';
 import { Button } from 'antd'
 import { BsVectorPen, BsCalendar2Week, BsFillCollectionPlayFill, BsJournalBookmark } from "react-icons/bs";
 import { FiUsers, FiSettings } from "react-icons/fi";
@@ -8,14 +8,12 @@ import { GrGallery } from "react-icons/gr";
 import { FaSignOutAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { signout } from "../common/actions/userActions";
+import { signout } from "../../common/actions/userActions";
 import { AiFillCaretDown } from "react-icons/ai";
 import { GrClose } from "react-icons/gr";
-import logo from "../assets/images/spekhazarlogo.png";
+import logo from "../../assets/images/spekhazarlogo.png";
 
 export const Navbar = () => {
-    const cart = useSelector((state) => state.cart);
-    const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
     const userSignin = useSelector((state) => state.userSignin);
     const { userInfo } = userSignin;
     const dispatch = useDispatch();
@@ -32,7 +30,7 @@ export const Navbar = () => {
             <div className="navbar">
                 <nav>
                     <div className="firstnav">
-                        <img src={logo} className="siteLogo"/>
+                        <img src={logo} className="siteLogo" alt=""/>
                         <Link to="/">
                             <div className="siteName">SPE Khazar</div>
                         </Link>
@@ -52,7 +50,7 @@ export const Navbar = () => {
                                     <Link to="/about">About </Link>
                                 </li>
                                 <li>
-                                    <Link to="/">Contact</Link>
+                                    <Link to="/contact">Contact</Link>
                                 </li>
                             </ul>
                         </div>

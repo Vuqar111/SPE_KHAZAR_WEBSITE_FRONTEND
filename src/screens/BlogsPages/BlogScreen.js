@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { detailsBlog } from "../../common/actions/blogActions";
 import { BsFillShareFill } from "react-icons/bs";
-import LoadingBox from "../../components/LoadingBox";
-import MessageBox from "../../components/MessageBox";
+import LoadingBox from "../../components/HelperComponents/LoadingBox";
+import MessageBox from "../../components/HelperComponents/MessageBox";
 import { BLOG_REVIEW_CREATE_RESET } from "../../common/constants/blogConstants";
 import { MdDateRange } from "react-icons/md";
 import {
