@@ -172,10 +172,6 @@ ul li {
   font-size: 18px;
 }
 
-.links-container {
-  display: flex;
-}
-
 .show-container {
   display: flex;
 }
@@ -381,10 +377,6 @@ textarea {
   ::-webkit-scrollbar {
     display: none;
     overflow: hidden;
-  }
-
-  .links-container {
-    display: none;
   }
 
   .table {

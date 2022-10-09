@@ -39,8 +39,8 @@ export const Navbar = () => {
                     </div>
                     <div
                         className={`${showlink
-                            ? "links-container flex w-[auto] show-container"
-                            : "links-container flex w-[auto]"
+                            ? "lg:block hidden flex w-[auto] show-container"
+                            : "lg:block hidden flex w-[auto]"
                             }`}
                     >
                         <div className="flex w-[100%]">
