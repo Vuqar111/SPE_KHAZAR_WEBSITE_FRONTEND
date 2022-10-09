@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 const SubHeader = () => {
   return (
-    <Wrapper>
+    <React.Fragment>
   <div>
       <div className="subnavbar">
         <nav>
-          <div className="mainsubheader font-bold">
+          <div className="w-[100%] font-bold">
             <div className="w-[100%] flex justify-between subheader">
               <div className="subLink">
                 <Link to="/events">Events</Link>
@@ -32,21 +31,9 @@ const SubHeader = () => {
         </nav>
       </div>
     </div>
-    </Wrapper>
+    </React.Fragment>
   );
 };
 
 export default SubHeader;
 
-
-const Wrapper = styled.div`
-
-
-@media (max-width: 768px) {
-  .mainsubheader {
-    width: 100%;
-    font-size: 10px;
-  }
-}
-
-`
