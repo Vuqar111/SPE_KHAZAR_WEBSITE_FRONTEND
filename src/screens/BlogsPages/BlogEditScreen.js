@@ -63,9 +63,9 @@ export default function BlogEditScreen(props) {
 
   return (
     <div>
-      <form className="form" onSubmit={submitHandler}>
+      <form className="w-[90%] m-[auto]" onSubmit={submitHandler}>
         <div>
-          <h1>Create / Edit Blog {blogId}</h1>
+          <h1 className="text-center">Create / Edit Blog {blogId}</h1>
         </div>
         {loadingUpdate && <LoadingBox></LoadingBox>}
         {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}

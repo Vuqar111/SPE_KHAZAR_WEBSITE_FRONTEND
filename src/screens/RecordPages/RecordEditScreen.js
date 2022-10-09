@@ -63,7 +63,7 @@ export default function RecordEditScreen(props) {
 
   return (
     <div>
-      <form className="form" onSubmit={submitHandler}>
+      <form className="w-[90%] m-[auto]" onSubmit={submitHandler}>
         <div>
           <h1>Create / Edit Record {recordId}</h1>
         </div>

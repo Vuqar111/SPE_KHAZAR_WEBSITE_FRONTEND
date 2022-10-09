@@ -5,15 +5,15 @@ const About = () => {
     <React.Fragment>
       <div>
         <div className="relative">
-          <img className="w-[100%] h-[100%] max-h-[60vh] object-cover" src={aboutimg} alt="" />
+          <img className="w-[100%] h-[100%] max-h-[70vh] object-cover" src={aboutimg} alt="" />
           <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[85px] text-[white] flex items-center justify-center w-[100%] h-[100%] font-bold">
             <h1>ABOUT US</h1>
           </div>
         </div>
         <div className="w-[80%] m-[auto] p-[20px] text-[#242424] font-bold mt-[50px] rounded-[20px] sm:[bg-[res]]">
           <p>
-          <spam className="specialText">SPE</spam> has student chapters around the world that provide an operating
-            framework for society activities at a university level. <spam className="specialText">SPE Khazar
+          <spam className="text-[#0067B1] font-bold">SPE</spam> has student chapters around the world that provide an operating
+            framework for society activities at a university level. <spam className="text-[#0067B1] font-bold">SPE Khazar
             University Student Chapter</spam>  was established on 1st of January in 2
             2005. The mission of the chapter is to provide students with SPE
             membership which gives them access to the technical and
@@ -25,7 +25,7 @@ const About = () => {
             <br />
             <br />
             <br />
-            <spam className="specialText">Our achievements:</spam>
+            <spam className="text-[#0067B1] font-bold">Our achievements:</spam>
             <br />
             <br />
             SPE has Student chapter awards and recognition recognize those that

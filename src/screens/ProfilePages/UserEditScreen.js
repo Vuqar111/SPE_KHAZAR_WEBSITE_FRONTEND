@@ -55,7 +55,7 @@ export default function UserEditScreen(props) {
 
   return (
     <div>
-      <form className="form" onSubmit={submitHandler}>
+      <form className="w-[90%] m-[auto]" onSubmit={submitHandler}>
         <div>
           <h1>Edit User {name}</h1>
           {loadingUpdate && <LoadingBox></LoadingBox>}

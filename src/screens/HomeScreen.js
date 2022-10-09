@@ -9,7 +9,6 @@ import { listBlogs } from "../common/actions/blogActions";
 // import Testimontials from "../components/Testimontials";
 import Slider from "../components/HomeSlider/Slider";
 
-
 export default function HomeScreen() {
   const dispatch = useDispatch();
 
@@ -18,7 +17,6 @@ export default function HomeScreen() {
 
   const blogList = useSelector((state) => state.blogList);
   const { loadingblog, errorblog, blogs } = blogList;
-
 
   useEffect(() => {
     dispatch(listProducts());
@@ -30,28 +28,32 @@ export default function HomeScreen() {
       <div className="h-[auto] flex">
         <Slider />
       </div>
-      <div className="w-[90%] m-[auto] mt-[25px] text-[20px] hometitle">Our Latest Events</div>
-      <div className="w-[100%] m-[auto] flex justify-between mt-[20px] w-[100%] h-[auto]">
+      <div className="w-[90%] m-[auto] mt-[25px] text-[20px] lg:text-[24px] text-center font-bold text-[#0067b1]">
+        Our Latest Events
+      </div>
+      <div className="w-[90%] m-[auto] flex justify-between mt-[20px] w-[100%] h-[auto]">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <div className="recordcontainer">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-[15px]">
             {products?.slice(0, 3)?.map((product) => (
               <Product key={product._id} product={product} />
             ))}
           </div>
         )}
       </div>
-      <div className="w-[90%] m-[auto] mt-[25px] text-[20px] hometitle">Our Latest Blogs</div>
-      <div className="w-[100%] m-[auto] flex justify-between mt-[20px] w-[100%] h-[auto] p-[0px]">
+      <div className="w-[90%] m-[auto] mt-[25px] text-[20px] lg:text-[24px] text-center font-bold text-[#0067b1]">
+        Our Latest Blogs
+      </div>
+      <div className="w-[90%] m-[auto] flex justify-between mt-[20px] w-[100%] h-[auto] p-[0px]">
         {loadingblog ? (
           <LoadingBox></LoadingBox>
         ) : errorblog ? (
           <MessageBox variant="danger">{errorblog}</MessageBox>
         ) : (
-          <div className="recordcontainer">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-[15px]">
             {blogs?.slice(0, 3)?.map((blog) => (
               <Blog key={blog._id} blog={blog} />
             ))}

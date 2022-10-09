@@ -32,7 +32,8 @@ export const Navbar = () => {
                     <div className="flex items-center justify-between text-[25px]">
                         <img src={logo} className="w-[50px] h-[40px] m-[5px]" alt=""/>
                         <Link to="/">
-                            <div className="siteName">SPE Khazar</div>
+                        
+                            <div className="text-[20px] font-[800] text-[#0067b1]">SPE Khazar</div>
                         </Link>
                     </div>
                     <div

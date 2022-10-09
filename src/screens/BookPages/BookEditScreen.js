@@ -65,9 +65,9 @@ export default function BookEditScreen(props) {
 
   return (
     <div>
-      <form className="form" onSubmit={submitHandler}>
+      <form className="w-[90%] m-[auto]" onSubmit={submitHandler}>
         <div>
-          <h1>Create / Edit Book {bookId}</h1>
+          <h1 className="text-center">Create / Edit Book {bookId}</h1>
           <p className="text-center">Description calisin 190 sozden artiq olmasin</p>
         </div>
         {loadingUpdate && <LoadingBox></LoadingBox>}

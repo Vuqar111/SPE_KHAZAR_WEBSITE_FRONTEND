@@ -424,16 +424,6 @@ button.edit {
   background-color: #28a745;
 }
 
-/* Form */
-
-.form {
-  width: 90%;
-  margin: auto;
-}
-
-.form h1 {
-  text-align: center;
-}
 
 /* Gallery */
 .gallery {
@@ -554,20 +544,6 @@ textarea {
   font-size: 30px;
   color: white;
   cursor: pointer;
-}
-
-
-.siteName {
-  font-size: 20px;
-  font-weight: 800;
-  color: #0067b1;
-}
-
-.hometitle {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: #0067b1;
 }
 
 @media (max-width: 768px) {

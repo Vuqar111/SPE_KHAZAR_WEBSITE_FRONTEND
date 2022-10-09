@@ -68,7 +68,7 @@ export default function ProductEditScreen(props) {
 
   return (
     <div style={{minHeight: "60vh"}}>
-      <form className="form" onSubmit={submitHandler}>
+      <form className="w-[90%] m-[auto]" onSubmit={submitHandler}>
         <div style={{padding: "10px"}}>
           <h1>Edit Event ID: {productId}</h1>
         </div>
