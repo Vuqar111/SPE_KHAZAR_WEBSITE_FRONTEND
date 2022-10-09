@@ -14,7 +14,6 @@ export default function HomeScreen() {
     dispatch(listBlogs());
   }, [dispatch]);
 
-  console.log(blogs);
 
   return (
     <div className="eventsContainer">

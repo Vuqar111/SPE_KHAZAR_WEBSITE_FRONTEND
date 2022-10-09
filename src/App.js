@@ -31,8 +31,8 @@ import SubHeader from "./components/FeatureComponents/SubHeader";
 import About from "./components/About";
 import Error from "./components/HelperComponents/Error";
 import FAQ from './components/FAQ';
-import Teams from './components/BoxComponents/Teams';
-import { Navbar } from "./components/FeatureComponents/Navbar";
+import Teams from "./components/BoxComponents/Teams.js";
+import {Navbar}  from "./components/FeatureComponents/Navbar";
 
 
 function App() {
