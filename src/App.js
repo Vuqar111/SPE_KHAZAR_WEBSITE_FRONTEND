@@ -32,6 +32,7 @@ import About from "./components/About";
 import {Contact} from "./components/Contact";
 import Error from "./components/HelperComponents/Error";
 import FAQ from './components/FAQ';
+import PageNotFound from "./components/HelperComponents/PageNotFound";
 import Teams from "./components/BoxComponents/Teams.js";
 import {Navbar}  from "./components/FeatureComponents/Navbar";
 
@@ -85,6 +86,7 @@ function App() {
           <Route path="/contact" component={Contact} exact></Route>
           <Route path="/faq" component={FAQ} exact></Route>
           <Route path="/teams" component={Teams} exact></Route>
+          <Route path="/*" component={PageNotFound} />
 
           <PrivateRoute
             path="/profile"
