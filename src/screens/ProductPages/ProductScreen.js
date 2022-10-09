@@ -37,7 +37,7 @@ export default function ProductScreen(props) {
             <div>
               <div className="mt-[20px] eventimgdiv">
                 <img
-                  className="blogimage"
+                  className="blogimage object-cover"
                   src={product.image}
                   alt={product.name}
                 />
@@ -45,6 +45,7 @@ export default function ProductScreen(props) {
               <div className="eventtitle">
                 <div className="flex items-center justify-between w-[auto] date">
                   <h2>{product.name}</h2>
+                  <p className="font-bold text-[#0067B1]">{product.author}</p>
                 </div>
               </div>
               <div className="w-[100%] pl-[15px] pr-[15px] m-[auto]  flex justify-between datesection ">
@@ -78,9 +79,12 @@ export default function ProductScreen(props) {
               <p className="eventdesc">{product.description}</p>
               <hr />
               <div className="w-[100%] p-[15px] m-[auto]  flex justify-between datesection ">
+                <a href="">
                 <div className="applybtn">
                   <button>Register for event</button>
                 </div>
+                </a>
+                
               </div>
             </div>
           </div>

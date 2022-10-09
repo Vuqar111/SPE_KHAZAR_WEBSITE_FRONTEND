@@ -73,7 +73,7 @@ export const Contact = () => {
             </div>
 
             <div className="mt-[15px]">
-              <button className="w-[300px] bg-[#000] text-[white]" type="submit" >Just Send</button>
+              <button className="w-[300px] py-[15px] bg-[#000] text-[white]" type="submit" >Just Send</button>
             </div>
           </form>
           {send && (<p>"Thank you for your message!"</p>)}
