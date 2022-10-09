@@ -40,7 +40,7 @@ export const Navbar = () => {
                     <div
 
                         className={`${showlink
-                            ? "hidden lg:flex w-[100%] absolute left-[0] top-[0] pt-[0px] block mt-[8vh] bg-[#f8f8f8] z-[1000] pb-[10px]"
+                            ? "lg:block w-[100%] absolute left-[0] top-[0] pt-[0px]  mt-[8vh] bg-[#f8f8f8] z-[1000] pb-[10px]"
                             : "hidden lg:flex w-[auto]"
                             }`}
                     >
@@ -67,7 +67,7 @@ export const Navbar = () => {
                                 </div>
                             ) : (
                                 <Link
-                                    className="bg-[#0067B1] text-[white] rounded-[5px] pl-[8px]  pr-[8px] pt-[5px] pb-[5px] "
+                                    className="bg-[#0067B1] text-[white] rounded-[5px] pl-[8px]  pr-[8px] pt-[5px] pb-[5px] ml-[10px] lg:ml-[0px]"
                                     to="/signin"
                                 >
                                     Log In
