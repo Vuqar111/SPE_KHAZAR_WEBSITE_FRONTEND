@@ -29,6 +29,7 @@ import UserListScreen from "./screens/ProfilePages/UserListScreen";
 import UserEditScreen from "./screens/ProfilePages/UserEditScreen";
 import SubHeader from "./components/FeatureComponents/SubHeader";
 import About from "./components/About";
+import {Contact} from "./components/Contact";
 import Error from "./components/HelperComponents/Error";
 import FAQ from './components/FAQ';
 import Teams from "./components/BoxComponents/Teams.js";
@@ -81,6 +82,7 @@ function App() {
           <Route path="/signin" component={SigninScreen}></Route>
           <Route path="/register" component={RegisterScreen}></Route>
           <Route path="/about" component={About} exact></Route>
+          <Route path="/contact" component={Contact} exact></Route>
           <Route path="/faq" component={FAQ} exact></Route>
           <Route path="/teams" component={Teams} exact></Route>
 
