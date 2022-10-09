@@ -17,8 +17,8 @@ export default function HomeScreen() {
 
   return (
     <div>
-      <div className="flex justify-center items-center bg-[#f5f5f5] text-center text-5xl font-bold p-[10px]  titleof">
-        <p className="text-center eventHeader">Events</p>
+      <div className="flex justify-center items-center bg-[#f5f5f5] text-center lg:text-5xl text-[18px] font-bold p-[10px]">
+        <p className="text-center text-[#0067b1]">Events</p>
       </div>
       <div className="w-[90%] m-[auto] flex justify-center mt-[10px] w-[100%] h-[auto] p-[0px]">
         {loading ? (

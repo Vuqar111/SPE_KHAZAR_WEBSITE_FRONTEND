@@ -15,7 +15,7 @@ export default function RecordsSection() {
 
   return (
     <div>
-      <div className="flex justify-center items-center bg-[#C4C4C4] text-center text-5xl font-bold p-[10px] titleof">
+      <div className="flex justify-center items-center bg-[#C4C4C4] text-center lg:text-5xl text-[18px] font-bold p-[10px]">
         <p className="text-center">Records</p>
       </div>
       <div className="w-[90%] h-[100%] m-[auto] flex justify-center mt-[20px] ">

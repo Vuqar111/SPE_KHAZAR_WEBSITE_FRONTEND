@@ -3,7 +3,6 @@ import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { useDispatch, useSelector } from "react-redux";
 import { listGalleries } from "../../common/actions/galleryActions";
-import styled from "styled-components";
 
 export default function GalleriesSection() {
   const dispatch = useDispatch();
@@ -21,8 +20,10 @@ export default function GalleriesSection() {
   };
   return (
     <>
-      <h1 className="font-bold text-[30px] w-[100%] p-[10px] text-center mb-[10px] bg-[#f5f5f5] eventHeader">Gallery</h1>
-      <Wrapper>
+      <h1 className="font-bold text-[30px] w-[100%] p-[10px] text-center mb-[10px] bg-[#f5f5f5] text-[#0067b1]">
+        Gallery
+      </h1>
+      <div className="w-[100%] min-h-[60vh] m-[auto] flex items-center flex-col">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
@@ -40,27 +41,19 @@ export default function GalleriesSection() {
             <div className="gallery">
               {galleries.map((item) => {
                 return (
-                    <img
-                      src={item.image}
-                      alt="img"
-                      className="pics"
-                      onClick={() => getImg(item.image)}
-                    />
+                  <img
+                    src={item.image}
+                    alt="img"
+                    className="pics"
+                    onClick={() => getImg(item.image)}
+                  />
                 );
               })}
             </div>
           </div>
         )}
-      </Wrapper>
+      </div>
     </>
   );
 }
 
-const Wrapper = styled.div`
-  width: 100%;
-  min-height: 60vh;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  `;

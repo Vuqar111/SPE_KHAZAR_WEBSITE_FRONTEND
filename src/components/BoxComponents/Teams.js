@@ -4,7 +4,7 @@ import { teams } from "../../data";
 const Teams = () => {
   return (
     <Wrapper>
-      <h1 className="font-bold text-[30px] w-[100%] p-[10px] text-center mb-[10px] bg-[#f5f5f5] eventHeader">Teams</h1>
+      <h1 className="font-bold text-[30px] w-[100%] p-[10px] text-center mb-[10px] bg-[#f5f5f5] text-[#0067b1]">Teams</h1>
       <div className="teambox">
         {teams.map((team) => {
           return (

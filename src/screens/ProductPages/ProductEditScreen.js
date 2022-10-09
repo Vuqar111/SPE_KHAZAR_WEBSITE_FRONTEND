@@ -80,7 +80,7 @@ export default function ProductEditScreen(props) {
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <>
-            <div className="editmainform">
+            <div className="editFormContainer">
               <div>
                 <label htmlFor="name">Name</label>
                 <input

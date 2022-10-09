@@ -28,6 +28,7 @@
   }
 }
 
+/* Globals */
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +36,6 @@
   text-decoration: none;
   list-style: none;
   font-family: "Poppins", sans-serif;
-  /* border: 1px solid red; */
 }
 
 a {
@@ -82,8 +82,6 @@ button {
   --text-color: #141b5c;
 }
 
-/* ERRORS */
-
 /* Alert */
 .alert {
   margin-top: 20px;
@@ -119,6 +117,41 @@ button {
   color: #08ad76;
 }
 
+.row {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button.primary {
+  background-color: #0067b1;
+  color: white;
+  margin-top: 10px;
+}
+
+button.small {
+  font-size: 15px;
+  background-color: var(--sky-color);
+  color: white;
+  margin: 5px;
+  padding: 8px 10px;
+}
+
+button.delete {
+  background-color: #dc3545;
+}
+
+button.edit {
+  background-color: #28a745;
+}
+
+ul li {
+  padding: 10px;
+}
+
 /* Dropdown */
 .icondropdown {
   display: flex;
@@ -139,41 +172,12 @@ button {
   font-size: 18px;
 }
 
-nav {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .links-container {
   display: flex;
 }
 
 .show-container {
   display: flex;
-}
-
-ul li {
-  padding: 10px;
-}
-
-.icon {
-  cursor: pointer;
-}
-
-.icons {
-  display: flex;
-}
-
-.icons div {
-  padding: 8px;
-  font-size: 20px;
-}
-
-.hamburger {
-  display: none;
 }
 
 /* Card */
@@ -186,91 +190,6 @@ ul li {
 .cardModel:hover {
   transform: scale(0.96);
   transition: all 0.5s;
-}
-
-/* Slider */
-.container-slider {
-  width: 100%;
-  height: 580px;
-  position: absolute;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.slide {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
-  transition: opacity ease-in-out 0.4s;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.slide .content {
-  position: absolute;
-  top: 25%;
-  left: 20%;
-  transform: translateX(-20%);
-  z-index: 2000;
-}
-
-.slide .content h1 {
-  font-size: 60px;
-  color: var(--text-color);
-}
-
-.slide .content p {
-  font-size: 20px;
-  color: white;
-}
-
-.active-anim {
-  opacity: 1;
-}
-
-.container-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.dot {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 3px solid #f1f1f1;
-  margin: 0 5px;
-  background: #f1f1f1;
-}
-
-.dot.active {
-  background: rgb(32, 32, 32);
-}
-
-.eventDetailDate {
-  font-size: 1em;
-  color: #0067b1;
-  padding: 0 2px;
-  font-style: italic;
-}
-
-
-/* FAQ */
-.wrapper {
-  justify-content: center;
-  align-items: center;
-}
-
-.accordion {
-  width: 60%;
-  margin: auto;
 }
 
 .item {
@@ -300,73 +219,6 @@ ul li {
   height: auto;
   max-height: 9999px;
   transition: 3s ease-in-out;
-}
-
-.eventHeader {
-  color: #0067b1;
-}
-
-
-/* Slider */
-
-.slideshow {
-  margin: 0 auto;
-  overflow: hidden;
-  max-width: 500px;
-}
-
-.slideshowSlider {
-  white-space: nowrap;
-  transition: ease 1000ms;
-}
-
-.slide {
-  display: inline-block;
-
-  height: 400px;
-  width: 100%;
-  border-radius: 40px;
-}
-
-/* Buttons */
-
-.slideshowDots {
-  text-align: center;
-}
-
-.slideshowDot {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-
-  cursor: pointer;
-  margin: 15px 7px 0px;
-
-  background-color: #c4c4c4;
-}
-
-.slideshowDot.active {
-  background-color: #6a0dad;
-}
-
-/* LISTOFADMINPRODUCTS */
-
-.row {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Table */
-.allList {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 
 .table {
@@ -402,29 +254,6 @@ ul li {
   padding: 0 0.5rem;
 }
 
-button.primary {
-  background-color: #0067b1;
-  color: white;
-  margin-top: 10px;
-}
-
-button.small {
-  font-size: 15px;
-  background-color: var(--sky-color);
-  color: white;
-  margin: 5px;
-  padding: 8px 10px;
-}
-
-button.delete {
-  background-color: #dc3545;
-}
-
-button.edit {
-  background-color: #28a745;
-}
-
-
 /* Gallery */
 .gallery {
   width: 90%;
@@ -446,7 +275,7 @@ button.edit {
 }
 
 /* EDIT FORM */
-.editmainform {
+.editFormContainer {
   width: 50%;
   margin: auto;
   display: flex;
@@ -460,7 +289,7 @@ button.edit {
   border: #0067b1 0.1em solid;
 }
 
-.editmainform div {
+.editFormContainer div {
   width: 100%;
   display: flex;
   align-items: center;
@@ -468,11 +297,11 @@ button.edit {
   margin-top: 10px;
 }
 
-.editmainform > label {
+.editFormContainer > label {
   color: #0067b1 !important;
 }
 
-.editmainform div input,
+.editFormContainer div input,
 select,
 textarea {
   width: 70%;
@@ -480,7 +309,7 @@ textarea {
   color: var(--black-color);
 }
 
-.editmainform div button {
+.editFormContainer div button {
   width: 100%;
   color: white;
   background-color: #0067b1;
@@ -499,7 +328,7 @@ textarea {
   top: 0;
   left: 0;
   transition: opacity 0.4s ease, visibility 0.4s ease,
-  transform 0.5s ease-in-out;
+    transform 0.5s ease-in-out;
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
@@ -552,21 +381,8 @@ textarea {
     overflow: hidden;
   }
 
-  nav {
-    width: 100%;
-    padding: 25px;
-  }
-
   .links-container {
     display: none;
-  }
-
-  /* Table */
-  .allList {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
   }
 
   .table {
@@ -631,16 +447,6 @@ textarea {
     margin: 10px 0;
   }
 
-  .icon {
-    font-size: 25px;
-    color: black;
-  }
-
-  .hamburger {
-    display: block;
-    margin-top: 5px;
-  }
-
   .show-container {
     width: 100%;
     position: absolute;
@@ -657,17 +463,12 @@ textarea {
     background-clip: padding-box;
   }
 
-
-
-
-
-
-  .editmainform {
+  .editFormContainer {
     width: 100%;
     text-align: left;
   }
 
-  .editmainform div {
+  .editFormContainer div {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -676,7 +477,7 @@ textarea {
     margin-top: 10px;
   }
 
-  .editmainform div input,
+  .editFormContainer div input,
   textarea {
     width: 100%;
   }
@@ -694,10 +495,5 @@ textarea {
     -webkit-column-width: 100%;
     -moz-column-width: 100%;
     column-width: 100%;
-  }
-
-  /* IndexOf */
-  .titleof {
-    font-size: 18px;
   }
 }

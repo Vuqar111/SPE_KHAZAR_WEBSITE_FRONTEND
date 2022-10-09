@@ -33,7 +33,7 @@ const FAQ = () => {
   ];
   return (
     <React.Fragment>
-      <div className="wrapper">
+      <div className="flex justify-center items-center">
         <div className="mt-[20px] text-center font-bold text-[24px] lg:text-[40px]">
           Frequently Asked Questions
         </div>

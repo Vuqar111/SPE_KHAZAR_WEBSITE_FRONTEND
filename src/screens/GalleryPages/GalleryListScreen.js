@@ -73,7 +73,7 @@ export default function GalleryListScreen(props) {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <div className="allList">
+        <div className="w-[100%] flex items-center justify-center">
           <table className="table">
             <thead>
               <tr className="tableHeader">

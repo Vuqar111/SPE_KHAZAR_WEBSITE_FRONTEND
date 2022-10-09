@@ -75,7 +75,7 @@ export default function RecordEditScreen(props) {
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <>
-            <div className="editmainform">
+            <div className="editFormContainer">
               <div>
                 <label htmlFor="title">Title</label>
                 <input

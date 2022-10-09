@@ -66,7 +66,7 @@ export default function GalleryEditScreen(props) {
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <>
-              <div className="editmainform">
+              <div className="editFormContainer">
 
 
             <div>

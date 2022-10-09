@@ -28,7 +28,8 @@ export const Navbar = () => {
     return (
         <div>
             <div className="w-[100%] flex fixed h-[8vh] bg-[#f8f8f8] z-[10000] top-[0] border-1">
-                <nav>
+
+                <nav className="w-[100%] p-[25px] lg:p-[0px] lg:w-[90%] mx-[auto] flex justify-between items-center">
                     <div className="flex items-center justify-between text-[25px]">
                         <img src={logo} className="w-[50px] h-[40px] m-[5px]" alt=""/>
                         <Link to="/">
@@ -86,7 +87,7 @@ export const Navbar = () => {
                         </div>
                     </div>
                     <div
-                        className="icon hamburger"
+                        className="icon block mt-[5px] lg:hidden"
                         onClick={() => setshowlink(!showlink)}
                     >
                         {!showlink ? <GiHamburgerMenu /> : <GrClose />}

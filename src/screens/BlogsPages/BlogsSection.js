@@ -17,8 +17,8 @@ export default function HomeScreen() {
 
   return (
     <div className="wrapper">
-      <div className="flex justify-center items-center bg-[#f5f5f5] text-center text-5xl font-bold p-[10px] titleof">
-        <p className="text-center eventHeader">Blogs</p>
+      <div className="flex justify-center items-center bg-[#f5f5f5] text-center lg:text-5xl text-[18px] font-bold p-[10px] ">
+        <p className="text-center text-[#0067b1]">Blogs</p>
       </div>
       <div className="w-[90%] m-[auto] flex justify-between mt-[20px] w-[100%] h-[auto] p-[0px]">
         {loading ? (
