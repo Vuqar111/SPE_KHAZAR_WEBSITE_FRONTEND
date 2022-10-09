@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Dropdown, { Item } from '../DropDown/Dropdown.js';
+import Dropdown, { Item } from '../dropdown/Dropdown';
 import { Button } from 'antd'
 import { BsVectorPen, BsCalendar2Week, BsFillCollectionPlayFill, BsJournalBookmark } from "react-icons/bs";
 import { FiUsers, FiSettings } from "react-icons/fi";

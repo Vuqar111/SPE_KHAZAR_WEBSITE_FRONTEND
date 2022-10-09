@@ -1,22 +1,24 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
-  const form = useRef();
 
-  const sendEmail = (e) => {
+  const formRef = useRef();
+  const [send, setSend] = useState(false);
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        form.current,
-        "YOUR_PUBLIC_KEY"
+        "service_zfip0ot",
+        "template_e0bd491",
+        formRef.current,
+        "LUduTUFjm5GUlWz5E"
       )
       .then(
         (result) => {
           console.log(result.text);
+          setSend(true);
         },
         (error) => {
           console.log(error.text);
@@ -34,7 +36,7 @@ export const Contact = () => {
           </h2>
         </div>
         <div className="mt-[20px]">
-          <form ref={form} onSubmit={sendEmail}>
+          <form ref={formRef} onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-[15px]">
               <div className="flex flex-col">
                 <label>Your name</label>
@@ -42,7 +44,7 @@ export const Contact = () => {
                   className="border-[0.5] border-solid border-[#0067B1] mt-[5px] py-[10px] px-[10px]"
                   type="text"
                   placeholder="Your name"
-                  name="user_name"
+                  name="user_name" required
                 />
               </div>
               <div className="flex flex-col">
@@ -62,19 +64,20 @@ export const Contact = () => {
                 className="border-[0.5] border-solid border-[#0067B1] mt-[5px] py-[10px] px-[10px]"
                 type="text"
                 placeholder="What are you interested?"
-                name="user_topic"
+                name="user_subject"
               />
             </div>
             <div className="flex flex-col mt-[15px] w-[100%]">
               <label>Message</label>
-              <textarea placeholder="Your message" className="w-[100%] border-1 border-solid border-[#0067B1] mt-[5px] py-[10px] px-[10px]" name="message" />
+              <textarea placeholder="Your message" className="w-[100%] border-1 border-solid border-[#0067B1] mt-[5px] py-[10px] px-[10px]" name="user_message" />
             </div>
 
             <div className="mt-[15px]">
-              <button className="w-[300px] bg-[#000] text-[white]" type="submit" value="Send">Just Send</button>
+              <button className="w-[300px] bg-[#000] text-[white]" type="submit" >Just Send</button>
             </div>
           </form>
-        </div>{" "}
+          {send && (<p>"Thank you for your message!"</p>)}
+        </div>
       </div>
     </React.Fragment>
   );
