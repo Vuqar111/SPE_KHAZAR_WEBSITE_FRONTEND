@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { signin } from "../../common/actions/userActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
-import styled from "styled-components";
 export default function SigninScreen(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,12 +26,12 @@ export default function SigninScreen(props) {
     }
   }, [props.history, redirect, userInfo]);
   return (
-    <Wrapper>
-      <div className="w-[100%] h-[85vh] flex justify-between mainlogin">
-        <div className="w-[100%]   input flex items-center justify-center">
-          <form className="form" onSubmit={submitHandler}>
+    <React.Fragment>
+      <div className="w-[100%] mt-[50px] flex justify-between ">
+        <div className="w-[100%]  flex items-center justify-center">
+          <form className="lg:w-[40%] w-[90%]" onSubmit={submitHandler}>
             <div>
-              <h1 className="font-bold text-[60px] text-center">Sign In</h1>
+              <h1 className="font-bold text-[35px] pb-[10px] lg:text-[60px] text-center">Sign In</h1>
             </div>
             {loading && <LoadingBox></LoadingBox>}
             {error && <MessageBox variant="danger">{error}</MessageBox>}
@@ -86,44 +85,6 @@ export default function SigninScreen(props) {
           </form>
         </div>
       </div>
-    </Wrapper>
+    </React.Fragment>
   );
 }
-
-const Wrapper = styled.div`
-  .form {
-    width: 40%;
-  }
- 
- input {
-   border:1px solid black;
-   outline: none;
- }
-   
-  @media (max-width: 768px) {
-    .form {
-      width: 90%;
-      margin: auto;
-    }
-    .mainlogin {
-      height: auto;
-      flex-direction: column;
-    }
-    .imgcontent {
-      display: none;
-    }
-    .input {
-      width: 100%;
-      margin-top: 60px;
-    }
-    .input h1 {
-      font-size: 25px;
-    }
-    .input input {
-      width: 100%;
-    }
-    .input button {
-      width: 100%;
-    }
-  }
-`;

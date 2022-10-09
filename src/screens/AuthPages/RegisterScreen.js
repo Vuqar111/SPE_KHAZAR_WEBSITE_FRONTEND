@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { register } from "../../common/actions/userActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
-import styled from "styled-components";
 import { universities } from "../../data";
 import { faculties } from "../../data";
 export default function RegisterScreen(props) {
@@ -41,12 +40,12 @@ export default function RegisterScreen(props) {
 
 
   return (
-    <Wrapper>
-      <div className=" w-[100%] mt-[30px] flex justify-between mainlogin">
-        <div className="w-[100%]  flex items-center justify-center input">
-          <form className="form" onSubmit={submitHandler}>
+    <React.Fragment>
+      <div className=" w-[100%] mt-[30px] flex justify-between flex-col">
+        <div className="w-[100%]  flex items-center justify-center mt-[60px] lg:mt-[0px]">
+          <form className="w-[90%] m-[auto] lg:w-[40%]" onSubmit={submitHandler}>
             <div>
-              <h1 className="font-bold text-[40px] text-center">Hey, Welcome to SPE Family</h1>
+              <h1 className="font-bold text-[25px] lg:text-[40px]">Hey, Welcome to SPE Family</h1>
             </div>
             {loading && <LoadingBox></LoadingBox>}
             {error && <MessageBox variant="danger">{error}</MessageBox>}
@@ -162,41 +161,6 @@ export default function RegisterScreen(props) {
           </form>
         </div>
       </div>
-    </Wrapper>
+    </React.Fragment>
   );
 }
-
-const Wrapper = styled.div`
-  margin-bottom: 40px;
-
-  .form {
-    width: 40%;
-  }
-
-  @media (max-width: 768px) {
-    .form {
-      width: 90%;
-      margin: auto;
-    }
-    .mainlogin {
-      height: auto;
-      flex-direction: column;
-    }
-    .imgcontent {
-      display: none;
-    }
-    .input {
-      width: 100%;
-      margin-top: 60px;
-    }
-    .input h1 {
-      font-size: 25px;
-    }
-    .input input {
-      width: 100%;
-    }
-    .input button {
-      width: 100%;
-    }
-  }
-`;
