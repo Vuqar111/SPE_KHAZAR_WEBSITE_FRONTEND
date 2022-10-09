@@ -1,19 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { BsFillPlayFill } from "react-icons/bs";
-
-
-
 const RecordItem = ({ record }) => {
   return (
     <Container>
       <Image src={record.image}></Image>
-      <InfoContainer>{record.title} </InfoContainer>
-      <PlayContainer>
-      
-          PLay
-      
-      </PlayContainer>
+      <InfoContainer>{record.title} - {record.author}</InfoContainer>
+      <a href={record.url}>
+      <PlayContainer>PLay</PlayContainer>
+      </a>
     </Container>
   );
 };
@@ -32,7 +26,6 @@ const Container = styled.div`
   @media (max-width: 768px) {
     margin-top: 45px;
   }
-
 `;
 const Image = styled.img`
   height: 100%;
@@ -53,7 +46,7 @@ const PlayContainer = styled.div`
   border-radius: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
-  :hover{
+  :hover {
     background: #0492c4;
   }
 `;

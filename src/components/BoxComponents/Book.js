@@ -4,6 +4,7 @@ export default function Book(props) {
   const { book } = props;
   return (
     <React.Fragment>
+       <Link to={`/book/${book._id}`}>
       <div
         key={book.id}
         className="w-[180px] lg:w-[320px]  mt-[10px] p-[10px] cardModel cursor-pointer"
@@ -28,6 +29,7 @@ export default function Book(props) {
           </div>
         </div>
       </div>
+      </Link>
     </React.Fragment>
   );
 }
