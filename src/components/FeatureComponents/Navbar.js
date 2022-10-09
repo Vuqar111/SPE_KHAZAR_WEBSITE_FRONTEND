@@ -27,29 +27,29 @@ export const Navbar = () => {
     const [showlink, setshowlink] = useState(false);
     return (
         <div>
-            <div className="navbar">
+            <div className="w-[100%] flex fixed h-[8vh] bg-[#f8f8f8] z-[10000] top-[0] border-1">
                 <nav>
-                    <div className="firstnav">
-                        <img src={logo} className="siteLogo" alt=""/>
+                    <div className="flex items-center justify-between text-[25px]">
+                        <img src={logo} className="w-[50px] h-[40px] m-[5px]" alt=""/>
                         <Link to="/">
                             <div className="siteName">SPE Khazar</div>
                         </Link>
                     </div>
                     <div
                         className={`${showlink
-                            ? "links-container navmenu show-container"
-                            : "links-container navmenu"
+                            ? "links-container flex w-[auto] show-container"
+                            : "links-container flex w-[auto]"
                             }`}
                     >
-                        <div className="submenu">
-                            <ul>
-                                <li>
+                        <div className="flex w-[100%]">
+                            <ul className="w-[100%] py-[0px] ml-[20px] lg:ml-[0px] h-[auto] lg:h-[100%] flex flex-col lg:flex-row justify-between items-center">
+                                <li className="w-[100%]">
                                     <Link to="/">Home</Link>
                                 </li>
-                                <li>
+                                <li className="w-[100%]">
                                     <Link to="/about">About </Link>
                                 </li>
-                                <li>
+                                <li className="w-[100%]">
                                     <Link to="/contact">Contact</Link>
                                 </li>
                             </ul>
