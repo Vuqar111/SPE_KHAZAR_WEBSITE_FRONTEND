@@ -442,16 +442,6 @@ textarea {
   }
 
   .show-container {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding-top: 0px;
-    display: block;
-    margin-top: 8vh;
-    background-color: #f8f8f8;
-    z-index: 1000;
-    padding-bottom: 10px;
     animation-name: fadeIn;
     animation-duration: 0.4s;
     background-clip: padding-box;
