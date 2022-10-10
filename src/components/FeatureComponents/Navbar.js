@@ -78,7 +78,7 @@ export const Navbar = () => {
           <div
             className={`${
               showlink
-                ? "lg:block w-[100%] absolute left-[0] top-[0] pt-[0px]  mt-[8vh] bg-[#f8f8f8] z-[1000] pb-[10px]"
+                ? "lg:block w-[100%] absolute left-[0] top-[0] pt-[0px]  mt-[8vh] bg-[#f8f8f8] z-[1000] pb-[10px] cursor-pointer"
                 : "hidden lg:flex w-[auto]"
             }`}
           >
@@ -152,7 +152,7 @@ export const Navbar = () => {
             </div>
           </div>
           <div
-            className="icon block mt-[5px] lg:hidden"
+            className="icon block mt-[5px] lg:hidden cursor-pointer"
             onClick={() => setshowlink(!showlink)}
           >
             {!showlink ? <GiHamburgerMenu /> : <GrClose />}

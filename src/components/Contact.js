@@ -36,6 +36,7 @@ export const Contact = () => {
           </h2>
         </div>
         <div className="mt-[20px]">
+        {send && (<p className="text-[20px] lg:text-[24px] text-[#0067B1] font-bold">Got it! Thank you for your message!</p>)}
           <form ref={formRef} onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-[15px]">
               <div className="flex flex-col">
@@ -76,7 +77,6 @@ export const Contact = () => {
               <button className="w-[300px] py-[15px] bg-[#000] text-[white]" type="submit" >Just Send</button>
             </div>
           </form>
-          {send && (<p>"Thank you for your message!"</p>)}
         </div>
       </div>
     </React.Fragment>
