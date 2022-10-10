@@ -12,7 +12,7 @@ function Slider(props) {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
-    }, 5000);
+    }, 15000);
     return () => clearInterval(interval);
   }, [activeIndex]);
 
@@ -27,11 +27,6 @@ function Slider(props) {
           setActiveIndex(activeIndex === len ? 0 : activeIndex + 1)
         }
       />
-      {/* <Dots
-        activeIndex={activeIndex}
-        sliderImage={sliderImage}
-        onclick={(activeIndex) => setActiveIndex(activeIndex)}
-      /> */}
     </div>
   );
 }

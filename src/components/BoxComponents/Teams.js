@@ -4,7 +4,9 @@ import { teams } from "../../data";
 const Teams = () => {
   return (
     <Wrapper>
-      <h1 className="font-bold text-[30px] w-[100%] p-[10px] text-center mb-[10px] bg-[#f5f5f5] text-[#0067b1]">Teams</h1>
+      <h1 className="font-bold text-[30px] w-[100%] p-[10px] text-center mb-[10px] bg-[#f5f5f5] text-[#0067b1]">
+        Teams
+      </h1>
       <div className="teambox">
         {teams.map((team) => {
           return (
@@ -41,7 +43,7 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
   }
   .team {
-    height: 300px;
+    height: 320px;
     width: 250px;
     position: relative;
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -49,7 +51,6 @@ const Wrapper = styled.div`
     overflow: hidden;
     box-shadow: 0 0 20px 8px #d0d0d0;
     /* border: 3px solid #0067B1; */
-  ;
   }
   .teamCard {
     margin: 20px;
@@ -59,7 +60,7 @@ const Wrapper = styled.div`
     width: 100%;
     position: absolute;
     transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background: #0067B1;
+    background: #0067b1;
     background: linear-gradient(to top, #0a3394, #4286f4);
     object-fit: cover;
   }
@@ -75,13 +76,13 @@ const Wrapper = styled.div`
     bottom: 0;
     border-radius: 1em 1em 0 0;
     transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-    padding: 10px 15px;
+    padding: 5px 15px;
   }
 
   .text-title {
     font-size: 1.2em;
     font-weight: 700;
-    color: #0067B1;
+    color: #0067b1;
   }
 
   .text-body {
@@ -92,5 +93,4 @@ const Wrapper = styled.div`
   .team:hover .team-description {
     transform: translateY(120%);
   }
-
 `;

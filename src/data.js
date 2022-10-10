@@ -15,6 +15,7 @@ import meryem from './assets/images/teamImages/MeryemMovlanova.jpg';
 import jahid from './assets/images/teamImages/JahidFaramazanov.jpg';
 import diana from './assets/images/teamImages/diana.jpeg';
 import mahammad from './assets/images/teamImages/mehemmed.jpg';
+import zeyneb from './assets/images/teamImages/zeyneb.jpeg';
 export const slider = [
   {
     image:
@@ -41,52 +42,52 @@ export const slider = [
 export const teams = [
   {
     id: 1,
-    name: "Diana Ismayilova",
-    status: "Senior Advisor",
-    img: diana,
-  },
-  {
-    id: 2,
-    name: "Aqsin Qarashli",
-    status: "Former Vice-President",
-    img: aqsin
-  },
-  {
-    id: 3,
-    name: "Resad Musayev",
-    status: "Former Chief Excutifer",
-    img: resad
-  },
-  {
-    id: 4,
     name: "Mahammad Sadigov",
     status: "President",
     img: mahammad,
   },
   {
-    id: 5,
+    id: 2,
     name: "Vugar Hasanov",
     status: "Vice-President",
     img: vugar,
   },
   {
+    id: 3,
+    name: "Diana Ismayilova",
+    status: "Senior Advisor",
+    img: diana,
+  },
+  {
+    id: 4,
+    name: "Anar Kamilov",
+    status: "Communications Officer",
+    img: anar,
+  },
+  {
+    id: 5,
+    name: "Naiba Garayeva",
+    status: "Program Manager",
+    img: naibe,
+  },
+  {
     id: 6,
-    name: "Seymur Mirzeliyev",
-    status: "Hussuz",
-    img: seymur,
+    name: "Shams Gadirli",
+    status: "Designer",
+    img: sems,
   },
   {
     id: 7,
-    name: "Naibe Garayeva",
-    status: "Project Manager",
+    name: "Sema Bayramova",
+    status: "Photographer",
     img: naibe,
   },
 
   {
     id: 8,
-    name: "Sems Aliyeva",
-    status: "Senior Designer",
-    img: sems,
+    name: "Jahid Faramazanov",
+    status: "Coordionator",
+    img: jahid,
   },
   {
     id: 9,
@@ -102,37 +103,37 @@ export const teams = [
   },
   {
     id: 14,
-    name: "Jahid Faramazanov",
-    status: "Treasurer",
-    img: jahid,
-  },
-  {
-    id: 15,
-    name: "Nuray Qedirli",
-    status: "Designer",
-    img: nuray,
-  },
-  {
-    id: 16,
     name: "Elmar Suleymanov",
     status: "Officer",
     img: elmar,
   },
   {
-    id: 17,
-    name: "Elgun Suleymanov",
-    status: "Officer",
+    id: 15,
+    name: "Aynur Huseynzade",
+    status: "SMM",
+    img: aynur,
+  },
+  {
+    id: 16,
+    name: "Elgun Asgarov",
+    status: "Program Manager",
     img: elgun,
   },
   {
-    id: 18,
-    name: "Meryem Movlanova",
-    status: "Officer",
+    id: 17,
+    name: "Maryam Movlanova",
+    status: "Social Activity Chairperson",
     img: meryem,
   },
   {
+    id: 18,
+    name: "Nuray Quliyeva",
+    status: "Designer",
+    img: nuray,
+  },
+  {
     id: 19,
-    name: "Aynur Huseynzade",
+    name: "Ruslan Abdurrahamov",
     status: "Officer",
     img: aynur,
   },
@@ -144,9 +145,21 @@ export const teams = [
   },
   {
     id: 21,
-    name: "Anar Kamilovic",
-    status: "Simpatya",
-    img: anar,
+    name: "Aqsin Qarashli",
+    status: "Former Vice President",
+    img: aqsin,
+  },
+  {
+    id: 22,
+    name: "Rashad Musayev",
+    status: "Social Activities Chairperson",
+    img: resad,
+  },
+  {
+    id: 23,
+    name: "Zeyneb Ferzizade",
+    status: "Social Activity Chairperson",
+    img: zeyneb,
   },
 
 
