@@ -1,7 +1,6 @@
-import aqsin from './assets/images/teamImages/aqsin.jpg';
+import aqsin from './assets/images/teamImages/aqsin.png';
 import resad from './assets/images/teamImages/resad.jpg';
 import naibe from './assets/images/teamImages/naibe.jpeg';
-import seymur from './assets/images/teamImages/seymur.jpg';
 import vugar from './assets/images/teamImages/vugar.jpg';
 import sems from './assets/images/teamImages/semsimage.jpg';
 import anar from './assets/images/teamImages/anar.jpeg';
@@ -16,6 +15,7 @@ import jahid from './assets/images/teamImages/JahidFaramazanov.jpg';
 import diana from './assets/images/teamImages/diana.jpeg';
 import mahammad from './assets/images/teamImages/mehemmed.jpg';
 import zeyneb from './assets/images/teamImages/zeyneb.jpeg';
+import ruslan from './assets/images/teamImages/ruslan.jpg';
 export const slider = [
   {
     image:
@@ -135,28 +135,22 @@ export const teams = [
     id: 19,
     name: "Ruslan Abdurrahamov",
     status: "Officer",
-    img: aynur,
+    img: ruslan,
   },
   {
     id: 20,
-    name: "Nuray Aliyeva",
-    status: "Officer",
-    img: nuray,
-  },
-  {
-    id: 21,
     name: "Aqsin Qarashli",
     status: "Former Vice President",
     img: aqsin,
   },
   {
-    id: 22,
+    id: 21,
     name: "Rashad Musayev",
     status: "Program Chairperson",
     img: resad,
   },
   {
-    id: 23,
+    id: 22,
     name: "Zeyneb Ferzizade",
     status: "Social Activity Chairperson",
     img: zeyneb,
