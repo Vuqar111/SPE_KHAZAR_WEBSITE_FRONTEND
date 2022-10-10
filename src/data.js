@@ -1,23 +1,5 @@
-import aqsin from './assets/images/teamImages/aqsin.png';
-import resad from './assets/images/teamImages/resad.jpg';
-import naibe from './assets/images/teamImages/naibe.jpeg';
-import vugar from './assets/images/teamImages/vugar.jpg';
-import sems from './assets/images/teamImages/semsimage.jpg';
-import anar from './assets/images/teamImages/anar.jpeg';
-import nuray from './assets/images/teamImages/nuray.jpg';
-import aynur from './assets/images/teamImages/aynur.jpg';
-import amina from './assets/images/teamImages/AminaAliyeva.jpg';
-import asim from './assets/images/teamImages/AsimMakhmudov.jpg';
-import elgun from './assets/images/teamImages/ElgunAsgarov.jpeg';
-import elmar from './assets/images/teamImages/ElmarSuleymanov.jpg';
-import meryem from './assets/images/teamImages/MeryemMovlanova.jpg';
-import jahid from './assets/images/teamImages/JahidFaramazanov.jpg';
-import diana from './assets/images/teamImages/diana.jpeg';
-import mahammad from './assets/images/teamImages/mehemmed.jpg';
-import zeyneb from './assets/images/teamImages/zeyneb.jpeg';
-import ruslan from './assets/images/teamImages/ruslan.jpg';
-export const slider = [
-  {
+
+export const slider = [  {
     image:
       'https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
   },
@@ -44,116 +26,116 @@ export const teams = [
     id: 1,
     name: "Mahammad Sadigov",
     status: "President",
-    img: mahammad,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439428/SPE-Teams/mehemmed_f90yqp.jpg",
   },
   {
     id: 2,
     name: "Vugar Hasanov",
     status: "Vice-President",
-    img: vugar,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439542/SPE-Teams/vugar_zp0jof.jpg",
   },
   {
     id: 3,
     name: "Diana Ismayilova",
     status: "Senior Advisor",
-    img: diana,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439367/SPE-Teams/diana_elthxo.jpg",
   },
   {
     id: 4,
     name: "Anar Kamilov",
     status: "Communications Officer",
-    img: anar,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439430/SPE-Teams/anar_dnyvmw.jpg",
   },
   {
     id: 5,
     name: "Naiba Garayeva",
     status: "Program Manager",
-    img: naibe,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439557/SPE-Teams/naibe_bln5m5.jpg",
   },
   {
     id: 6,
     name: "Shams Gadirli",
     status: "Designer",
-    img: sems,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439593/SPE-Teams/semsimage_bsxbgl.jpg",
   },
   {
     id: 7,
     name: "Sema Bayramova",
     status: "Photographer",
-    img: naibe,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439593/SPE-Teams/semsimage_bsxbgl.jpg",
   },
 
   {
     id: 8,
     name: "Jahid Faramazanov",
     status: "Coordionator",
-    img: jahid,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439402/SPE-Teams/JahidFaramazanov_qqfzay.jpg",
   },
   {
     id: 9,
     name: "Asim Mahmudov",
     status: "Webmaster",
-    img: asim,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439530/SPE-Teams/AsimMakhmudov_q6t1jm.jpg",
   },
   {
     id: 13,
     name: "Amina Aliyeva",
     status: "Designer",
-    img: amina,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439433/SPE-Teams/AminaAliyeva_r2n2bt.jpg",
   },
   {
     id: 14,
     name: "Elmar Suleymanov",
     status: "Officer",
-    img: elmar,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665440039/SPE-Teams/ElmarSuleymanov_1_qgy5vw.jpg",
   },
   {
     id: 15,
     name: "Aynur Huseynzade",
     status: "SMM",
-    img: aynur,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439501/SPE-Teams/aynur_qkzgi5.jpg",
   },
   {
     id: 16,
     name: "Elgun Asgarov",
     status: "Program Manager",
-    img: elgun,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439387/SPE-Teams/ElgunAsgarov_oaj5z1.jpg",
   },
   {
     id: 17,
     name: "Maryam Movlanova",
     status: "Social Activity Chairperson",
-    img: meryem,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439440/SPE-Teams/MeryemMovlanova_guyxqf.jpg",
   },
   {
     id: 18,
     name: "Nuray Quliyeva",
     status: "Designer",
-    img: nuray,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439461/SPE-Teams/nuray_edp4lq.jpg",
   },
   {
     id: 19,
     name: "Ruslan Abdurrahamov",
     status: "Officer",
-    img: ruslan,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439543/SPE-Teams/ruslan_sipzfr.jpg",
   },
   {
     id: 20,
     name: "Aqsin Qarashli",
     status: "Former Vice President",
-    img: aqsin,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439536/SPE-Teams/aqsin_yoirsk.png",
   },
   {
     id: 21,
     name: "Rashad Musayev",
     status: "Program Chairperson",
-    img: resad,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439661/SPE-Teams/resad_uvtmwh.jpg",
   },
   {
     id: 22,
     name: "Zeyneb Ferzizade",
     status: "Social Activity Chairperson",
-    img: zeyneb,
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439543/SPE-Teams/zeyneb_sceehe.jpg",
   },
 
 

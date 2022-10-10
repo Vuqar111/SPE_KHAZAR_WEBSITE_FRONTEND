@@ -67,7 +67,7 @@ img {
 }
 @media (max-width: 768px) {
   .card {
-    width: 90vw;
+    width: 100%;
     margin: 10px 5px;
   }
 }
