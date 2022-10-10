@@ -15,8 +15,8 @@ export default function RecordsSection() {
 
   return (
     <div>
-      <div className="flex justify-center items-center bg-[#C4C4C4] text-center lg:text-5xl text-[18px] font-bold p-[10px]">
-        <p className="text-center text-[#0067b1]">Records</p>
+      <div className="flex justify-center items-center bg-[#f5f5f5] text-center lg:text-4xl text-[24px] font-bold p-[10px] ">
+        <p className="text-center text-[#0067b1] ">Records</p>
       </div>
       <div className="w-[90%] h-[100%] m-[auto] flex justify-center mt-[40px] ">
         {loading ? (
@@ -24,7 +24,7 @@ export default function RecordsSection() {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-[15px]">
+          <div className="w-[100%] grid grid-cols-1 lg:grid-cols-3 gap-[15px]">
             {records.map((record) => (
               <Record key={record._id} record={record} />
             ))}

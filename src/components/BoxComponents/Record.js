@@ -2,7 +2,7 @@ import React from "react";
 const RecordItem = ({ record }) => {
   return (
     <React.Fragment>
-      <div className="w-[400px] cardModel">
+      <div className="w-[100% lg:w-[400px] cardModel">
         <div className="w-[100%] h-[230px] relative">
           <img
             className="w-[100%] h-[100%] object-cover"

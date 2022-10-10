@@ -20,9 +20,9 @@ export default function GalleriesSection() {
   };
   return (
     <>
-      <h1 className="font-bold text-[30px] w-[100%] p-[10px] text-center mb-[10px] bg-[#f5f5f5] text-[#0067b1]">
-        Gallery
-      </h1>
+       <div className="flex justify-center items-center bg-[#f5f5f5] text-center lg:text-4xl text-[24px] font-bold p-[10px] ">
+        <p className="text-center text-[#0067b1] ">Gallery</p>
+      </div>
       <div className="w-[100%] min-h-[60vh] m-[auto] flex items-center flex-col">
         {loading ? (
           <LoadingBox></LoadingBox>
