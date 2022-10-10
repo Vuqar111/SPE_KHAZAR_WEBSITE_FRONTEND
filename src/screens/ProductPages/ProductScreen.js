@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { detailsProduct } from "../../common/actions/productActions";
@@ -79,12 +79,11 @@ export default function ProductScreen(props) {
               <p className="eventdesc">{product.description}</p>
               <hr />
               <div className="w-[100%] p-[15px] m-[auto]  flex justify-between datesection ">
-                <a href="">
-                <div className="applybtn">
-                  <button>Register for event</button>
-                </div>
+                <a href={product.registerLink}>
+                  <div className="applybtn">
+                    <button>Register for event</button>
+                  </div>
                 </a>
-                
               </div>
             </div>
           </div>

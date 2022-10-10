@@ -17,6 +17,7 @@ export default function ProductEditScreen(props) {
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
   const [type, setType] = useState("");
+  const [registerLink, setRegisterLink]= useState("");
 
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
@@ -43,6 +44,7 @@ export default function ProductEditScreen(props) {
       setLocation(product.location);
       setType(product.type);
       setCategory(product.category);
+      setRegisterLink(product.registerLink);
       setDescription(product.description);
     }
   }, [product, dispatch, productId, successUpdate, props.history]);
@@ -58,6 +60,7 @@ export default function ProductEditScreen(props) {
         location,
         type,
         description,
+        registerLink,
       })
     );
   };
@@ -144,6 +147,17 @@ export default function ProductEditScreen(props) {
                   <option value="online">Online</option>
                 </select>
               </div>
+              <div>
+                <label htmlFor="registerlink">Register Link</label>
+                <input
+                  id="register"
+                  type="text"
+                  placeholder="Enter Register Link"
+                  value={registerLink}
+                  onChange={(e) => setRegisterLink(e.target.value)}
+                ></input>
+              </div>
+
               <div>
                 <label htmlFor="description">Description</label>
                 <textarea
