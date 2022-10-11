@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import styled from "styled-components";
 import { detailsProduct } from "../../common/actions/productActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
@@ -26,8 +25,8 @@ export default function ProductScreen(props) {
   }, [dispatch, productId]);
 
   return (
-    <Wrapper>
-      <div className="w-[80%] m-[auto] center">
+    <React.Fragment>
+      <div className="w-[95%] lg:w-[80%] m-[auto]">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
@@ -42,11 +41,11 @@ export default function ProductScreen(props) {
                   alt={product.name}
                 />
               </div>
-              <div className="eventtitle">
-                <div className="flex items-center justify-between w-[auto] date">
+              <div className="p-[15px]">
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between w-[auto] date">
                   <div>
-                  <h2>{product.name}</h2>
-                  <p className="font-bold opacity-[0.8]">{product.location} - {product.type}</p>
+                  <h2 className="font-bold text-[22px] lg:text-[30px]">{product.name}</h2>
+                  <p className="font-bold opacity-[0.8]">{product.location} - {product.category} -{product.type}</p>
                   </div>
                   
                   <p className="font-bold text-[#0067B1]">{product.author}</p>
@@ -80,7 +79,7 @@ export default function ProductScreen(props) {
                 </div>
               </div>
               <hr />
-              <p className="eventdesc">{product.description}</p>
+              <p className="w-[100%] text-[18px] my-[20px] mx-[18px]">{product.description}</p>
               <hr />
               <div className="w-[100%] p-[15px] m-[auto]  flex justify-between datesection ">
                 <a href={product.registerLink} target="_blank">
@@ -93,57 +92,7 @@ export default function ProductScreen(props) {
           </div>
         )}
       </div>
-    </Wrapper>
+    </React.Fragment>
   );
 }
 
-const Wrapper = styled.div`
-  width: 100%;
-  min-height: 60vh;
-  .productname {
-    font-size: 45px;
-    color: black;
-    padding: 0px;
-    margin: 0px;
-  }
-  .eventdesc {
-    font-size: 18px;
-    width: 100%;
-    margin: 20px 5px;
-  }
-  .productprice {
-    font-weight: bold;
-    font-size: 40px;
-  }
-
-  .eventtitle {
-    padding: 15px;
-  }
-  .eventtitle h2 {
-    font-size: 30px;
-    font-weight: bold;
-  }
-  .applybtn {
-    border: 2px solid #0067b1;
-    color: #0067b1;
-    padding: 5px 8px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-  }
-  .applybtn:hover {
-    background-color: #0067b1;
-    color: white;
-    transition: all 0.3s ease;
-  }
-  @media (max-width: 768px) {
-    .center {
-      width: 95%;
-    }
-    .productname {
-      font-size: 15px;
-    }
-    .eventtitle h2 {
-      font-size: 18px;
-    }
-  }
-`;
