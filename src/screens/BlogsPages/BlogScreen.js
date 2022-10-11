@@ -12,7 +12,6 @@ import {
   WhatsappShareButton,
   WhatsappIcon,
 } from "react-share";
-import parse from "html-react-parser"
 export default function BlogScreen(props) {
   const dispatch = useDispatch();
   const blogId = props.match.params.id;
@@ -26,7 +25,10 @@ export default function BlogScreen(props) {
   const [width, setWidth] = useState(0);
   const url = window.location.href;
   const pagewith = window.innerWidth;
-
+ 
+  const createMarkup = () => {
+    return { __html: blog.description };
+  }
   
   useEffect(() => {
     if (pagewith > 768) {
@@ -89,9 +91,7 @@ export default function BlogScreen(props) {
                 </div>
               </div>
               <hr />
-              <p className="w-[100%] text-[18px] my-[20px] mx-[18px]"> 
-              
-              {parse(blog.description)}
+              <p className="w-[100%] text-[18px] my-[20px] mx-[18px]"  dangerouslySetInnerHTML={createMarkup()}>
               </p>
             </div>
           </div>

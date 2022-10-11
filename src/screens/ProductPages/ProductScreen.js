@@ -24,6 +24,10 @@ export default function ProductScreen(props) {
     dispatch(detailsProduct(productId));
   }, [dispatch, productId]);
 
+  const createMarkup = () => {
+    return { __html: product.description };
+  }
+  
   return (
     <React.Fragment>
       <div className="w-[95%] lg:w-[80%] m-[auto]">
@@ -79,7 +83,7 @@ export default function ProductScreen(props) {
                 </div>
               </div>
               <hr />
-              <p className="w-[100%] text-[18px] my-[20px] mx-[18px]">{product.description}</p>
+              <p className="w-[100%] text-[18px] my-[20px] mx-[18px]" dangerouslySetInnerHTML={createMarkup()}></p>
               <hr />
               <div className="w-[100%] p-[15px] m-[auto]  flex justify-between ">
                 <a href={product.registerLink} target="_blank">
