@@ -70,7 +70,7 @@ export const Contact = () => {
             </div>
             <div className="flex flex-col mt-[15px] w-[100%]">
               <label>Message</label>
-              <textarea placeholder="Your message" className="w-[100%] border-1 border-solid border-[#0067B1] mt-[5px] py-[10px] px-[10px]" name="user_message" />
+              <textarea placeholder="Your message" className="w-[100%] border-1 border-solid border-[#0067B1]  outline-1 outline-solid outline-[#0067B1]  mt-[5px] py-[10px] px-[10px]" name="user_message" />
             </div>
 
             <div className="mt-[15px]">
