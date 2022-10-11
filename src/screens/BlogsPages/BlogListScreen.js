@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { createBlog, deleteBlog, listBlogs } from "../../common/actions/blogActions";
+import {
+  createBlog,
+  deleteBlog,
+  listBlogs,
+} from "../../common/actions/blogActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import {
@@ -52,8 +56,12 @@ export default function BlogListScreen(props) {
   return (
     <div>
       <div className="row">
-        <h1>Salam Guys</h1>
-        <button type="button" className="primary p-[1rem]" onClick={createHandler}>
+      <h1 className="font-bold text-[16px] lg:text-[24px]">SPE KHAZAR Blogs List</h1>
+        <button
+          type="button"
+          className="primary p-[1rem]"
+          onClick={createHandler}
+        >
           Create Blog
         </button>
       </div>

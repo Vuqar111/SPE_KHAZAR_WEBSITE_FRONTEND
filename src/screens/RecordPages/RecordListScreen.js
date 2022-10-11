@@ -52,7 +52,7 @@ export default function RecordListScreen(props) {
   return (
     <div style={{minHeight: "60vh"}}>
       <div className="row">
-        <h1>Records Edit/Create</h1>
+      <h1 className="font-bold text-[16px] lg:text-[24px]">SPE KHAZAR Records List</h1>
         <button type="button" className="primary p-[1rem]" onClick={createHandler}>
           Create Record
         </button>

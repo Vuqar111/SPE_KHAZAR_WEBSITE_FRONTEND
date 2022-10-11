@@ -56,7 +56,7 @@ export default function GalleryListScreen(props) {
   return (
     <div style={{minHeight: "60vh"}}>
       <div className="row">
-        <h1> Galleries</h1>
+      <h1 className="font-bold text-[16px] lg:text-[24px]">SPE KHAZAR Gallery List</h1>
         <button type="button" className="primary p-[1rem]" onClick={createHandler}>
           Create Gallery-Image
         </button>
