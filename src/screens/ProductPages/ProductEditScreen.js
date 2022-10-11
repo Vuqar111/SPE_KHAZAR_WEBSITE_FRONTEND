@@ -7,7 +7,8 @@ import {
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { PRODUCT_UPDATE_RESET } from "../../common/constants/productConstants";
-
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 export default function ProductEditScreen(props) {
   const productId = props.match.params.id;
   const [name, setName] = useState("");
@@ -82,7 +83,7 @@ export default function ProductEditScreen(props) {
         ) : (
           <>
             <div className="editFormContainer">
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="name">Name</label>
                 <input
                   id="name"
@@ -92,7 +93,7 @@ export default function ProductEditScreen(props) {
                   onChange={(e) => setName(e.target.value)}
                 ></input>
               </div>
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="image">Image</label>
                 <input
                   id="image"
@@ -102,7 +103,7 @@ export default function ProductEditScreen(props) {
                   onChange={(e) => setImage(e.target.value)}
                 ></input>
               </div>
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="author">Author</label>
                 <input
                   id="author"
@@ -113,7 +114,7 @@ export default function ProductEditScreen(props) {
                 ></input>
               </div>
 
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="category">Category</label>
                 <input
                   id="category"
@@ -124,7 +125,7 @@ export default function ProductEditScreen(props) {
                 ></input>
               </div>
 
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="category">Location</label>
                 <input
                   id="location"
@@ -135,7 +136,7 @@ export default function ProductEditScreen(props) {
                 ></input>
               </div>
 
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="category">Type</label>
                 <select
                   placeholder="Enter Type"
@@ -143,11 +144,12 @@ export default function ProductEditScreen(props) {
                   onChange={(e) => setType(e.target.value)}
                 >
                   <option value="">Choose your event type</option>
-                  <option value="offline">Offline</option>
-                  <option value="online">Online</option>
+                  <option value="Offline">Offline</option>
+                  <option value="Online">Online</option>
+                  <option value="Hybrid">Hybrid</option>
                 </select>
               </div>
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="registerlink">Register Link</label>
                 <input
                   id="register"
@@ -158,17 +160,28 @@ export default function ProductEditScreen(props) {
                 ></input>
               </div>
 
-              <div>
-                <label htmlFor="description">Description</label>
-                <textarea
-                  id="description"
-                  rows="3"
-                  type="text"
-                  placeholder="Enter description"
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                ></textarea>
+              <div className="w-[100%] mt-[15px]">
+                <label>Description</label>
+                <CKEditor
+                    editor={ ClassicEditor }
+                    data={description}
+                    onReady={ editor => {
+                        // You can store the "editor" and use when it is needed.
+                        console.log( 'Editor is ready to use!', editor );
+                    } }
+                    onChange={ ( event, editor ) => {
+                        const data = editor.getData();
+                        setDescription(data)
+                    } }
+                    onBlur={ ( event, editor ) => {
+                        console.log( 'Blur.', editor );
+                    } }
+                    onFocus={ ( event, editor ) => {
+                        console.log( 'Focus.', editor );
+                    } }
+                />
               </div>
+             
               <div>
                 <label></label>
                 <button className="primary" type="submit">

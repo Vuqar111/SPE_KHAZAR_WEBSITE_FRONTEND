@@ -37,7 +37,7 @@ export const teams = [
   },
   {
     id: 7,
-    name: "Sema Bayramova",
+    name: "Sama Bayramova",
     status: "Photographer",
     img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665474457/SPE-Teams/sema_r6alpv_pftnec_xffkgn.jpg",
   },

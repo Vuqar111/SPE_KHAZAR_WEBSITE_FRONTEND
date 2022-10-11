@@ -12,6 +12,7 @@ import {
   WhatsappShareButton,
   WhatsappIcon,
 } from "react-share";
+import parse from "html-react-parser"
 export default function BlogScreen(props) {
   const dispatch = useDispatch();
   const blogId = props.match.params.id;
@@ -88,7 +89,10 @@ export default function BlogScreen(props) {
                 </div>
               </div>
               <hr />
-              <p className="w-[100%] text-[18px] my-[20px] mx-[18px]">{blog.description}</p>
+              <p className="w-[100%] text-[18px] my-[20px] mx-[18px]"> 
+              
+              {parse(blog.description)}
+              </p>
             </div>
           </div>
         )}

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { BsPersonFill } from "react-icons/bs";
+import parse from "html-react-parser"
 
 export default function Product(props) {
   const { blog } = props;
@@ -22,7 +23,7 @@ export default function Product(props) {
             </div>
             <div className="card-date">{new Date(blog.createdAt).toDateString()}</div>
           </div>
-            <div className="card-text">{blog.description}</div>
+            <div className="card-text">{parse(blog.description)}</div>
         </div>
       </div>
     </Wrapper>
