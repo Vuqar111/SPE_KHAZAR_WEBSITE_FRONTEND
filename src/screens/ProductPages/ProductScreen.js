@@ -51,16 +51,16 @@ export default function ProductScreen(props) {
                   <p className="font-bold text-[#0067B1]">{product.author}</p>
                 </div>
               </div>
-              <div className="w-[100%] pl-[15px] pr-[15px] m-[auto]  flex justify-between datesection ">
+              <div className="w-[100%] pl-[15px] pr-[15px] m-[auto]  flex justify-between">
                 <div className="flex items-center w-[auto] date">
-                  <div className="eventDetailDate">
+                  <div>
                     <MdDateRange />
                   </div>
-                  <div className="eventDetailDate">
+                  <div>
                     {new Date(product.createdAt).toDateString()}
                   </div>
                 </div>
-                <div className="flex justify-between  items-center  sharecontainer    text-[white]">
+                <div className="flex justify-between  items-center  text-[white]">
                   <div className="ml-[5px] cursor-pointer  pointer">
                     <FacebookShareButton url={url}>
                       <FacebookIcon size="30px" />
@@ -81,7 +81,7 @@ export default function ProductScreen(props) {
               <hr />
               <p className="w-[100%] text-[18px] my-[20px] mx-[18px]">{product.description}</p>
               <hr />
-              <div className="w-[100%] p-[15px] m-[auto]  flex justify-between datesection ">
+              <div className="w-[100%] p-[15px] m-[auto]  flex justify-between ">
                 <a href={product.registerLink} target="_blank">
                   <div className="applybtn">
                     <button>Register for event</button>
