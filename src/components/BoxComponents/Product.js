@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 export default function Product(props) {
   const { product } = props;
+  const createMarkup = () => {
+    return { __html: product.description };
+  }
   return (
     <Wrapper>
       <div key={product.id} className="card">
@@ -14,7 +17,7 @@ export default function Product(props) {
             <h2 className="font-bold text-[25px]">{product.name}</h2>
           </Link>
           <div className="card-date">{new Date(product.createdAt).toDateString()}</div>
-          <div className="card-text">{product.description}...</div>
+          <div className="card-text" dangerouslySetInnerHTML={createMarkup()}></div>
         </div>
       </div>
     </Wrapper>
