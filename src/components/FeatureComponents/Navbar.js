@@ -152,7 +152,7 @@ export const Navbar = () => {
             </div>
           </div>
           <div
-            className="icon block mt-[5px] lg:hidden cursor-pointer"
+            className="icon block m-[12px] text-3xl lg:hidden cursor-pointer"
             onClick={() => setshowlink(!showlink)}
           >
             {!showlink ? <GiHamburgerMenu /> : <GrClose />}
