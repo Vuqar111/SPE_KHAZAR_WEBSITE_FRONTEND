@@ -8,13 +8,13 @@ export default function Product(props) {
   }
   return (
     <Wrapper>
-      <div key={product.id} className="card">
+      <div key={product.id} className="card m-[10px]">
         <Link to={`/event/${product._id}`}>
-          <img src={product.image} alt={product.name} />
+          <img className="medium" src={product.image} alt={product.name} />
         </Link>
         <div className="card-body">
           <Link to={`/event/${product._id}`}>
-            <h2 className="font-bold text-[25px]">{product.name}</h2>
+            <h2 className="mt-[5px] font-bold text-[15px]">{product.name}</h2>
           </Link>
           <div className="card-date">{new Date(product.createdAt).toDateString()}</div>
           <div className="card-text" dangerouslySetInnerHTML={createMarkup()}></div>
@@ -70,7 +70,7 @@ img {
 }
 @media (max-width: 768px) {
   .card {
-    width: 100%;
+    width: 90vw;
     margin: 10px 5px;
   }
 }
