@@ -35,16 +35,20 @@ export default function ProductScreen(props) {
         ) : (
           <div className="">
             <div>
-              <div className="mt-[20px] eventimgdiv">
+              <div className="mt-[20px] w-[100%] h-[250px] lg:h-[450px]">
                 <img
-                  className="blogimage object-cover"
+                  className="w-[100%] h-[100%] rounded-[5px] object-cover bg-cover"
                   src={product.image}
                   alt={product.name}
                 />
               </div>
               <div className="eventtitle">
                 <div className="flex items-center justify-between w-[auto] date">
+                  <div>
                   <h2>{product.name}</h2>
+                  <p className="font-bold opacity-[0.8]">{product.location} - {product.type}</p>
+                  </div>
+                  
                   <p className="font-bold text-[#0067B1]">{product.author}</p>
                 </div>
               </div>
@@ -79,7 +83,7 @@ export default function ProductScreen(props) {
               <p className="eventdesc">{product.description}</p>
               <hr />
               <div className="w-[100%] p-[15px] m-[auto]  flex justify-between datesection ">
-                <a href={product.registerLink}>
+                <a href={product.registerLink} target="_blank">
                   <div className="applybtn">
                     <button>Register for event</button>
                   </div>
@@ -111,14 +115,7 @@ const Wrapper = styled.div`
     font-weight: bold;
     font-size: 40px;
   }
-  .blogimage {
-    width: 100%;
-    max-height: 500px;
-    height: 100%;
-    border-radius: 5px;
-    background-size: cover;
-    object-fit: cover;
-  }
+
   .eventtitle {
     padding: 15px;
   }

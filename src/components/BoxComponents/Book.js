@@ -1,10 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 export default function Book(props) {
   const { book } = props;
   return (
     <React.Fragment>
-       <Link to={`/book/${book._id}`}>
       <div
         key={book.id}
         className="w-[180px] lg:w-[320px]  mt-[10px] p-[10px] cardModel cursor-pointer"
@@ -22,14 +20,15 @@ export default function Book(props) {
             {book.title}
           </h2>
           <p className="text-[12px] lg:text-[16px] font-italic opacity-[0.7]">
-            Adventure
+            {book.category}
           </p>
-          <div className="text-[15px] mt-[5px] p-[10px] bg-[#256F98] text-[white] w-[100%] downloadbtn">
-            <Link to={`/book/${book._id}`}>See Details</Link>
-          </div>
+          <a href={book.url} target="_blank">
+            <div className="text-[15px] mt-[5px] p-[10px] bg-[#256F98] text-[white] w-[100%] downloadbtn">
+              Download Now
+            </div>
+          </a>
         </div>
       </div>
-      </Link>
     </React.Fragment>
   );
 }

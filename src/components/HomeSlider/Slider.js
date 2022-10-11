@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SliderContent from "./SliderContent";
 import Arrows from "./Arrow";
 import sliderImage from "./sliderImage";
-import "./slider.css";
+import "../../assets/css/slider.css";
 
 const len = sliderImage.length - 1;
 

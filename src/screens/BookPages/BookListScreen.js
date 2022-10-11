@@ -49,7 +49,7 @@ export default function BookListScreen(props) {
     dispatch(createBook());
   };
 
-  console.log(books);
+
   return (
     <div style={{minHeight: "60vh"}}>
       <div className="row">

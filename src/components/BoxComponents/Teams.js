@@ -61,7 +61,6 @@ const Wrapper = styled.div`
     position: absolute;
     transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
     background: #0067b1;
-    background: linear-gradient(to top, #0a3394, #4286f4);
     object-fit: cover;
   }
 

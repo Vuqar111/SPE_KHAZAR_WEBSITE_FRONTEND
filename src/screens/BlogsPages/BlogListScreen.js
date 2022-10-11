@@ -49,7 +49,6 @@ export default function BlogListScreen(props) {
     dispatch(createBlog());
   };
 
-  console.log(blogs);
   return (
     <div>
       <div className="row">

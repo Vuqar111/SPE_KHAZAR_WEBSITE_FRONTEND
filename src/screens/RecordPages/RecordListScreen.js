@@ -49,7 +49,6 @@ export default function RecordListScreen(props) {
     dispatch(createRecord());
   };
 
-  console.log(records);
   return (
     <div style={{minHeight: "60vh"}}>
       <div className="row">

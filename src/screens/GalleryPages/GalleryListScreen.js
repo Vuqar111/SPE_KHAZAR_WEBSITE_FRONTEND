@@ -53,7 +53,6 @@ export default function GalleryListScreen(props) {
     dispatch(createGallery());
   };
 
-  console.log(galleries);
   return (
     <div style={{minHeight: "60vh"}}>
       <div className="row">

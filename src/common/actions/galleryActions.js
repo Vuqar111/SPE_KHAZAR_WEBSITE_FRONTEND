@@ -24,7 +24,6 @@ export const listGalleries = () => async (dispatch) => {
   try {
     const { data } = await Axios.get(`https://spekhazarwebsitebackend.vercel.app/api/galleries`);
     dispatch({ type: GALLERY_LIST_SUCCESS, payload: data.galleries });
-    console.log(data.galleries)
   } catch (error) {
     dispatch({ type: GALLERY_LIST_FAIL, payload: error.message });
   }

@@ -9,7 +9,7 @@ const RecordItem = ({ record }) => {
             src={record.image}
             alt=""
           />
-          <a href={record.url}>
+          <a href={record.url} target="_blank" >
             <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[white] bg-[#0067B1] p-[20px] rounded-[30px] hover:scale-[1.1] hover:transition-[1.1s] transition-[1.1s] cursor-pointer">
               Play
             </div>
