@@ -55,9 +55,9 @@ export default function UserEditScreen(props) {
 
   return (
     <div>
-      <form className="w-[90%] m-[auto]" onSubmit={submitHandler}>
+      <form className="w-[90%] m-[auto] mt-[20px]" onSubmit={submitHandler}>
         <div>
-          <h1>Edit User {name}</h1>
+          <h1 className="text-center text-[16px] lg:text-[24px] font-bold">Edit User {name}</h1>
           {loadingUpdate && <LoadingBox></LoadingBox>}
           {errorUpdate && (
             <MessageBox variant="danger">{errorUpdate}</MessageBox>
@@ -70,7 +70,7 @@ export default function UserEditScreen(props) {
         ) : (
           <>
             <div className="editFormContainer">
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="name">Name</label>
                 <input
                   id="name"
@@ -80,7 +80,7 @@ export default function UserEditScreen(props) {
                   onChange={(e) => setName(e.target.value)}
                 ></input>
               </div>
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="email">Email</label>
                 <input
                   id="email"
@@ -90,7 +90,7 @@ export default function UserEditScreen(props) {
                   onChange={(e) => setEmail(e.target.value)}
                 ></input>
               </div>
-              <div className="mt-[10px]">
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label className="mt-[15px]" htmlFor="university">
                   University
                 </label>
@@ -107,8 +107,8 @@ export default function UserEditScreen(props) {
                     return <option value={item}>{item}</option>;
                   })}
                 </select>
-              </div>
-              <div className="mt-[10px]">
+              </div >
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label className="mt-[15px]" htmlFor="faculty">
                   Faculty
                 </label>
@@ -126,7 +126,7 @@ export default function UserEditScreen(props) {
                   })}
                 </select>
               </div>
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="isAdmin">Is Admin</label>
                 <input
                   id="isAdmin"
@@ -135,9 +135,9 @@ export default function UserEditScreen(props) {
                   onChange={(e) => setIsAdmin(e.target.checked)}
                 ></input>
               </div>
-              <div>
-                <button type="submit" className="w-[100%] p-[10px]">
-                  Update
+              <div className="w-[100%]">
+                <button className="primary bg-[#0067b1] w-[100%] p-[10px]" type="submit">
+                  Update User Information
                 </button>
               </div>
             </div>

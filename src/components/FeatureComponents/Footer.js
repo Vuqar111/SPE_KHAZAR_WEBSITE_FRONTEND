@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {AiOutlineFacebook,AiOutlineInstagram,AiOutlineLinkedin,AiOutlineYoutube} from 'react-icons/ai'
+import {
+  AiOutlineFacebook,
+  AiOutlineInstagram,
+  AiOutlineLinkedin,
+  AiOutlineYoutube,
+} from "react-icons/ai";
 const Footer = () => {
   return (
     <div className="bg-[#0067B1] flex w-[100%]  text-[white] mt-[50px] relative">
@@ -47,25 +52,37 @@ const Footer = () => {
           <div className="w-[40%] lg:w-[100%] flex  lg:items-center justify-between">
             <li className="m-[5px]">
               <a href="https://www.facebook.com/SPE.Khazar" target="_blank">
-                <AiOutlineFacebook className="text-[32px] cursor-pointer"/>
+                <AiOutlineFacebook className="text-[32px] cursor-pointer" />
               </a>
             </li>
             <li className="m-[5px]">
               {" "}
-              <a href="https://www.instagram.com/spe.khazar/" target="_blank" className="text-[32px] cursor-pointer">
-                <AiOutlineInstagram/>
+              <a
+                href="https://www.instagram.com/spe.khazar/"
+                target="_blank"
+                className="text-[32px] cursor-pointer"
+              >
+                <AiOutlineInstagram />
               </a>
             </li>
             <li className="m-[5px]">
               {" "}
-              <a href="https://www.linkedin.com/company/spe-khazar-university-student-chapter/" target="_blank" className="text-[32px] cursor-pointer">
-                <AiOutlineLinkedin/>
+              <a
+                href="https://www.linkedin.com/company/spe-khazar-university-student-chapter/"
+                target="_blank"
+                className="text-[32px] cursor-pointer"
+              >
+                <AiOutlineLinkedin />
               </a>
             </li>
             <li className="m-[5px]">
               {" "}
-              <a href="https://www.youtube.com/channel/UCkHQt8M4ohFXIqZ56euFRIQ" target="_blank" className="text-[32px] cursor-pointer">
-                <AiOutlineYoutube/>
+              <a
+                href="https://www.youtube.com/channel/UCkHQt8M4ohFXIqZ56euFRIQ"
+                target="_blank"
+                className="text-[32px] cursor-pointer"
+              >
+                <AiOutlineYoutube />
               </a>
             </li>
           </div>

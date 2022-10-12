@@ -57,9 +57,9 @@ export default function BlogEditScreen(props) {
 
   return (
     <div>
-      <form className="w-[90%] m-[auto]" onSubmit={submitHandler}>
+      <form className="w-[90%] m-[auto] mt-[20px]" onSubmit={submitHandler}>
         <div>
-          <h1 className="text-center">Create / Edit Blog {blogId}</h1>
+          <h1 className="text-center text-[16px] lg:text-[24px] font-bold">Create / Edit Blog {blogId}</h1>
         </div>
         {loadingUpdate && <LoadingBox></LoadingBox>}
         {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
@@ -132,10 +132,9 @@ export default function BlogEditScreen(props) {
                 />
               </div>
               
-              <div>
-                <label></label>
-                <button className="w-[100%] p-[10px]" type="submit">
-                  Update/Create Blog
+              <div className="w-[100%]">
+                <button className="primary bg-[#0067b1] w-[100%] p-[10px]" type="submit">
+                  Update / Cretate Blog
                 </button>
               </div>
             </div>

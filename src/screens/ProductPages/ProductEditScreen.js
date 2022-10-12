@@ -69,10 +69,10 @@ export default function ProductEditScreen(props) {
 
 
   return (
-    <div style={{ minHeight: "60vh" }}>
-      <form className="w-[90%] m-[auto]" onSubmit={submitHandler}>
-        <div style={{ padding: "10px" }}>
-          <h1 className="text-center text-[24px] font-bold">Edit Event ID: {productId}</h1>
+    <div>
+      <form className="w-[90%] m-[auto] mt-[20px]" onSubmit={submitHandler}>
+        <div>
+          <h1 className="text-center text-[16px] lg:text-[24px] font-bold">Edit Event ID: {productId}</h1>
         </div>
         {loadingUpdate && <LoadingBox></LoadingBox>}
         {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
@@ -139,6 +139,7 @@ export default function ProductEditScreen(props) {
               <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="category">Type</label>
                 <select
+                className="p-[10px]"
                   placeholder="Enter Type"
                   value={type}
                   onChange={(e) => setType(e.target.value)}
@@ -182,9 +183,8 @@ export default function ProductEditScreen(props) {
                 />
               </div>
              
-              <div>
-                <label></label>
-                <button className="w-[100%] p-[10px]" type="submit">
+              <div className="w-[100%]">
+                <button className="primary bg-[#0067b1] w-[100%] p-[10px]" type="submit">
                   Update / Cretate Event
                 </button>
               </div>

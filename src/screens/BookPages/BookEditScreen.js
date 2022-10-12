@@ -59,10 +59,9 @@ export default function BookEditScreen(props) {
 
   return (
     <div>
-      <form className="w-[90%] m-[auto]" onSubmit={submitHandler}>
+      <form className="w-[90%] m-[auto] mt-[20px]" onSubmit={submitHandler}>
         <div>
-          <h1 className="text-center">Create / Edit Book {bookId}</h1>
-          <p className="text-center">Description calisin 190 sozden artiq olmasin</p>
+          <h1 className="text-center text-[16px] lg:text-[24px] font-bold">Create / Edit Book {bookId}</h1>
         </div>
         {loadingUpdate && <LoadingBox></LoadingBox>}
         {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
@@ -73,7 +72,7 @@ export default function BookEditScreen(props) {
         ) : (
           <>
             <div className="editFormContainer">
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="name">Title</label>
                 <input
                   id="title"
@@ -83,7 +82,7 @@ export default function BookEditScreen(props) {
                   onChange={(e) => setTitle(e.target.value)}
                 ></input>
               </div>
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="author">Author</label>
                 <input
                   id="author"
@@ -93,7 +92,7 @@ export default function BookEditScreen(props) {
                   onChange={(e) => setAuthor(e.target.value)}
                 ></input>
               </div>
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="image">Image</label>
                 <input
                   id="image"
@@ -104,7 +103,7 @@ export default function BookEditScreen(props) {
                 ></input>
               </div>
             
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="category">Category</label>
                 <input
                   id="category"
@@ -116,7 +115,7 @@ export default function BookEditScreen(props) {
               </div>
 
 
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="category">URL</label>
                 <input
                   id="url"
@@ -127,7 +126,7 @@ export default function BookEditScreen(props) {
                 ></input>
               </div>
 
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="description">Description</label>
                 <textarea
                   id="description"
@@ -138,10 +137,9 @@ export default function BookEditScreen(props) {
                   onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
               </div>
-              <div>
-                <label></label>
-                <button className="w-[100%] p-[10px]" type="submit">
-                  Update/Create Book
+              <div className="w-[100%]">
+                <button className="primary bg-[#0067b1] w-[100%] p-[10px]" type="submit">
+                  Update / Cretate Book
                 </button>
               </div>
             </div>

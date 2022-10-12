@@ -48,10 +48,10 @@ export default function GalleryEditScreen(props) {
 
 
   return (
-    <div style={{minHeight: "60vh"}}>
-      <form className="w-[90%] m-[auto]" onSubmit={submitHandler}>
+    <div >
+      <form className="w-[90%] m-[auto] mt-[20px]" onSubmit={submitHandler}>
         <div>
-          <h1>Create / Edit Gallery {galleryId}</h1>
+          <h1 className="text-center text-[16px] lg:text-[24px] font-bold">Create / Edit Gallery {galleryId}</h1>
         </div>
         {loadingUpdate && <LoadingBox></LoadingBox>}
         {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
@@ -64,7 +64,7 @@ export default function GalleryEditScreen(props) {
               <div className="editFormContainer">
 
 
-            <div>
+            <div className="w-[100%] flex items-center justify-between mt-[15px]">
               <label htmlFor="name">Title</label>
               <input
                 id="title"
@@ -75,7 +75,7 @@ export default function GalleryEditScreen(props) {
               ></input>
             </div>
 
-            <div>
+            <div className="w-[100%] flex items-center justify-between mt-[15px]">
               <label htmlFor="image">Image</label>
               <input
                 id="image"
@@ -86,12 +86,11 @@ export default function GalleryEditScreen(props) {
               ></input>
             </div>
           
-            <div>
-              <label></label>
-              <button className="w-[100%] p-[10px]" type="submit">
-                Update/Create Gallery
-              </button>
-            </div>
+            <div className="w-[100%]">
+                <button className="primary bg-[#0067b1] w-[100%] p-[10px]" type="submit">
+                  Update / Cretate Gallery Photo
+                </button>
+              </div>
               </div>
           </>
         )}

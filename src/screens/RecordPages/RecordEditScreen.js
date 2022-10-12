@@ -58,9 +58,9 @@ export default function RecordEditScreen(props) {
 
   return (
     <div>
-      <form className="w-[90%] m-[auto]" onSubmit={submitHandler}>
+      <form className="w-[90%] m-[auto] mt-[20px]" onSubmit={submitHandler}>
         <div>
-          <h1>Create / Edit Record {recordId}</h1>
+          <h1 className="text-center text-[16px] lg:text-[24px] font-bold">Create / Edit Record {recordId}</h1>
         </div>
         {loadingUpdate && <LoadingBox></LoadingBox>}
         {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
@@ -71,7 +71,7 @@ export default function RecordEditScreen(props) {
         ) : (
           <>
             <div className="editFormContainer">
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="title">Title</label>
                 <input
                   id="title"
@@ -81,7 +81,7 @@ export default function RecordEditScreen(props) {
                   onChange={(e) => setTitle(e.target.value)}
                 ></input>
               </div>
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]"> 
                 <label htmlFor="author">Author</label>
                 <input
                   id="author"
@@ -91,7 +91,7 @@ export default function RecordEditScreen(props) {
                   onChange={(e) => setAuthor(e.target.value)}
                 ></input>
               </div>
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="image">Image</label>
                 <input
                   id="image"
@@ -102,7 +102,7 @@ export default function RecordEditScreen(props) {
                 ></input>
               </div>
              
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="category">category</label>
                 <input
                   id="category"
@@ -112,7 +112,7 @@ export default function RecordEditScreen(props) {
                   onChange={(e) => setCategory(e.target.value)}
                 ></input>
               </div>
-              <div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="url">Url</label>
                 <input
                   id="url"
@@ -123,10 +123,9 @@ export default function RecordEditScreen(props) {
                 ></input>
               </div>
 
-              <div>
-                <label></label>
-                <button className="p-[10px] w-[100%]" type="submit">
-                  Update/Create Record
+              <div className="w-[100%]">
+                <button className="primary bg-[#0067b1] w-[100%] p-[10px]" type="submit">
+                  Update / Cretate Record
                 </button>
               </div>
             </div>
