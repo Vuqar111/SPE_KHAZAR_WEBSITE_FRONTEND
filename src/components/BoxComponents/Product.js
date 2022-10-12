@@ -8,7 +8,7 @@ export default function Product(props) {
   }
   return (
     <Wrapper>
-      <div key={product.id} className="card m-[10px]">
+      <div key={product.id} className="card">
         <Link to={`/event/${product._id}`}>
           <img className="medium" src={product.image} alt={product.name} />
         </Link>
@@ -25,6 +25,9 @@ export default function Product(props) {
 }
 
 const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
  .card {
   width: 29vw;
   height: 360px;
@@ -45,6 +48,11 @@ const Wrapper = styled.div`
   font-weight: 600;
   color: #0067B1;
   padding: 10px 7px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .card-date {
   font-size: 0.7em;
@@ -62,16 +70,17 @@ const Wrapper = styled.div`
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-img {
+.card img {
   background-color: rgb(236, 236, 236);
   width: 100%;
   height: 220px;
   border-radius: 6px 6px 0 0;
+  object-fit: cover;
 }
 @media (max-width: 768px) {
   .card {
-    width: 90vw;
-    margin: 10px 5px;
+    width: 95vw;
+    margin: 10px 0;
   }
 }
 `;
