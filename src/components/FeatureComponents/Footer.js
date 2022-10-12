@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {AiOutlineFacebook,AiOutlineInstagram,AiOutlineLinkedin,AiOutlineYoutube} from 'react-icons/ai'
 const Footer = () => {
   return (
     <div className="bg-[#0067B1] flex w-[100%]  text-[white] mt-[50px] relative">
@@ -43,14 +44,30 @@ const Footer = () => {
 
         <div>
           <div className="font-bold text-[16px] mt-[10px]">Social Media</div>
-          <div className="footerul">
-            <li className="mt-[5px]">
-              <a href="https://tr-tr.facebook.com/">
-              FaceBook
-                </a></li>
-            <li className="mt-[5px]">Instagram</li>
-            <li className="mt-[5px]">Linkedin</li>
-            <li className="mt-[5px]">Youtube</li>
+          <div className="w-[40%] lg:w-[100%] flex  lg:items-center justify-between">
+            <li className="m-[5px]">
+              <a href="https://www.facebook.com/SPE.Khazar" target="_blank">
+                <AiOutlineFacebook className="text-[32px] cursor-pointer"/>
+              </a>
+            </li>
+            <li className="m-[5px]">
+              {" "}
+              <a href="https://www.instagram.com/spe.khazar/" target="_blank" className="text-[32px] cursor-pointer">
+                <AiOutlineInstagram/>
+              </a>
+            </li>
+            <li className="m-[5px]">
+              {" "}
+              <a href="https://www.linkedin.com/company/spe-khazar-university-student-chapter/" target="_blank" className="text-[32px] cursor-pointer">
+                <AiOutlineLinkedin/>
+              </a>
+            </li>
+            <li className="m-[5px]">
+              {" "}
+              <a href="https://www.youtube.com/channel/UCkHQt8M4ohFXIqZ56euFRIQ" target="_blank" className="text-[32px] cursor-pointer">
+                <AiOutlineYoutube/>
+              </a>
+            </li>
           </div>
         </div>
       </div>

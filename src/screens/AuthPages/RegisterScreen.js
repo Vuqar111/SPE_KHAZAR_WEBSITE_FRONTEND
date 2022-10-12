@@ -10,8 +10,8 @@ import PasswordStrengthBar from 'react-password-strength-bar';
 export default function RegisterScreen(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [university, setUniversity] = useState("");
-  const [faculty, setFaculty] = useState("");
+  const [university, setUniversity] = useState("Khazar University");
+  const [faculty, setFaculty] = useState("Petroleum Engineering");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -41,7 +41,8 @@ export default function RegisterScreen(props) {
     }
   }, [props.history, redirect, userInfo]);
 
-
+console.log(university)
+console.log(faculty)
 
   return (
     <React.Fragment>
