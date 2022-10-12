@@ -295,6 +295,7 @@ textarea {
   width: 70%;
   background-color: #fff;
   color: var(--black-color);
+  padding: 10px;
 
 }
 
