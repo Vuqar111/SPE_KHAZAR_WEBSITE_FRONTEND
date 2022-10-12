@@ -42,6 +42,9 @@ export default function ProfileScreen() {
   const submitHandler = (e) => {
     e.preventDefault();
     // dispatch update profile
+    if(password.length < 6){
+      alert("Password must be at least 6 characters");
+    }
     if (password !== confirmPassword) {
       alert("Password and Confirm Password Are Not Matched");
     } else {

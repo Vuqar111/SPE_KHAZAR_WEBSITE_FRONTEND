@@ -6,6 +6,7 @@ import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { universities } from "../../data";
 import { faculties } from "../../data";
+import PasswordStrengthBar from 'react-password-strength-bar';
 export default function RegisterScreen(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -24,7 +25,10 @@ export default function RegisterScreen(props) {
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) {
+    if(password.length < 6){
+      alert("Password must be at least 6 characters");
+    }
+    else if (password !== confirmPassword) {
       alert("Password and confirm password are not match");
     } 
     else {
@@ -123,6 +127,7 @@ export default function RegisterScreen(props) {
                 required
                 onChange={(e) => setPassword(e.target.value)}
               ></input>
+              <PasswordStrengthBar password={password} minLength={5} />
             </div>
             <div className="mt-[10px]">
               <label className="mt-[15px]" htmlFor="confirmPassword">
