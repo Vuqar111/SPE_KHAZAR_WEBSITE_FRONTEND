@@ -109,7 +109,7 @@ function App() {
           ></AdminRoute>
           <Route path="/" component={HomeScreen} exact></Route>
           <Route path="/*" component={PageNotFound} />
-        </Switch>``
+        </Switch>
         <Footer />
     </BrowserRouter>
   );

@@ -32,7 +32,7 @@ export const Contact = () => {
         <div>
           <h2 className="text-[36px]  font-bold">
             Love to hear from you! <br />
-            Get in touch with us.
+            Get in touch with us. 👇
           </h2>
         </div>
         <div className="mt-[20px]">
@@ -44,8 +44,9 @@ export const Contact = () => {
                 <input
                   className="border-[0.5] border-solid border-[#0067B1] mt-[5px] py-[10px] px-[10px]"
                   type="text"
+                  required
                   placeholder="Your name"
-                  name="user_name" required
+                  name="user_name" 
                 />
               </div>
               <div className="flex flex-col">
@@ -55,6 +56,7 @@ export const Contact = () => {
                   type="email"
                   placeholder="Your email"
                   name="user_email"
+                  required
                 />
               </div>
             </div>
@@ -66,15 +68,16 @@ export const Contact = () => {
                 type="text"
                 placeholder="What are you interested?"
                 name="user_subject"
+                required
               />
             </div>
             <div className="flex flex-col mt-[15px] w-[100%]">
               <label>Message</label>
-              <textarea placeholder="Your message" className="w-[100%] border-1 border-solid border-[#0067B1]  outline-1 outline-solid outline-[#0067B1]  mt-[5px] py-[10px] px-[10px]" name="user_message" />
+              <textarea placeholder="Your message" className="w-[100%] border-1 border-solid border-[#0067B1] outline-solid outline-[#0067B1]  mt-[5px] py-[10px] px-[10px]" name="user_message" required/>
             </div>
 
             <div className="mt-[15px]">
-              <button className="w-[300px] py-[15px] bg-[#000] text-[white]" type="submit" >Just Send</button>
+              <button className="w-[300px] py-[15px] bg-[#000] text-[white]" type="submit" >Just Send 👉</button>
             </div>
           </form>
         </div>

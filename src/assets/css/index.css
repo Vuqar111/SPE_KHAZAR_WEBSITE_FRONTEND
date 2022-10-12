@@ -1,26 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @keyframes fadeIn {
   0% {
     transform: translateY(-25%);
   }
+
   50% {
     transform: translateY(4%);
   }
+
   65% {
     transform: translateY(-2%);
   }
+
   80% {
     transform: translateY(2%);
   }
+
   95% {
     transform: translateY(-1%);
   }
+
   100% {
     transform: translateY(0%);
   }
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -29,33 +36,45 @@
   list-style: none;
   font-family: "Poppins", sans-serif;
 }
+
 a {
   font-family: "Poppins", sans-serif;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fff;
 }
+
 input {
   padding: 10px;
   font-size: 15px;
   border: none;
 }
+
+textarea {
+  border: 2px solid #0067b1;
+}
+
 select {
   color: #000;
 }
+
 select::placeholder {
   color: #000;
 }
+
 option {
   color: #000;
 }
+
 button {
   padding: 10px;
   font-size: 15px;
   border: none;
   cursor: pointer;
 }
+
 :root {
   --green-color: #08ad76;
   --black-color: #2b2c2f;
@@ -65,36 +84,43 @@ button {
   --header-color: #f3f0f0;
   --text-color: #141b5c;
 }
+
 .alert {
   margin-top: 20px;
   padding: 10px;
   text-align: center;
   width: auto;
 }
+
 .alert-success {
   background-color: #d1e7dd;
   color: #327770;
   border-color: #c3e6cb;
 }
+
 .alert-info {
   background-color: #d4edda;
   color: #155724;
   border-color: #c3e6cb;
 }
+
 .alert-warning {
   background-color: #d4edda;
   color: #155724;
   border-color: #c3e6cb;
 }
+
 .alert-danger {
   background-color: #f8d7da;
   color: #964a4b;
   border-color: #c3e6cb;
 }
+
 .info {
   background-color: #08ad76;
   color: #08ad76;
 }
+
 .row {
   width: 90%;
   margin: auto;
@@ -103,11 +129,13 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+
 button.primary {
   background-color: #0067b1;
   color: #fff;
   margin-top: 10px;
 }
+
 button.small {
   font-size: 15px;
   background-color: var(--sky-color);
@@ -115,15 +143,19 @@ button.small {
   margin: 5px;
   padding: 8px 10px;
 }
+
 button.delete {
   background-color: #dc3545;
 }
+
 button.edit {
   background-color: #28a745;
 }
+
 ul li {
   padding: 10px;
 }
+
 .icondropdown {
   display: flex;
   width: 100%;
@@ -133,25 +165,31 @@ ul li {
   align-items: center;
   padding: 15px;
 }
-.icondropdown > div {
+
+.icondropdown>div {
   margin: 0 5px;
 }
+
 .buttondownIcon {
   margin: 5px;
   font-size: 18px;
 }
+
 .show-container {
   display: flex;
 }
+
 .cardModel {
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.5s;
 }
+
 .cardModel:hover {
   transform: scale(0.96);
   transition: all 0.5s;
 }
+
 .item {
   background: #44abe4;
   margin-bottom: 5px;
@@ -159,6 +197,7 @@ ul li {
   color: #fff;
   border-radius: 30px;
 }
+
 .title {
   display: flex;
   justify-content: space-between;
@@ -166,17 +205,20 @@ ul li {
   cursor: pointer;
   font-weight: 700;
 }
+
 .content {
   max-height: 0;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0, 1, 0, 1);
 }
+
 .content.show {
   padding-top: 10px;
   height: auto;
   max-height: 9999px;
   transition: 3s ease-in-out;
 }
+
 .table {
   width: 90%;
   margin: auto;
@@ -184,6 +226,7 @@ ul li {
   margin-top: 40px;
   margin-bottom: 50px;
 }
+
 .tableHeader {
   background-color: #0067b1;
   color: #fff;
@@ -191,19 +234,23 @@ ul li {
   font-size: 18px;
   height: 35px;
 }
+
 .tableBody {
   color: #0067b1;
   font-size: 18px;
   height: 35px;
 }
+
 .table tbody tr:nth-of-type(odd) {
   background-color: #f4f4f4;
 }
+
 .table td,
 .table th {
   border: 0.1rem solid #e4e4e4;
   padding: 0 0.5rem;
 }
+
 .gallery {
   width: 90%;
   height: 100%;
@@ -213,13 +260,16 @@ ul li {
   justify-content: center;
   align-items: center;
 }
+
 .pics {
   width: 28vw;
   margin: 10px;
 }
+
 .gallery .pics:hover {
   opacity: 0.7;
 }
+
 .editFormContainer {
   width: 60%;
   margin: auto;
@@ -233,17 +283,11 @@ ul li {
   background: #f5f5f5;
 }
 
-.jodit-react-container {
-  width: 100% !important;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 15px;
-  flex-direction: column !important;
-}
-.editFormContainer > label {
+
+.editFormContainer>label {
   color: #0067b1 !important;
 }
+
 .editFormContainer div input,
 select,
 option,
@@ -251,13 +295,15 @@ textarea {
   width: 70%;
   background-color: #fff;
   color: var(--black-color);
-  
+
 }
+
 .editFormContainer div button {
   width: 100%;
   color: #fff;
-  
+
 }
+
 .model {
   height: 100%;
   width: 100%;
@@ -279,6 +325,7 @@ textarea {
   z-index: 99999;
   background-color: rgba(0, 0, 0, 0.438);
 }
+
 .modelbox {
   width: 80%;
   height: 80%;
@@ -288,11 +335,13 @@ textarea {
   background-color: #000;
   position: relative;
 }
+
 .model.open {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
 }
+
 .model img {
   width: auto;
   max-width: 100%;
@@ -304,6 +353,7 @@ textarea {
   padding: 20px 0 20px;
   margin: 0 auto;
 }
+
 .model.open .closebtn {
   position: absolute;
   top: 5px;
@@ -325,6 +375,7 @@ textarea {
   font-weight: bold;
   transition: all 0.3s ease;
 }
+
 .applybtn:hover {
   background-color: #0067b1;
   color: white;
@@ -336,6 +387,7 @@ textarea {
     display: none;
     overflow: hidden;
   }
+
   .table {
     width: 90%;
     margin: auto;
@@ -343,6 +395,7 @@ textarea {
     margin-top: 40px;
     margin-bottom: 50px;
   }
+
   .tableHeader {
     background-color: #0067b1;
     color: #fff;
@@ -350,30 +403,37 @@ textarea {
     font-size: 12px;
     height: 35px;
   }
+
   .tableBody {
     color: #0067b1;
     font-size: 12px;
     height: 35px;
   }
+
   .table tbody tr:nth-of-type(odd) {
     background-color: #f4f4f4;
   }
+
   .table td,
   .table th {
     border: 0.1rem solid #e4e4e4;
     padding: 0 0.5rem;
   }
+
   button.small {
     font-size: 8px;
     margin: 5px;
     padding: 10px 4px;
   }
+
   button.delete {
     background-color: #dc3545;
   }
+
   button.edit {
     background-color: #28a745;
   }
+
   .modelbox {
     width: 90%;
     height: 50%;
@@ -384,19 +444,23 @@ textarea {
     background-color: #000;
     position: relative;
   }
+
   .pics {
     width: 90%;
     margin: 10px 0;
   }
+
   .show-container {
     animation-name: fadeIn;
     animation-duration: 0.4s;
     background-clip: padding-box;
   }
+
   .editFormContainer {
     width: 100%;
     text-align: left;
   }
+
   .editFormContainer div {
     width: 100%;
     display: flex;
@@ -405,15 +469,18 @@ textarea {
     justify-content: flex-start;
     margin-top: 10px;
   }
+
   .editFormContainer div input,
   textarea {
     width: 100%;
   }
+
   .gallery {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
   }
+
   .gallery {
     -webkit-column-count: 1;
     -moz-column-count: 1;

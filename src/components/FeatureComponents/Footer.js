@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="bg-[#0067B1] flex w-[100%]  text-[white] mt-[50px] relative">
       <div className="flex flex-col lg:flex-row justify-between m-[auto]  w-[80%] mt-[20px] mb-[30px] relative">
-        <div className="font-bold text-[35px]">SPE-KHAZAR</div>
+        <div className="font-bold text-[28px] lg:text-[35px]">SPE-Khazar</div>
         <div>
           <div className="font-bold text-[16px] mt-[10px]">Resources</div>
           <div className="footerul">
@@ -18,7 +18,7 @@ const Footer = () => {
               <Link to="/records">Records</Link>
             </li>
             <li className="mt-[5px]">
-              <Link to="/library">Library</Link>
+              <Link to="/books">Library</Link>
             </li>
             <li className="mt-[5px]">
               <Link to="/galleries">Gallery</Link>
