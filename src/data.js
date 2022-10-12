@@ -52,12 +52,12 @@ export const teams = [
     id: 9,
     name: "Asim Mahmudov",
     status: "Webmaster",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439530/SPE-Teams/AsimMakhmudov_q6t1jm.jpg",
+    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665583329/SPE-Teams/IMG_0891_xixhre.jpg",
   },
   {
     id: 13,
     name: "Amina Aliyeva",
-    status: "Designer",
+    status: "Secretary",
     img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439433/SPE-Teams/AminaAliyeva_r2n2bt.jpg",
   },
   {

@@ -104,6 +104,7 @@ export const deleteBlog = (blogId) => async (dispatch, getState) => {
     const { data } = Axios.delete(`https://spekhazarwebsitebackend.vercel.app/api/blogs/${blogId}`, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
+
     dispatch({ type: BLOG_DELETE_SUCCESS });
   } catch (error) {
     const message =

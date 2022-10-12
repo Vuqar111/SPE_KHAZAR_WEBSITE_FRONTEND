@@ -88,7 +88,7 @@ export default function GalleryEditScreen(props) {
           
             <div>
               <label></label>
-              <button className="primary" type="submit">
+              <button className="w-[100%] p-[10px]" type="submit">
                 Update/Create Gallery
               </button>
             </div>

@@ -125,7 +125,7 @@ export default function RecordEditScreen(props) {
 
               <div>
                 <label></label>
-                <button className="primary w-[100%]" type="submit">
+                <button className="p-[10px] w-[100%]" type="submit">
                   Update/Create Record
                 </button>
               </div>

@@ -184,7 +184,7 @@ export default function ProductEditScreen(props) {
              
               <div>
                 <label></label>
-                <button className="primary" type="submit">
+                <button className="w-[100%] p-[10px]" type="submit">
                   Update / Cretate Event
                 </button>
               </div>
