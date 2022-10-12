@@ -8,10 +8,8 @@ import { BOOK_UPDATE_RESET } from "../../common/constants/bookConstants";
 export default function BookEditScreen(props) {
   const bookId = props.match.params.id;
   const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
   const [image, setImage] = useState("");
   const [category, setCategory] = useState("");
-  const [description, setDescription] = useState("");
   const [url, setUrl] = useState("");
 
   const bookDetails = useSelector((state) => state.bookDetails);
@@ -34,10 +32,8 @@ export default function BookEditScreen(props) {
       dispatch(detailsBook(bookId));
     } else {
       setTitle(book.title);
-      setAuthor(book.author);
       setImage(book.image);
       setCategory(book.category);
-      setDescription(book.description);
       setUrl(book.url);
     }
   }, [book, dispatch, bookId, successUpdate, props.history]);
@@ -48,10 +44,8 @@ export default function BookEditScreen(props) {
       updateBook({
         _id: bookId,
         title,
-        author,
         image,
         category,
-        description,
         url,
       })
     );
@@ -80,16 +74,6 @@ export default function BookEditScreen(props) {
                   placeholder="Enter name"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                ></input>
-              </div>
-              <div className="w-[100%] flex items-center justify-between mt-[15px]">
-                <label htmlFor="author">Author</label>
-                <input
-                  id="author"
-                  type="text"
-                  placeholder="Enter author"
-                  value={author}
-                  onChange={(e) => setAuthor(e.target.value)}
                 ></input>
               </div>
               <div className="w-[100%] flex items-center justify-between mt-[15px]">
@@ -126,17 +110,6 @@ export default function BookEditScreen(props) {
                 ></input>
               </div>
 
-              <div className="w-[100%] flex items-center justify-between mt-[15px]">
-                <label htmlFor="description">Description</label>
-                <textarea
-                  id="description"
-                  rows="3"
-                  type="text"
-                  placeholder="Enter description"
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                ></textarea>
-              </div>
               <div className="w-[100%]">
                 <button className="primary bg-[#0067b1] w-[100%] p-[10px]" type="submit">
                   Update / Cretate Book

@@ -74,7 +74,6 @@ export default function BookListScreen(props) {
             <thead>
               <tr className="tableHeader">
                 <th>TITLE</th>
-                <th>AUTHOR</th>
                 <th>CATEGORY</th>
                 <th>ACTIONS</th>
               </tr>
@@ -83,7 +82,6 @@ export default function BookListScreen(props) {
               {books.map((book) => (
                 <tr key={book._id}>
                   <td>{book.title}</td>
-                  <td>{book.author}</td>
                   <td>{book.category}</td>
 
                   <td>
