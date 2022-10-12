@@ -46,6 +46,7 @@ export default function HomeScreen() {
       <div className="w-[90%] m-[auto] mt-[25px] text-[20px] lg:text-[24px] text-center font-bold text-[#0067b1]">
         Our Latest Blogs
       </div>
+      
       <div className="w-[90%] m-[auto] flex justify-between mt-[20px] w-[100%] h-[auto] p-[0px]">
         {loadingblog ? (
           <LoadingBox></LoadingBox>
