@@ -1,124 +1,139 @@
+import mahammad from "./assets/images/teamImages/mahammad.jpg";
+import asim from "./assets/images/teamImages/asim.jpg";
+import vugar from "./assets/images/teamImages/vugar.jpg";
+import diana from "./assets/images/teamImages/diana.jpeg";
+import anar from "./assets/images/teamImages/anar.jpeg";
+import naiba from "./assets/images/teamImages/naibe.jpeg";
+import shams from "./assets/images/teamImages/semsimage.jpg";
+import sama from "./assets/images/teamImages/sema.jpg";
+import jahid from "./assets/images/teamImages/jahid.jpg";
+import amina from "./assets/images/teamImages/amina.jpg";
+import elmar from "./assets/images/teamImages/elmar.jpg";
+import aynur from "./assets/images/teamImages/aynur.jpg";
+import elgun from "./assets/images/teamImages/elgun.jpeg";
+import maryam from "./assets/images/teamImages/maryam.jpg";
+import nuray from "./assets/images/teamImages/nuray.jpg";
+import ruslan from "./assets/images/teamImages/ruslan.jpg";
+import aqsin from "./assets/images/teamImages/aqsin.png";
+import rashad from "./assets/images/teamImages/resad.jpg";
+import zeyneb from "./assets/images/teamImages/zeyneb.jpeg";
 export const teams = [
   {
     id: 1,
     name: "Mahammad Sadigov",
     status: "President",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439428/SPE-Teams/mehemmed_f90yqp.jpg",
+    img: mahammad,
   },
   {
     id: 2,
     name: "Vugar Hasanov",
     status: "Vice-President",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439542/SPE-Teams/vugar_zp0jof.jpg",
+    img: vugar,
   },
   {
     id: 3,
     name: "Diana Ismayilova",
     status: "Senior Advisor",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439367/SPE-Teams/diana_elthxo.jpg",
+    img: diana,
   },
   {
     id: 4,
     name: "Anar Kamilov",
     status: "Communications Officer",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439430/SPE-Teams/anar_dnyvmw.jpg",
+    img: anar,
   },
   {
     id: 5,
     name: "Naiba Garayeva",
     status: "Program Manager",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439557/SPE-Teams/naibe_bln5m5.jpg",
+    img: naiba,
   },
   {
     id: 6,
     name: "Shams Gadirli",
     status: "Designer",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439593/SPE-Teams/semsimage_bsxbgl.jpg",
+    img: shams,
   },
   {
     id: 7,
     name: "Sama Bayramova",
     status: "Photographer",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665474457/SPE-Teams/sema_r6alpv_pftnec_xffkgn.jpg",
+    img: sama,
   },
 
   {
     id: 8,
     name: "Jahid Faramazanov",
     status: "Coordionator",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439402/SPE-Teams/JahidFaramazanov_qqfzay.jpg",
+    img: jahid,
   },
   {
     id: 9,
     name: "Asim Mahmudov",
     status: "Webmaster",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665583329/SPE-Teams/IMG_0891_xixhre.jpg",
+    img: asim,
+  },
+  {
+    id: 10,
+    name: "Amina Aliyeva",
+    status: "Secretary",
+    img: amina,
+  },
+  {
+    id: 11,
+    name: "Elmar Suleymanov",
+    status: "Officer",
+    img: elmar,
+  },
+  {
+    id: 12,
+    name: "Aynur Huseynzade",
+    status: "SMM",
+    img: aynur,
   },
   {
     id: 13,
-    name: "Amina Aliyeva",
-    status: "Secretary",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439433/SPE-Teams/AminaAliyeva_r2n2bt.jpg",
+    name: "Elgun Asgarov",
+    status: "Program Manager",
+    img: elgun,
   },
   {
     id: 14,
-    name: "Elmar Suleymanov",
-    status: "Officer",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665440039/SPE-Teams/ElmarSuleymanov_1_qgy5vw.jpg",
+    name: "Maryam Movlanova",
+    status: "Social Activity Chairperson",
+    img: maryam,
   },
   {
     id: 15,
-    name: "Aynur Huseynzade",
-    status: "SMM",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439501/SPE-Teams/aynur_qkzgi5.jpg",
+    name: "Nuray Quliyeva",
+    status: "Designer",
+    img: nuray,
   },
   {
     id: 16,
-    name: "Elgun Asgarov",
-    status: "Program Manager",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439387/SPE-Teams/ElgunAsgarov_oaj5z1.jpg",
+    name: "Ruslan Abdurrahamov",
+    status: "Officer",
+    img: ruslan,
   },
   {
     id: 17,
-    name: "Maryam Movlanova",
-    status: "Social Activity Chairperson",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439440/SPE-Teams/MeryemMovlanova_guyxqf.jpg",
+    name: "Aqsin Qarashli",
+    status: "Former Vice President",
+    img: aqsin,
   },
   {
     id: 18,
-    name: "Nuray Quliyeva",
-    status: "Designer",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439461/SPE-Teams/nuray_edp4lq.jpg",
+    name: "Rashad Musayev",
+    status: "Program Chairperson",
+    img: rashad,
   },
   {
     id: 19,
-    name: "Ruslan Abdurrahamov",
-    status: "Officer",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439543/SPE-Teams/ruslan_sipzfr.jpg",
-  },
-  {
-    id: 20,
-    name: "Aqsin Qarashli",
-    status: "Former Vice President",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439536/SPE-Teams/aqsin_yoirsk.png",
-  },
-  {
-    id: 21,
-    name: "Rashad Musayev",
-    status: "Program Chairperson",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439661/SPE-Teams/resad_uvtmwh.jpg",
-  },
-  {
-    id: 22,
     name: "Zeyneb Ferzizade",
     status: "Social Activity Chairperson",
-    img: "https://res.cloudinary.com/dmpt1iii5/image/upload/v1665439543/SPE-Teams/zeyneb_sceehe.jpg",
+    img: zeyneb,
   },
-
-
-]
-
-
+];
 
 export const universities = [
   "Khazar University",
@@ -165,9 +180,8 @@ export const universities = [
   "Nakchivan Private University",
   "Odlar Yurdu University",
   "Western University",
-  "Baku Islam University"
-]
-
+  "Baku Islam University",
+];
 
 export const faculties = [
   "Computer Science",
@@ -198,6 +212,5 @@ export const faculties = [
   "Materials Science & Engineering",
   "Industrial Engineering",
   "System Engineering",
-  "Mechatronics"
-]
-
+  "Mechatronics",
+];

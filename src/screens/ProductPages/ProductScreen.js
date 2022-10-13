@@ -72,8 +72,8 @@ export default function ProductScreen(props) {
                   <div>
                     <MdDateRange />
                   </div>
-                  {/* <div>{new Date(product.createdAt).toDateString()}</div> */}
-                  <div>{new Date(product.deadline).toDateString()}</div>
+                  <div>{new Date(product.createdAt).toDateString()}</div>
+                  
                 </div>
                 <div className="flex justify-between  items-center  text-[white]">
                   <div className="ml-[5px] cursor-pointer  pointer">
@@ -108,7 +108,7 @@ export default function ProductScreen(props) {
                   </a>
                 ) : (
                   <div className="applybtn">
-                    <button>Deadline is finished for this event</button>
+                    <button>Deadline is finished</button>
                   </div>
                 )}
               </div>
