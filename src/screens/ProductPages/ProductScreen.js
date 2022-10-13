@@ -108,7 +108,7 @@ export default function ProductScreen(props) {
                   </a>
                 ) : (
                   <div className="applybtn">
-                    <button>Deadline is finished</button>
+                    <button>Deadline is finished for this event</button>
                   </div>
                 )}
               </div>
