@@ -15,7 +15,7 @@ export default function HomeScreen() {
   }, [dispatch]);
 
   return (
-    <React.Fragment>
+    <div>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
@@ -24,7 +24,7 @@ export default function HomeScreen() {
         <div>
           <div className="relative">
             <img
-              className="w-[100%] h-[100%] max-h-[250px] lg:max-h-[400px]"
+              className="w-[100%] h-[100%] max-h-[250px] lg:max-h-[400px] object-cover"
               src={aboutimg}
               alt="aboutImage"
             />
@@ -66,6 +66,6 @@ export default function HomeScreen() {
           </div>
         </div>
       )}
-    </React.Fragment>
+    </div>
   );
 }
