@@ -47,7 +47,7 @@ export default function BlogScreen(props) {
         ) : (
           <div className="">
             <div>
-              <div className="w-[100%] h-[450px] mt-[20px]">
+              <div className="w-[100%] md:h-[30vh] lg:h-[50vh] mt-[20px]">
                 <img
                   className="w-[100%] h-[100%] bg-cover object-cover rounded-[5px]"
                   src={blog.image}
@@ -60,7 +60,7 @@ export default function BlogScreen(props) {
                   <h2 className="font-bold text-[22px] lg:text-[30px]">{blog.title}</h2>
                   <p className="font-bold opacity-[0.8]">{blog.category}</p>
                   </div>
-                  <p className="font-bold text-[#0067B1]">{blog.author}</p>
+                  <p className="font-bold text-[#0067B1] md:text-lg text-sm">{blog.author}</p>
                 </div>
               </div>
               <div className="w-[100%] pl-[15px] pr-[15px] m-[auto]  flex justify-between ">
@@ -91,7 +91,7 @@ export default function BlogScreen(props) {
                 </div>
               </div>
               <hr />
-              <p className="w-[100%] text-[18px] my-[20px] mx-[18px]"  dangerouslySetInnerHTML={createMarkup()}>
+              <p className="w-[95%] md:text-lg text-sm my-[20px] mx-[5px]"  dangerouslySetInnerHTML={createMarkup()}>
               </p>
             </div>
           </div>

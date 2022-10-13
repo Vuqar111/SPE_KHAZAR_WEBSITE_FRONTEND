@@ -6,7 +6,7 @@ const About = () => {
       <div>
         <div className="relative">
           <img className="w-[100%] h-[100%] max-h-[40vh] lg:max-h-[70vh] object-cover" src={aboutimg} alt="" />
-          <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[85px] text-[white] flex items-center justify-center w-[100%] h-[100%] font-bold">
+          <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[white] flex items-center justify-center w-[100%] h-[100%] text-6xl font-bold">
             <h1>ABOUT US</h1>
           </div>
         </div>
