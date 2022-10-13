@@ -97,9 +97,6 @@ export const Navbar = () => {
                 <li className="w-[100%]">
                   <Link to="/contact">Contact</Link>
                 </li>
-                <li className="w-[100%]">
-                <QrReader/>
-                </li>
               </ul>
             </div>
             <div className="icondropdown">
