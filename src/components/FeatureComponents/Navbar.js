@@ -140,7 +140,7 @@ export const Navbar = () => {
                     </Item>
                     <Item>
                       <BsFillCollectionPlayFill className="buttondownIcon" />
-                      <Link to="/recordlist">Records</Link>
+                      <Link to="/recordlist">Recordings</Link>
                     </Item>
                     <Item>
                       <BsJournalBookmark className="buttondownIcon" />

@@ -14,7 +14,7 @@ const About = () => {
           <p>
           <spam className="text-[#0067B1] font-bold">SPE</spam> has student chapters around the world that provide an operating
             framework for society activities at a university level. <spam className="text-[#0067B1] font-bold">SPE Khazar
-            University Student Chapter</spam>  was established on 1st of January in 2
+            University Student Chapter</spam>  was established on 1st of January in 
             2005. The mission of the chapter is to provide students with SPE
             membership which gives them access to the technical and
             non-technical knowledge besides will keep them in touch with the
