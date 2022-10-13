@@ -1,33 +1,60 @@
 import React, { useState } from "react";
-import {QrReader} from "react-qr-reader";
+import { QrReader } from "react-qr-reader";
 
-const App = () => {
-  const [code, setCode] = useState(null);
-  const [showDialog, setDiaglog] = useState(false);
-  const [processing, setProcessing] = useState(false);
-  const [precScan, setPrecScan] = useState("");
+const QrScan = () => {
   const [selected, setSelected] = useState("environment");
+  const [startScan, setStartScan] = useState(false);
+  const [loadingScan, setLoadingScan] = useState(false);
+  const [data, setData] = useState("");
 
-  const handleScan = (scanData) => {
-    // window.location.href = "";
-    if (scanData && scanData) {
-      window.location.href = scanData;
+  const handleScan = async (scanData) => {
+    setLoadingScan(true);
+    console.log(`loaded data data`, scanData);
+    if (scanData && scanData !== "") {
+      console.log(`loaded >>>`, scanData);
+      setData(scanData);
+      setStartScan(false);
+      setLoadingScan(false);
+      // setPrecScan(scanData);
     }
   };
   const handleError = (err) => {
     console.error(err);
   };
   return (
-    <div className="qrContainer bg-[red]">
-      {!showDialog && !processing && (
-        <QrReader
-          delay={500}
-          onScan={handleScan}
-          style={{ width: "100%"}}
-        />
+    <div className="qrContainer bg-[white]">
+      <h2>
+        Last Scan:
+        {selected}
+      </h2>
+
+      <button
+        onClick={() => {
+          setStartScan(!startScan);
+        }}
+      >
+        {startScan ? "Stop Scan" : "Start Scan"}
+      </button>
+      {startScan && (
+        <>
+          <select onChange={(e) => setSelected(e.target.value)}>
+            <option value={"environment"}>Back Camera</option>
+            <option value={"user"}>Front Camera</option>
+          </select>
+          <QrReader
+            facingMode={selected}
+            delay={1000}
+            onError={handleError}
+            onScan={handleScan}
+            chooseDeviceId={()=>selected}
+            style={{ width: "300px" }}
+          />
+        </>
       )}
+      {loadingScan && <p>Loading</p>}
+      {data !== "" && <p className="text-[black] text-[24px]">{data}</p>}
     </div>
   );
 };
 
-export default App;
+export default QrScan;
