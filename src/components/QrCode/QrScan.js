@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { QrReader } from "react-qr-reader";
 
 const QrScan = () => {
-  const [selected, setSelected] = useState("environment");
+  const [selected, setSelected] = useState("rear");
   const [startScan, setStartScan] = useState(false);
   const [loadingScan, setLoadingScan] = useState(false);
   const [data, setData] = useState("");
@@ -38,15 +38,15 @@ const QrScan = () => {
       {startScan && (
         <>
           <select onChange={(e) => setSelected(e.target.value)}>
-            <option value={"environment"}>Back Camera</option>
-            <option value={"user"}>Front Camera</option>
+            <option value="environment">Back Camera</option>
+            <option value="user">Front Camera</option>
           </select>
           <QrReader
-            facingMode={selected}
+            facingMode="rear"
             delay={1000}
             onError={handleError}
             onScan={handleScan}
-            chooseDeviceId={()=>selected}
+           
             style={{ width: "300px" }}
           />
         </>
