@@ -383,6 +383,18 @@ textarea {
   transition: all 0.3s ease;
 }
 
+.qrContainer {
+  width: 30%;
+  margin: auto;
+  margin-top: 100px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10000000;
+}
+
 @media (max-width: 768px) {
   ::-webkit-scrollbar {
     display: none;
@@ -489,5 +501,16 @@ textarea {
     -webkit-column-width: 100%;
     -moz-column-width: 100%;
     column-width: 100%;
+  }
+  .qrContainer {
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10000000;
   }
 }

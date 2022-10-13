@@ -17,6 +17,7 @@ import { signout } from "../../common/actions/userActions";
 import { AiFillCaretDown } from "react-icons/ai";
 import { GrClose } from "react-icons/gr";
 import logo from "../../assets/images/spekhazarlogo.png";
+import QrReader from "../QrCode/QrScan";
 
 export const Navbar = () => {
   const userSignin = useSelector((state) => state.userSignin);
@@ -63,6 +64,9 @@ export const Navbar = () => {
 
   useEffect(() => {}, [dispatch]);
   const [showlink, setshowlink] = useState(false);
+
+  // QrScanner
+
   return (
     <div>
       <div className="w-[100%] flex fixed h-[8vh] bg-[#f8f8f8] z-[10000] top-[0] border-1">
@@ -136,7 +140,7 @@ export const Navbar = () => {
                     </Item>
                     <Item>
                       <BsFillCollectionPlayFill className="buttondownIcon" />
-                      <Link to="/recordlist">Records</Link>
+                      <Link to="/recordlist">Recordings</Link>
                     </Item>
                     <Item>
                       <BsJournalBookmark className="buttondownIcon" />
@@ -145,6 +149,10 @@ export const Navbar = () => {
                     <Item>
                       <GrGallery className="buttondownIcon" />
                       <Link to="/gallerylist">Gallery</Link>
+                    </Item>
+                    <Item>
+                      <GrGallery className="buttondownIcon" />
+                      <Link to="/certificatelist">Certificates</Link>
                     </Item>
                   </Dropdown>
                 </div>

@@ -16,7 +16,7 @@ export default function RecordsSection() {
   return (
     <div>
       <div className="flex justify-center items-center bg-[#f5f5f5] text-center lg:text-4xl text-[24px] font-bold p-[10px] ">
-        <p className="text-center text-[#0067b1] ">Records</p>
+        <p className="text-center text-[#0067b1] ">Recordings</p>
       </div>
       <div className="w-[90%] h-[100%] m-[auto] flex justify-center mt-[40px] ">
         {loading ? (

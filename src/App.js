@@ -24,93 +24,104 @@ import RecordListScreen from "./screens/RecordPages/RecordListScreen";
 import GalleriesSection from "./screens/GalleryPages/GalleriesSection";
 import GalleryEditScreen from "./screens/GalleryPages/GalleryEditScreen";
 import GalleryListScreen from "./screens/GalleryPages/GalleryListScreen";
+import CertificateEditScreen from "./screens/CertificatePages/CertificateEdit";
+import CertificateListScreen from "./screens/CertificatePages/CertificateList";
 import UserListScreen from "./screens/ProfilePages/UserListScreen";
 import UserEditScreen from "./screens/ProfilePages/UserEditScreen";
 import SubHeader from "./components/FeatureComponents/SubHeader";
+import QrCode from "./components/QrCode/QrCode";
 import About from "./components/About";
-import {Contact} from "./components/Contact";
-import FAQ from './components/FAQ';
+import { Contact } from "./components/Contact";
+import FAQ from "./components/FAQ";
 import PageNotFound from "./components/HelperComponents/PageNotFound";
 import Teams from "./components/BoxComponents/Teams.js";
-import {Navbar}  from "./components/FeatureComponents/Navbar";
-
+import { Navbar } from "./components/FeatureComponents/Navbar";
 
 function App() {
   return (
     <BrowserRouter>
-        <Navbar/>
-        <SubHeader />
-        <Switch>
+      <Navbar />
+      <SubHeader />
+      <Switch>
+        <Route path="/events" component={ProductsSection} exact></Route>
+        <Route path="/event/:id" component={ProductScreen} exact></Route>
+        <Route
+          path="/event/:id/edit"
+          component={ProductEditScreen}
+          exact
+        ></Route>
 
-          <Route path="/events" component={ProductsSection} exact></Route>
-          <Route path="/event/:id" component={ProductScreen} exact></Route>
-          <Route
-            path="/event/:id/edit"
-            component={ProductEditScreen}
-            exact
-          ></Route>
+        {/* Blog */}
 
-          {/* Blog */}
+        <Route path="/blogs" component={BlogsSection} exact></Route>
+        <Route path="/blog/:id" component={BlogScreen} exact></Route>
+        <Route path="/blog/:id/edit" component={BlogEditScreen} exact></Route>
 
-          <Route path="/blogs" component={BlogsSection} exact></Route>
-          <Route path="/blog/:id" component={BlogScreen} exact></Route>
-          <Route path="/blog/:id/edit" component={BlogEditScreen} exact></Route>
+        {/* Record Routers */}
+        <Route path="/records" component={RecordsSection} exact></Route>
+        <Route
+          path="/record/:id/edit"
+          component={RecordEditScreen}
+          exact
+        ></Route>
 
-          {/* Record Routers */}
-          <Route path="/records" component={RecordsSection} exact></Route>
-          <Route
-            path="/record/:id/edit"
-            component={RecordEditScreen}
-            exact
-          ></Route>
+        {/* Books */}
 
-          {/* Books */}
+        <Route path="/books" component={BooksSection} exact></Route>
+        <Route path="/book/:id/edit" component={BookEditScreen} exact></Route>
 
-          <Route path="/books" component={BooksSection} exact></Route>
-          <Route path="/book/:id/edit" component={BookEditScreen} exact></Route>
+        <Route
+          path="/certificate/:id/edit"
+          component={CertificateEditScreen}
+          exact
+        ></Route>
 
-          {/* Gallery */}
-          <Route path="/galleries" component={GalleriesSection} exact></Route>
-          <Route
-            path="/gallery/:id/edit"
-            component={GalleryEditScreen}
-            exact
-          ></Route>
+        {/* Gallery */}
+        <Route path="/galleries" component={GalleriesSection} exact></Route>
+        <Route
+          path="/gallery/:id/edit"
+          component={GalleryEditScreen}
+          exact
+        ></Route>
 
-          <Route path="/signin" component={SigninScreen}></Route>
-          <Route path="/register" component={RegisterScreen}></Route>
-          <Route path="/about" component={About} exact></Route>
-          <Route path="/contact" component={Contact} exact></Route>
-          <Route path="/faq" component={FAQ} exact></Route>
-          <Route path="/teams" component={Teams} exact></Route>
+        <Route path="/signin" component={SigninScreen}></Route>
+        <Route path="/register" component={RegisterScreen}></Route>
+        <Route path="/about" component={About} exact></Route>
+        <Route path="/contact" component={Contact} exact></Route>
+        <Route path="/qrcode" component={QrCode} exact></Route>
+        <Route path="/faq" component={FAQ} exact></Route>
+        <Route path="/teams" component={Teams} exact></Route>
 
-          <PrivateRoute
-            path="/profile"
-            component={ProfileScreen}
-          ></PrivateRoute>
-          <AdminRoute
-            path="/eventlist"
-            component={ProductListScreen}
-          ></AdminRoute>
-          <AdminRoute path="/bloglist" component={BlogListScreen}></AdminRoute>
-          <AdminRoute
-            path="/gallerylist"
-            component={GalleryListScreen}
-          ></AdminRoute>
-          <AdminRoute path="/booklist" component={BookListScreen}></AdminRoute>
-          <AdminRoute
-            path="/recordlist"
-            component={RecordListScreen}
-          ></AdminRoute>
-          <AdminRoute path="/userlist" component={UserListScreen}></AdminRoute>
-          <AdminRoute
-            path="/user/:id/edit"
-            component={UserEditScreen}
-          ></AdminRoute>
-          <Route path="/" component={HomeScreen} exact></Route>
-          <Route path="/*" component={PageNotFound} />
-        </Switch>
-        <Footer />
+        <PrivateRoute path="/profile" component={ProfileScreen}></PrivateRoute>
+        <AdminRoute
+          path="/eventlist"
+          component={ProductListScreen}
+        ></AdminRoute>
+        <AdminRoute path="/bloglist" component={BlogListScreen}></AdminRoute>
+        <AdminRoute
+          path="/gallerylist"
+          component={GalleryListScreen}
+        ></AdminRoute>
+        <AdminRoute path="/booklist" component={BookListScreen}></AdminRoute>
+        <AdminRoute
+          path="/recordlist"
+          component={RecordListScreen}
+        ></AdminRoute>
+        <AdminRoute path="/userlist" component={UserListScreen}></AdminRoute>
+        <AdminRoute
+          path="/user/:id/edit"
+          component={UserEditScreen}
+        ></AdminRoute>
+        {/* Certificate */}
+        <AdminRoute
+          path="/certificatelist"
+          component={CertificateListScreen}
+          exact
+        ></AdminRoute>
+        <Route path="/" component={HomeScreen} exact></Route>
+        <Route path="/*" component={PageNotFound} />
+      </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
