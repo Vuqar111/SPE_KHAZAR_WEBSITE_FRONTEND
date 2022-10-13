@@ -49,7 +49,13 @@ import {
   galleryListReducer,
   galleryUpdateReducer,
 } from "./common/reducers/galleryReducers";
-
+import {
+  certificateCreateReducer,
+  certificateDeleteReducer,
+  certificateDetailsReducer,
+  certificateListReducer,
+  certificateUpdateReducer,
+} from './common/reducers/certificateReducers';
 const initialState = {
   userSignin: {
     userInfo: localStorage.getItem("userInfo")
@@ -92,6 +98,11 @@ const reducer = combineReducers({
   galleryCreate: galleryCreateReducer,
   galleryUpdate: galleryUpdateReducer,
   galleryDelete: galleryDeleteReducer,
+  certificateList: certificateListReducer,
+  certificateDetails: certificateDetailsReducer,
+  certificateCreate: certificateCreateReducer,
+  certificateUpdate: certificateUpdateReducer,
+  certificateDelete: certificateDeleteReducer,
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
