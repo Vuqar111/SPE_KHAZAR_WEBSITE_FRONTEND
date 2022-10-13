@@ -19,6 +19,7 @@ export default function ProductEditScreen(props) {
   const [location, setLocation] = useState("");
   const [type, setType] = useState("");
   const [registerLink, setRegisterLink]= useState("");
+  const [deadline, setDeadline] = useState("");
 
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
@@ -46,6 +47,7 @@ export default function ProductEditScreen(props) {
       setType(product.type);
       setCategory(product.category);
       setRegisterLink(product.registerLink);
+      setDeadline(product.deadline);
       setDescription(product.description);
     }
   }, [product, dispatch, productId, successUpdate, props.history]);
@@ -62,6 +64,7 @@ export default function ProductEditScreen(props) {
         type,
         description,
         registerLink,
+        deadline,
       })
     );
   };
@@ -158,6 +161,16 @@ export default function ProductEditScreen(props) {
                   placeholder="Enter Register Link"
                   value={registerLink}
                   onChange={(e) => setRegisterLink(e.target.value)}
+                ></input>
+              </div>
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
+                <label htmlFor="registerlink">Deadline</label>
+                <input
+                  id="register"
+                  type="date"
+                  placeholder="Enter Deadline"
+                  value={deadline}
+                  onChange={(e) => setDeadline(e.target.value)}
                 ></input>
               </div>
 

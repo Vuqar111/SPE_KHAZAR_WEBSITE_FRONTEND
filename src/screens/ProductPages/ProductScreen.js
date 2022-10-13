@@ -20,14 +20,22 @@ export default function ProductScreen(props) {
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
 
+  const date = new Date();
+  console.log(date);
+  //  console.log(product.deadline)
+  // Check deadline is between current date and event date
+  // if(product.deadline  && product.deadline < new Date().toISOString().slice(0, 10) && product.deadline > product.date){
+  //   product.status = "Closed";
+  // }
+
   useEffect(() => {
     dispatch(detailsProduct(productId));
   }, [dispatch, productId]);
 
   const createMarkup = () => {
     return { __html: product.description };
-  }
-  
+  };
+
   return (
     <React.Fragment>
       <div className="w-[95%] lg:w-[80%] m-[auto]">
@@ -48,10 +56,14 @@ export default function ProductScreen(props) {
               <div className="p-[15px]">
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between w-[auto] date">
                   <div>
-                  <h2 className="font-bold text-[22px] lg:text-[30px]">{product.name}</h2>
-                  <p className="font-bold opacity-[0.8]">{product.location} - {product.category} -{product.type}</p>
+                    <h2 className="font-bold text-[22px] lg:text-[30px]">
+                      {product.name}
+                    </h2>
+                    <p className="font-bold opacity-[0.8]">
+                      {product.location} - {product.category} -{product.type}
+                    </p>
                   </div>
-                  
+
                   <p className="font-bold text-[#0067B1]">{product.author}</p>
                 </div>
               </div>
@@ -60,9 +72,8 @@ export default function ProductScreen(props) {
                   <div>
                     <MdDateRange />
                   </div>
-                  <div>
-                    {new Date(product.createdAt).toDateString()}
-                  </div>
+                  {/* <div>{new Date(product.createdAt).toDateString()}</div> */}
+                  <div>{new Date(product.deadline).toDateString()}</div>
                 </div>
                 <div className="flex justify-between  items-center  text-[white]">
                   <div className="ml-[5px] cursor-pointer  pointer">
@@ -83,14 +94,23 @@ export default function ProductScreen(props) {
                 </div>
               </div>
               <hr />
-              <p className="w-[100%] text-[18px] my-[20px] mx-[18px]" dangerouslySetInnerHTML={createMarkup()}></p>
+              <p
+                className="w-[100%] text-[18px] my-[20px] mx-[18px]"
+                dangerouslySetInnerHTML={createMarkup()}
+              ></p>
               <hr />
               <div className="w-[100%] p-[15px] m-[auto]  flex justify-between ">
-                <a href={product.registerLink} target="_blank">
+                {product.deadline > new Date().toISOString().slice(0, 10) ? (
+                  <a href={product.registerLink} target="_blank">
+                    <div className="applybtn">
+                      <button>Register for event</button>
+                    </div>
+                  </a>
+                ) : (
                   <div className="applybtn">
-                    <button>Register for event</button>
+                    <button>Deadline is finished</button>
                   </div>
-                </a>
+                )}
               </div>
             </div>
           </div>
@@ -99,4 +119,3 @@ export default function ProductScreen(props) {
     </React.Fragment>
   );
 }
-
