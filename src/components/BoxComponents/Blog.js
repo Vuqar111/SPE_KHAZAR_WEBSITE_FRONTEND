@@ -6,7 +6,7 @@ import { BsPersonFill } from "react-icons/bs";
 export default function Product(props) {
   const { blog } = props;
   const createMarkup = () => {
-    return { __html: blog.description.slice(0, 100)+"..." };
+    return { __html: blog.description.slice(0, 70)+"..." };
   }
   return (
     <Wrapper>
