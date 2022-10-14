@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { listCertificates } from "../../common/actions/certificateActions";
 const CertificateCheck = () => {
   const [code, setCode] = useState("");
+  const [message, setMessage] = useState("");
 
   const dispatch = useDispatch();
   const certificateList = useSelector((state) => state.certificateList);
@@ -19,15 +20,15 @@ const CertificateCheck = () => {
     } else if (error) {
       return "Error";
     } else if (certificates.length !== 0) {
-      const isFound = certificates.find((element) => {
+      certificates.find((element) => {
         if (element.code === code) {
           window.location.href = element.url;
+          setMessage("");
         }
-        if (element.code !== code) {
-          return "Certificate not found";
+        else {
+          setMessage("Certificate not found");
         }
       });
-      isFound();
     }
   };
 
@@ -49,6 +50,7 @@ const CertificateCheck = () => {
               onChange={(e) => setCode(e.target.value)}
               placeholder="Your certificate id number"
             />
+            <p className="my-[5px] text-[red]">{message}</p>
             <button
               type="submit"
               className="w-[100%] text-[16px] lg:text-[20px]  p-[10px] bg-[#0067B1] text-white"
