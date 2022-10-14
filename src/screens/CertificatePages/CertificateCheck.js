@@ -22,10 +22,9 @@ const CertificateCheck = () => {
     } else if (certificates.length !== 0) {
       certificates.find((element) => {
         if (element.code === code) {
-          window.location.href = element.url;
-          setMessage("");
-        }
-        else {
+          window.open(element.url, "_blank");
+          setMessage("Certificate Found");
+        } else {
           setMessage("Certificate not found");
         }
       });
@@ -50,7 +49,7 @@ const CertificateCheck = () => {
               onChange={(e) => setCode(e.target.value)}
               placeholder="Your certificate id number"
             />
-            <div className="mb-[10px] alert alert-danger">{message}</div>
+            <div className="mb-[10px] alert text-[#964a4b]">{message}</div>
             <button
               type="submit"
               className="w-[100%] text-[16px] lg:text-[20px]  p-[10px] bg-[#0067B1] text-white"

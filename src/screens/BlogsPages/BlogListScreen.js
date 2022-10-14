@@ -56,7 +56,9 @@ export default function BlogListScreen(props) {
   return (
     <div>
       <div className="row">
-      <h1 className="font-bold text-[16px] lg:text-[24px]">SPE KHAZAR Blogs List</h1>
+        <h1 className="font-bold text-[16px] lg:text-[24px]">
+          SPE KHAZAR Blogs List
+        </h1>
         <button
           type="button"
           className="primary p-[1rem]"
