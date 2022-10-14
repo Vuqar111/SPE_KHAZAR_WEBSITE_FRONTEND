@@ -10,7 +10,6 @@ export default function RecordEditScreen(props) {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [category, setCategory] = useState("");
-  const [image, setImage] = useState("");
   const [url, setUrl] = useState("");
 
   const recordDetails = useSelector((state) => state.recordDetails);
@@ -34,7 +33,6 @@ export default function RecordEditScreen(props) {
     } else {
       setTitle(record.title);
       setAuthor(record.author);
-      setImage(record.image);
       setCategory(record.category);
       setUrl(record.url);
     }
@@ -47,7 +45,6 @@ export default function RecordEditScreen(props) {
         _id: recordId,
         title,
         author,
-        image,
         category,
         url,
       })
@@ -91,17 +88,6 @@ export default function RecordEditScreen(props) {
                   onChange={(e) => setAuthor(e.target.value)}
                 ></input>
               </div>
-              <div className="w-[100%] flex items-center justify-between mt-[15px]">
-                <label htmlFor="image">Image</label>
-                <input
-                  id="image"
-                  type="text"
-                  placeholder="Enter image"
-                  value={image}
-                  onChange={(e) => setImage(e.target.value)}
-                ></input>
-              </div>
-             
               <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="category">category</label>
                 <input
