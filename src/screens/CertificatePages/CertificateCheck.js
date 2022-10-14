@@ -18,14 +18,13 @@ const CertificateCheck = () => {
       return "Loading...";
     } else if (error) {
       return "Error";
-    } else {
+    } else if (certificates.length !== 0) {
       const isFound = certificates.find((element) => {
         if (element.code === code) {
           window.location.href = element.url;
-        } else if (element.code !== code) {
-          alert("Certificate not found");
-        } else {
-          alert("Error");
+        }
+        if (element.code !== code) {
+          return "Certificate not found";
         }
       });
       isFound();
