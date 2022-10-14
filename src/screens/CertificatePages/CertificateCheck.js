@@ -44,7 +44,7 @@ const CertificateCheck = () => {
         <form className="flex flex-col mt-[30px]" onSubmit={submitHandler}>
           <div>
             <input
-              className="w-[100%] bg-[white]  mt-[10px] mb-[10px] text-[16px] lg:text-[20px] text-center border-1 border-solid border-[#0067B1]"
+              className="w-[100%] bg-[white] p-[10px]  mt-[10px] mb-[10px] text-[16px] lg:text-[18px] text-center border-1 border-solid border-[#0067B1]"
               type="number"
               value={code}
               onChange={(e) => setCode(e.target.value)}
