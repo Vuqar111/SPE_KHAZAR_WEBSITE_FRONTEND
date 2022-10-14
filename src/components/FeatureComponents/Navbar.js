@@ -9,7 +9,7 @@ import {
   BsJournalBookmark,
 } from "react-icons/bs";
 import { FiUsers, FiSettings } from "react-icons/fi";
-import { GrGallery } from "react-icons/gr";
+import { GrGallery,GrDocumentLocked } from "react-icons/gr";
 import { FaSignOutAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -150,7 +150,7 @@ export const Navbar = () => {
                       <Link to="/gallerylist">Gallery</Link>
                     </Item>
                     <Item>
-                      <GrGallery className="buttondownIcon" />
+                      <GrDocumentLocked className="buttondownIcon" />
                       <Link to="/certificatelist">Certificates</Link>
                     </Item>
                   </Dropdown>
