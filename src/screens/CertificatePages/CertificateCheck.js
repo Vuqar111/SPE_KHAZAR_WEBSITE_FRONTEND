@@ -44,18 +44,18 @@ const CertificateCheck = () => {
         <form className="flex flex-col mt-[30px]" onSubmit={submitHandler}>
           <div>
             <input
-              className="w-[100%] bg-[white] p-[10px]  mt-[10px] mb-[10px] text-[16px] lg:text-[18px] text-center border-1 border-solid border-[#0067B1]"
+              className="w-[100%] bg-[white] p-[10px]  mt-[10px]  text-[16px] lg:text-[18px] text-center border-1 border-solid border-[#0067B1]"
               type="number"
               value={code}
               onChange={(e) => setCode(e.target.value)}
               placeholder="Your certificate id number"
             />
-            <p className="my-[5px] text-[red]">{message}</p>
+            <div className="mb-[10px] alert alert-danger">{message}</div>
             <button
               type="submit"
               className="w-[100%] text-[16px] lg:text-[20px]  p-[10px] bg-[#0067B1] text-white"
             >
-              Search
+              Check
             </button>
           </div>
         </form>
