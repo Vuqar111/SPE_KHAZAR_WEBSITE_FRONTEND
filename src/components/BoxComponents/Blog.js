@@ -6,7 +6,7 @@ import { BsPersonFill } from "react-icons/bs";
 export default function Product(props) {
   const { blog } = props;
   const createMarkup = () => {
-    return { __html: blog.description };
+    return { __html: blog.description.slice(0, 100)+"..." };
   }
   return (
     <Wrapper>
@@ -79,10 +79,10 @@ const Wrapper = styled.div`
     color: rgb(88, 87, 87);
     margin: 5px;
     overflow: hidden;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: vertical; */
   }
   .card img {
     background-color: rgb(236, 236, 236);

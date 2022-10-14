@@ -71,7 +71,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     background-color: #f5f5f5;
     width: 100%;
-    height: 27%;
+    height: 25%;
     bottom: 0;
     border-radius: 1em 1em 0 0;
     transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -85,8 +85,9 @@ const Wrapper = styled.div`
   }
 
   .text-body {
-    font-size: 1em;
-    line-height: 30%;
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: -15px;
   }
 
   .team:hover .team-description {

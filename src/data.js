@@ -38,14 +38,14 @@ export const teams = [
   },
   {
     id: 4,
-    name: "Anar Kamilov",
+    name: "Anar Bandiyev",
     status: "Communications Officer",
     img: anar,
   },
   {
     id: 5,
     name: "Naiba Garayeva",
-    status: "Program Manager",
+    status: "Program Chairperson",
     img: naiba,
   },
   {
@@ -63,15 +63,15 @@ export const teams = [
 
   {
     id: 8,
-    name: "Jahid Faramazanov",
-    status: "Coordionator",
-    img: jahid,
-  },
-  {
-    id: 9,
     name: "Asim Mahmudov",
     status: "Webmaster",
     img: asim,
+  },
+  {
+    id: 9,
+    name: "Jahid Faramazanov",
+    status: "Chemical Engineering Coordinator",
+    img: jahid,
   },
   {
     id: 10,
@@ -82,7 +82,7 @@ export const teams = [
   {
     id: 11,
     name: "Elmar Suleymanov",
-    status: "Officer",
+    status: "Membership Chairperson",
     img: elmar,
   },
   {
@@ -94,13 +94,13 @@ export const teams = [
   {
     id: 13,
     name: "Elgun Asgarov",
-    status: "Program Manager",
+    status: "Petroleum Engineering Coordinator",
     img: elgun,
   },
   {
     id: 14,
     name: "Maryam Movlanova",
-    status: "Social Activity Chairperson",
+    status: "Social Activities Chairperson ",
     img: maryam,
   },
   {
@@ -111,8 +111,8 @@ export const teams = [
   },
   {
     id: 16,
-    name: "Ruslan Abdurrahamov",
-    status: "Officer",
+    name: "Ruslan Abdurahamov",
+    status: "Treasurer",
     img: ruslan,
   },
   {

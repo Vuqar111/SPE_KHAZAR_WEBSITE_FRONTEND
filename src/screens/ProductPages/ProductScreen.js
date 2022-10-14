@@ -101,7 +101,7 @@ export default function ProductScreen(props) {
               <hr />
               <div className="w-[100%] p-[15px] m-[auto]  flex justify-between ">
                 {product.deadline > new Date().toISOString().slice(0, 10) ? (
-                  <a href={product.registerLink} target="_blank">
+                  <a href={product.registerLink} target="_blank" rel="noreferrer">
                     <div className="applybtn">
                       <button>Register for event</button>
                     </div>

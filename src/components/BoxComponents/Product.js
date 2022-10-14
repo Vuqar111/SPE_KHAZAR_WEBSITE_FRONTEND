@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Product(props) {
   const { product } = props;
   const createMarkup = () => {
-    return { __html: product.description };
+    return { __html: product.description.slice(0, 100)+"..." };
   }
   return (
     <Wrapper>

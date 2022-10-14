@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="flex flex-col lg:flex-row justify-between m-[auto]  w-[80%] mt-[20px] mb-[30px] relative">
         <div className="font-bold text-[28px] lg:text-[35px]">SPE-Khazar</div>
         <div>
-          <div className="font-bold text-[16px] mt-[10px]">Resources</div>
+          <div className="font-black text-[20px] mt-[10px] border-b-2 border-b-white-500">Resources</div>
           <div className="footerul">
             <li className="mt-[5px]">
               <Link to="/events">Events</Link>
