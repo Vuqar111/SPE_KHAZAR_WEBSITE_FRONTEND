@@ -29,13 +29,13 @@ import CertificateListScreen from "./screens/CertificatePages/CertificateList";
 import UserListScreen from "./screens/ProfilePages/UserListScreen";
 import UserEditScreen from "./screens/ProfilePages/UserEditScreen";
 import SubHeader from "./components/FeatureComponents/SubHeader";
-import QrCode from "./components/QrCode/QrCode";
 import About from "./components/About";
 import { Contact } from "./components/Contact";
 import FAQ from "./components/FAQ";
 import PageNotFound from "./components/HelperComponents/PageNotFound";
 import Teams from "./components/BoxComponents/Teams.js";
 import { Navbar } from "./components/FeatureComponents/Navbar";
+import CertificateCheck from "./screens/CertificatePages/CertificateCheck";
 
 function App() {
   return (
@@ -75,6 +75,11 @@ function App() {
           component={CertificateEditScreen}
           exact
         ></Route>
+        <Route
+          path="/certificatecheck"
+          component={CertificateCheck}
+          exact
+        ></Route>
 
         {/* Gallery */}
         <Route path="/galleries" component={GalleriesSection} exact></Route>
@@ -88,7 +93,6 @@ function App() {
         <Route path="/register" component={RegisterScreen}></Route>
         <Route path="/about" component={About} exact></Route>
         <Route path="/contact" component={Contact} exact></Route>
-        <Route path="/qrcode" component={QrCode} exact></Route>
         <Route path="/faq" component={FAQ} exact></Route>
         <Route path="/teams" component={Teams} exact></Route>
 

@@ -166,7 +166,7 @@ ul li {
   padding: 15px;
 }
 
-.icondropdown>div {
+.icondropdown > div {
   margin: 0 5px;
 }
 
@@ -283,8 +283,7 @@ ul li {
   background: #f5f5f5;
 }
 
-
-.editFormContainer>label {
+.editFormContainer > label {
   color: #0067b1 !important;
 }
 
@@ -296,13 +295,11 @@ textarea {
   background-color: #fff;
   color: var(--black-color);
   padding: 10px;
-
 }
 
 .editFormContainer div button {
   width: 100%;
   color: #fff;
-
 }
 
 .model {
@@ -365,8 +362,6 @@ textarea {
   cursor: pointer;
 }
 
-
-
 /* WRAPPERS */
 
 .applybtn {
@@ -383,16 +378,24 @@ textarea {
   transition: all 0.3s ease;
 }
 
-.qrContainer {
-  width: 30%;
-  margin: auto;
-  margin-top: 100px;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  z-index: 10000000;
+.checkCertificateBtn {
+  background-color: white;
+  margin-right: 15px;
+  border: 1px solid #0067b1;
+  font-size: 16px;
+  border-radius: 10px;
+  color: #0067b1;
+  cursor: pointer;
+  text-align: center;
+}
+.checkCertificateBtn button {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.shadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 @media (max-width: 768px) {
@@ -502,15 +505,15 @@ textarea {
     -moz-column-width: 100%;
     column-width: 100%;
   }
-  .qrContainer {
-    width: 70%;
-    margin: auto;
-    margin-top: 100px;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 10000000;
+  .checkCertificateBtn {
+    width: 100%;
+    background-color: white;
+    margin-right: 0px;
+    margin-top: 5px;
+    border: 1px solid #0067b1;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+    color: #0067b1;
   }
 }

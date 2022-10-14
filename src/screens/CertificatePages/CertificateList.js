@@ -69,7 +69,7 @@ export default function CertificateListScreen(props) {
           className="primary p-[1rem]"
           onClick={createHandler}
         >
-          Create Certificate-Image
+          Create Certificate
         </button>
       </div>
 

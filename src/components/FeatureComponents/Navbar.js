@@ -17,7 +17,6 @@ import { signout } from "../../common/actions/userActions";
 import { AiFillCaretDown } from "react-icons/ai";
 import { GrClose } from "react-icons/gr";
 import logo from "../../assets/images/spekhazarlogo.png";
-import QrReader from "../QrCode/QrScan";
 
 export const Navbar = () => {
   const userSignin = useSelector((state) => state.userSignin);
