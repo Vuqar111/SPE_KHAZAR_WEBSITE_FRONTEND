@@ -124,13 +124,13 @@ export const teams = [
   {
     id: 18,
     name: "Rashad Musayev",
-    status: "Program Chairperson",
+    status: "Former Program Chairperson",
     img: rashad,
   },
   {
     id: 19,
     name: "Zeyneb Ferzizade",
-    status: "Social Activity Chairperson",
+    status: "Former Social Activity Chairperson",
     img: zeyneb,
   },
 ];
