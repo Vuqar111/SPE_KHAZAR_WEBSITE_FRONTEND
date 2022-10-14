@@ -383,7 +383,6 @@ textarea {
   margin-right: 15px;
   border: 1px solid #0067b1;
   font-size: 16px;
-  padding: 10px;
   border-radius: 10px;
   color: #0067b1;
   cursor: pointer;
@@ -393,6 +392,7 @@ textarea {
   width: 100%;
   border: none;
   outline: none;
+  padding: 10px;
 }
 
 .shadow {
@@ -510,7 +510,6 @@ textarea {
     width: 100%;
     background-color: white;
     margin-right: 0px;
-    padding: 10px;
     margin-top: 5px;
     border: 1px solid #0067b1;
     font-size: 16px;
@@ -518,4 +517,5 @@ textarea {
     border-radius: 10px;
     color: #0067b1;
   }
+  
 }
