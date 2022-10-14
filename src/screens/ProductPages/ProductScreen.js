@@ -48,7 +48,7 @@ export default function ProductScreen(props) {
             <div>
               <div className="mt-[20px] w-[100%] h-[50vh] lg:h-[60vh]">
                 <img
-                  className="w-[100%] h-[100%] rounded-[5px] object-cover bg-cover"
+                  className="w-[100%] md:h-[30vh] lg:h-[50vh] rounded-[5px] object-cover bg-cover"
                   src={product.image}
                   alt={product.name}
                 />
