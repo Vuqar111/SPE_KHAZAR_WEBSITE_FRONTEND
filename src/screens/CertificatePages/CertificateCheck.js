@@ -47,7 +47,7 @@ const CertificateCheck = () => {
               type="number"
               value={code}
               onChange={(e) => setCode(e.target.value)}
-              placeholder="Your certificate id number"
+              placeholder="Your certificate ID number"
             />
             <div className="mb-[10px] alert text-[#964a4b]">{message}</div>
             <button
