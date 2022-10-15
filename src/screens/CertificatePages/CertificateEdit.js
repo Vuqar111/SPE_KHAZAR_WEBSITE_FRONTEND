@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   detailsCertificate,
@@ -8,7 +8,8 @@ import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { CERTIFICATE_UPDATE_RESET } from "../../common/constants/certificateConstants";
 
-export default function CertificateEditScreen(props) {
+
+const CertificateEditScreen = (props) => {
   const certificateId = props.match.params.id;
   const [title, setTitle] = useState("");
   const [code, setCode] = useState("");
@@ -128,3 +129,6 @@ export default function CertificateEditScreen(props) {
     </div>
   );
 }
+
+
+export default memo(CertificateEditScreen);

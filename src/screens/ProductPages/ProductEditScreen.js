@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   detailsProduct,
@@ -9,7 +9,7 @@ import MessageBox from "../../components/HelperComponents/MessageBox";
 import { PRODUCT_UPDATE_RESET } from "../../common/constants/productConstants";
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-export default function ProductEditScreen(props) {
+const ProductEditScreen = (props) => {
   const productId = props.match.params.id;
   const [name, setName] = useState("");
   const [author, setAuthor] = useState("");
@@ -208,3 +208,5 @@ export default function ProductEditScreen(props) {
     </div>
   );
 }
+
+export default memo(ProductEditScreen)

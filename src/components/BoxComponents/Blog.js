@@ -1,9 +1,9 @@
-import React from "react";
+import React, {memo} from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { BsPersonFill } from "react-icons/bs";
 
-export default function Product(props) {
+const Blog = (props) => {
   const { blog } = props;
   const createMarkup = () => {
     return { __html: blog.description.slice(0, 70)+"..." };
@@ -31,6 +31,8 @@ export default function Product(props) {
     </Wrapper>
   );
 }
+
+export default memo(Blog);
 
 const Wrapper = styled.div`
   display: flex;

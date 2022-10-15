@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 const RecordItem = ({ record }) => {
   return (
     <React.Fragment>
@@ -25,4 +25,4 @@ const RecordItem = ({ record }) => {
   );
 };
 
-export default RecordItem;
+export default memo(RecordItem);

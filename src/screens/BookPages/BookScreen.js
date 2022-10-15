@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
-import Book from '../../components/BoxComponents/Book';
+import Book from "../../components/BoxComponents/Book";
 import { useDispatch, useSelector } from "react-redux";
 import { listBooks } from "../../common/actions/bookActions";
 import aboutimg from "../../assets/images/library.jpg";
-export default function HomeScreen() {
+
+const BookScreen = () => {
   const dispatch = useDispatch();
   const bookList = useSelector((state) => state.bookList);
   const { loading, error, books } = bookList;
@@ -60,7 +61,7 @@ export default function HomeScreen() {
                 })
 
                 .map((book, index) => (
-                  <Book key={index} book={book}/>
+                  <Book key={index} book={book} />
                 ))}
             </div>
           </div>
@@ -68,4 +69,6 @@ export default function HomeScreen() {
       )}
     </div>
   );
-}
+};
+
+export default memo(BookScreen);

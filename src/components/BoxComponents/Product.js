@@ -1,7 +1,7 @@
-import React from "react";
+import React, {memo} from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-export default function Product(props) {
+const Product = (props)  => {
   const { product } = props;
   const createMarkup = () => {
     return { __html: product.description.slice(0, 70)+"..." };
@@ -23,6 +23,8 @@ export default function Product(props) {
     </Wrapper>
   );
 }
+
+export default memo(Product);
 
 const Wrapper = styled.div`
   display: flex;

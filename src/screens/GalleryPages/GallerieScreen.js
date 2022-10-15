@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { useDispatch, useSelector } from "react-redux";
 import { listGalleries } from "../../common/actions/galleryActions";
 
-export default function GalleriesSection() {
+const  GalleriesSection = () => {
   const dispatch = useDispatch();
   const galleryList = useSelector((state) => state.galleryList);
   const { loading, error, galleries } = galleryList;
@@ -57,3 +57,4 @@ export default function GalleriesSection() {
   );
 }
 
+export default memo(GalleriesSection);

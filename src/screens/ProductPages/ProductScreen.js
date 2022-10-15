@@ -1,121 +1,38 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { detailsProduct } from "../../common/actions/productActions";
+import React, { useEffect, memo } from "react";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
-import { MdDateRange } from "react-icons/md";
-import {
-  FacebookShareButton,
-  FacebookIcon,
-  TwitterShareButton,
-  TwitterIcon,
-  WhatsappShareButton,
-  WhatsappIcon,
-} from "react-share";
-
-export default function ProductScreen(props) {
-  const url = window.location.href;
+import { useDispatch, useSelector } from "react-redux";
+import { listProducts } from "../../common/actions/productActions";
+import Product from "../../components/BoxComponents/Product";
+const ProductScreen = () => {
   const dispatch = useDispatch();
-  const productId = props.match.params.id;
-  const productDetails = useSelector((state) => state.productDetails);
-  const { loading, error, product } = productDetails;
-
-  const date = new Date();
-  console.log(date);
-  //  console.log(product.deadline)
-  // Check deadline is between current date and event date
-  // if(product.deadline  && product.deadline < new Date().toISOString().slice(0, 10) && product.deadline > product.date){
-  //   product.status = "Closed";
-  // }
+  const productList = useSelector((state) => state.productList);
+  const { loading, error, products } = productList;
 
   useEffect(() => {
-    dispatch(detailsProduct(productId));
-  }, [dispatch, productId]);
-
-  const createMarkup = () => {
-    return { __html: product.description };
-  };
+    dispatch(listProducts());
+  }, [dispatch]);
 
   return (
-    <React.Fragment>
-      <div className="w-[95%] lg:w-[80%] m-[auto]">
+    <div>
+      <div className="flex justify-center items-center bg-[#f5f5f5] text-center lg:text-4xl text-[24px] font-bold p-[10px] ">
+        <p className="text-center text-[#0067b1] ">Events</p>
+      </div>
+      <div className="lg:w-[90%] m-[auto] flex justify-center mt-[10px] w-[100%] p-[0px]">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <div className="">
-            <div>
-              <div className="mt-[20px] w-[100%] h-[30vh] lg:h-[60vh]">
-                <img
-                  className="w-[100%] h-[100%] rounded-[5px] object-cover bg-cover"
-                  src={product.image}
-                  alt={product.name}
-                />
-              </div>
-              <div className="p-[15px]">
-                <div className="flex flex-col lg:flex-row lg:items-center justify-between w-[auto] date">
-                  <div>
-                    <h2 className="font-bold text-[22px] lg:text-[30px]">
-                      {product.name}
-                    </h2>
-                    <p className="font-bold opacity-[0.8]">
-                      {product.location} - {product.category} -{product.type}
-                    </p>
-                  </div>
-
-                  <p className="font-bold text-[#0067B1]">{product.author}</p>
-                </div>
-              </div>
-              <div className="w-[100%] pl-[15px] pr-[15px] m-[auto]  flex justify-between">
-                <div className="flex items-center w-[auto] date">
-                  <div>
-                    <MdDateRange />
-                  </div>
-                  <div>{new Date(product.createdAt).toDateString()}</div>
-                  
-                </div>
-                <div className="flex justify-between  items-center  text-[white]">
-                  <div className="ml-[5px] cursor-pointer  pointer">
-                    <FacebookShareButton url={url}>
-                      <FacebookIcon size="30px" />
-                    </FacebookShareButton>
-                  </div>
-                  <div className="ml-[5px] cursor-pointer  pointer">
-                    <TwitterShareButton url={url}>
-                      <TwitterIcon size="30px" />
-                    </TwitterShareButton>
-                  </div>
-                  <div className="ml-[5px] cursor-pointer  pointer">
-                    <WhatsappShareButton url={url}>
-                      <WhatsappIcon size="30px" />
-                    </WhatsappShareButton>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <p
-                className="w-[100%] text-[18px] my-[20px] mx-[18px]"
-                dangerouslySetInnerHTML={createMarkup()}
-              ></p>
-              <hr />
-              <div className="w-[100%] p-[15px] m-[auto]  flex justify-between ">
-                {product.deadline > new Date().toISOString().slice(0, 10) ? (
-                  <a href={product.registerLink} target="_blank" rel="noreferrer">
-                    <div className="applybtn">
-                      <button>Register for event</button>
-                    </div>
-                  </a>
-                ) : (
-                  <div className="applybtn">
-                    <button>Deadline is finished</button>
-                  </div>
-                )}
-              </div>
-            </div>
+          <div className="w-[100%]  grid grid-cols-1 lg:grid-cols-3 gap-[15px]">
+            {products.map((product) => (
+              <Product key={product._id} product={product} />
+            ))}
           </div>
         )}
       </div>
-    </React.Fragment>
+    </div>
   );
-}
+};
+
+export default memo(ProductScreen);

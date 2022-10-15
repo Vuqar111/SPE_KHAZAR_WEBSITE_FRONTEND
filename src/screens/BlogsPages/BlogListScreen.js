@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
@@ -13,7 +13,7 @@ import {
   BLOG_DELETE_RESET,
 } from "../../common/constants/blogConstants";
 
-export default function BlogListScreen(props) {
+const BlogListScreen = (props) => {
   const blogList = useSelector((state) => state.blogList);
   const { loading, error, blogs } = blogList;
 
@@ -122,3 +122,5 @@ export default function BlogListScreen(props) {
     </div>
   );
 }
+
+export default memo(BlogListScreen);

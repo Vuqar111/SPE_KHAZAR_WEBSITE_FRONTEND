@@ -1,6 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState,memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { detailsUser, updateUser } from "../../common/actions/userActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
@@ -9,7 +8,7 @@ import { universities } from "../../data";
 import { faculties } from "../../data";
 import { USER_UPDATE_RESET } from "../../common/constants/userConstants";
 
-export default function UserEditScreen(props) {
+const UserEditScreen = (props)  =>{
   const userId = props.match.params.id;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -147,3 +146,5 @@ export default function UserEditScreen(props) {
     </div>
   );
 }
+
+export default memo(UserEditScreen);

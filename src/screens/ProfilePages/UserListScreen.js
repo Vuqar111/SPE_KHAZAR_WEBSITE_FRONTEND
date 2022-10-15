@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteUser, listUsers } from '../../common/actions/userActions';
 import LoadingBox from '../../components/HelperComponents/LoadingBox';
 import MessageBox from '../../components/HelperComponents/MessageBox';
 import { USER_DETAILS_RESET } from '../../common/constants/userConstants';
 
-export default function UserListScreen(props) {
+const UserListScreen = (props) => {
   const userList = useSelector((state) => state.userList);
   const { loading, error, users } = userList;
 
@@ -85,3 +85,5 @@ export default function UserListScreen(props) {
     </div>
   );
 }
+
+export default memo(UserListScreen);

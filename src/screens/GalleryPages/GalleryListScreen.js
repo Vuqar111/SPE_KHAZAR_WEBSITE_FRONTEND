@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
@@ -13,7 +13,7 @@ import {
   GALLERY_DELETE_RESET,
 } from "../../common/constants/galleryConstants";
 
-export default function GalleryListScreen(props) {
+const GalleryListScreen = (props) => {
   const galleryList = useSelector((state) => state.galleryList);
   const { loading, error, galleries } = galleryList;
 
@@ -114,3 +114,6 @@ export default function GalleryListScreen(props) {
     </div>
   );
 }
+
+
+export default memo(GalleryListScreen)

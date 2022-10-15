@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { detailsBook, updateBook } from "../../common/actions/bookActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { BOOK_UPDATE_RESET } from "../../common/constants/bookConstants";
 
-export default function BookEditScreen(props) {
+const BookEditScreen = (props) => {
   const bookId = props.match.params.id;
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
@@ -122,3 +122,4 @@ export default function BookEditScreen(props) {
     </div>
   );
 }
+export default memo(BookEditScreen);

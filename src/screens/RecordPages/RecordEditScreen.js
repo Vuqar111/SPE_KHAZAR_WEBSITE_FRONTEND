@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { detailsRecord, updateRecord } from "../../common/actions/recordActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { RECORD_UPDATE_RESET } from "../../common/constants/recordConstants";
 
-export default function RecordEditScreen(props) {
+const RecordEditScreen = (props) => {
   const recordId = props.match.params.id;
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -121,3 +121,5 @@ export default function RecordEditScreen(props) {
     </div>
   );
 }
+
+export default memo(RecordEditScreen)

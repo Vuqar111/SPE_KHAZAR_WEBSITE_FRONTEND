@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { detailsBlog, updateBlog } from "../../common/actions/blogActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
@@ -6,7 +6,7 @@ import MessageBox from "../../components/HelperComponents/MessageBox";
 import { BLOG_UPDATE_RESET } from "../../common/constants/blogConstants";
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-export default function BlogEditScreen(props) {
+const BlogEditScreen = (props)=> {
   const blogId = props.match.params.id;
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -144,3 +144,5 @@ export default function BlogEditScreen(props) {
     </div>
   );
 }
+
+export default memo(BlogEditScreen);

@@ -1,5 +1,5 @@
-import React from "react";
-export default function Book(props) {
+import React, {memo} from "react";
+const Book = (props) => {
   const { book } = props;
   return (
     <React.Fragment>
@@ -32,3 +32,5 @@ export default function Book(props) {
     </React.Fragment>
   );
 }
+
+export default memo(Book);

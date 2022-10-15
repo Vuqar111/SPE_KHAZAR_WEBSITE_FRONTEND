@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { listCertificates } from "../../common/actions/certificateActions";
 const CertificateCheck = () => {
   const [code, setCode] = useState("");
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(false);
 
   const dispatch = useDispatch();
   const certificateList = useSelector((state) => state.certificateList);
@@ -23,9 +23,9 @@ const CertificateCheck = () => {
       certificates.find((element) => {
         if (element.code === code) {
           window.open(element.url, "_blank");
-          setMessage("Certificate Found");
+          setMessage(true);
         } else {
-          setMessage("Certificate not found");
+          setMessage(false);
         }
       });
     }
@@ -49,7 +49,13 @@ const CertificateCheck = () => {
               onChange={(e) => setCode(e.target.value)}
               placeholder="Your certificate ID number"
             />
-            <div className="mb-[10px] alert text-[#964a4b]">{message}</div>
+            {message ? (
+              <div className="mb-[10px] alert text-[green]">Certificate found</div>
+            ) :
+            (
+              <div className="mb-[10px] alert text-[#964a4b]">Certificate not found</div>
+            )}
+            
             <button
               type="submit"
               className="w-[100%] text-[16px] lg:text-[20px]  p-[10px] bg-[#0067B1] text-white"
@@ -63,4 +69,4 @@ const CertificateCheck = () => {
   );
 };
 
-export default CertificateCheck;
+export default memo(CertificateCheck);

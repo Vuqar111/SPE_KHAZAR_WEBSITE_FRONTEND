@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { createBook, deleteBook, listBooks } from "../../common/actions/bookActions";
@@ -9,7 +9,7 @@ import {
   BOOK_DELETE_RESET,
 } from "../../common/constants/bookConstants";
 
-export default function BookListScreen(props) {
+const BookListScreen = (props)  =>{
   const bookList = useSelector((state) => state.bookList);
   const { loading, error, books } = bookList;
 
@@ -111,3 +111,4 @@ export default function BookListScreen(props) {
     </div>
   );
 }
+export default memo(BookListScreen);

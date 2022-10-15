@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { detailsGallery, updateGallery } from "../../common/actions/galleryActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { GALLERY_UPDATE_RESET } from "../../common/constants/galleryConstants";
 
-export default function GalleryEditScreen(props) {
+const GalleryEditScreen = (props) => {
   const galleryId = props.match.params.id;
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
@@ -98,3 +98,6 @@ export default function GalleryEditScreen(props) {
     </div>
   );
 }
+
+
+export default memo(GalleryEditScreen);

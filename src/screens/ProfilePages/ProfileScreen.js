@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   detailsUser,
@@ -10,7 +10,7 @@ import { universities } from "../../data";
 import { faculties } from "../../data";
 import { USER_UPDATE_PROFILE_RESET } from "../../common/constants/userConstants";
 
-export default function ProfileScreen() {
+const ProfileScreen = ()  => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [university, setUniversity] = useState("");
@@ -203,3 +203,6 @@ export default function ProfileScreen() {
     </React.Fragment>
   );
 }
+
+
+export default memo(ProfileScreen)

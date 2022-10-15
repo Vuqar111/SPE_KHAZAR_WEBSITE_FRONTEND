@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { createRecord, deleteRecord, listRecords } from "../../common/actions/recordActions";
@@ -9,7 +9,7 @@ import {
   RECORD_DELETE_RESET,
 } from "../../common/constants/recordConstants";
 
-export default function RecordListScreen(props) {
+const RecordListScreen = (props)  => {
   const recordList = useSelector((state) => state.recordList);
   const { loading, error, records } = recordList;
 
@@ -113,3 +113,6 @@ export default function RecordListScreen(props) {
     </div>
   );
 }
+
+
+export default memo(RecordListScreen);

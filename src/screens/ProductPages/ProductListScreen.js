@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
@@ -13,7 +13,7 @@ import {
   PRODUCT_DELETE_RESET,
 } from "../../common/constants/productConstants";
 
-export default function ProductListScreen(props) {
+const ProductListScreen = (props) =>{
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
 
@@ -124,3 +124,5 @@ export default function ProductListScreen(props) {
     </div>
   );
 }
+
+export default memo(ProductListScreen)

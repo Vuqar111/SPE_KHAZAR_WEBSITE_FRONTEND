@@ -1,7 +1,7 @@
-import React from "react";
+import React, {memo} from "react";
 import styled from "styled-components";
 
-export default function Gallery(props) {
+const  Gallery = (props) => {
   const { gallery } = props;
   return (
     <Wrapper>
@@ -15,6 +15,8 @@ export default function Gallery(props) {
     </Wrapper>
   );
 }
+
+export default memo(Gallery);
 
 const Wrapper = styled.div`
 .card {

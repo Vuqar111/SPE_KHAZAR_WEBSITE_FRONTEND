@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { register } from "../../common/actions/userActions";
@@ -7,13 +7,16 @@ import MessageBox from "../../components/HelperComponents/MessageBox";
 import { universities } from "../../data";
 import { faculties } from "../../data";
 import PasswordStrengthBar from 'react-password-strength-bar';
-export default function RegisterScreen(props) {
+
+
+const RegisterScreen = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [university, setUniversity] = useState("Khazar University");
   const [faculty, setFaculty] = useState("Petroleum Engineering");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
 
   const redirect = props.location.search
     ? props.location.search.split("=")[1]
@@ -41,8 +44,6 @@ export default function RegisterScreen(props) {
     }
   }, [props.history, redirect, userInfo]);
 
-console.log(university)
-console.log(faculty)
 
   return (
     <React.Fragment>
@@ -170,3 +171,6 @@ console.log(faculty)
     </React.Fragment>
   );
 }
+
+
+export default memo(RegisterScreen)

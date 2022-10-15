@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   createCertificate,
@@ -12,7 +12,7 @@ import {
   CERTIFICATE_DELETE_RESET,
 } from "../../common/constants/certificateConstants";
 
-export default function CertificateListScreen(props) {
+const CertificateListScreen = (props) => {
   const certificateList = useSelector((state) => state.certificateList);
   const { loading, error, certificates } = certificateList;
 
@@ -126,3 +126,5 @@ export default function CertificateListScreen(props) {
     </div>
   );
 }
+
+export default memo(CertificateListScreen)

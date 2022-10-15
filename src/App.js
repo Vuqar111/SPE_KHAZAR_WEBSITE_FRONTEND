@@ -5,23 +5,23 @@ import PrivateRoute from "./components/Routes/PrivateRoute";
 import Footer from "./components/FeatureComponents/Footer";
 import HomeScreen from "./screens/HomeScreen";
 import ProductListScreen from "./screens/ProductPages/ProductListScreen";
-import ProductScreen from "./screens/ProductPages/ProductScreen";
+import ProductScreen from "./screens/ProductPages/ProductDetailsScreen";
 import ProfileScreen from "./screens/ProfilePages/ProfileScreen";
 import RegisterScreen from "./screens/AuthPages/RegisterScreen";
 import SigninScreen from "./screens/AuthPages/SigninScreen";
-import ProductsSection from "./screens/ProductPages/ProductsSection";
+import ProductsSection from "./screens/ProductPages/ProductScreen";
 import ProductEditScreen from "./screens/ProductPages/ProductEditScreen";
-import BlogsSection from "./screens/BlogsPages/BlogsSection";
 import BlogScreen from "./screens/BlogsPages/BlogScreen";
+import BlogDetailsScreen from "./screens/BlogsPages/BlogDetailsScreen";
 import BlogEditScreen from "./screens/BlogsPages/BlogEditScreen";
 import BlogListScreen from "./screens/BlogsPages/BlogListScreen";
-import BooksSection from "./screens/BookPages/BooksSection";
+import BooksSection from "./screens/BookPages/BookScreen";
 import BookEditScreen from "./screens/BookPages/BookEditScreen";
 import BookListScreen from "./screens/BookPages/BookListScreen";
-import RecordsSection from "./screens/RecordPages/RecordsSection";
+import RecordsSection from "./screens/RecordPages/RecordScreen";
 import RecordEditScreen from "./screens/RecordPages/RecordEditScreen";
 import RecordListScreen from "./screens/RecordPages/RecordListScreen";
-import GalleriesSection from "./screens/GalleryPages/GalleriesSection";
+import GalleriesSection from "./screens/GalleryPages/GallerieScreen";
 import GalleryEditScreen from "./screens/GalleryPages/GalleryEditScreen";
 import GalleryListScreen from "./screens/GalleryPages/GalleryListScreen";
 import CertificateEditScreen from "./screens/CertificatePages/CertificateEdit";
@@ -53,7 +53,7 @@ function App() {
 
         {/* Blog */}
 
-        <Route path="/blogs" component={BlogsSection} exact></Route>
+        <Route path="/blogs" component={BlogDetailsScreen} exact></Route>
         <Route path="/blog/:id" component={BlogScreen} exact></Route>
         <Route path="/blog/:id/edit" component={BlogEditScreen} exact></Route>
 
