@@ -111,7 +111,7 @@ export const teams = [
   },
   {
     id: 16,
-    name: "Ruslan Abdurahamov",
+    name: "Ruslan Abdurahmanov",
     status: "Treasurer",
     img: ruslan,
   },
@@ -129,8 +129,8 @@ export const teams = [
   },
   {
     id: 19,
-    name: "Zeyneb Ferzizade",
-    status: "Former Social Activity Chairperson",
+    name: "Zeynab Farzizada",
+    status: "Former Social Activities Chair",
     img: zeyneb,
   },
 ];
