@@ -53,8 +53,8 @@ function App() {
 
         {/* Blog */}
 
-        <Route path="/blogs" component={BlogDetailsScreen} exact></Route>
-        <Route path="/blog/:id" component={BlogScreen} exact></Route>
+        <Route path="/blogs" component={BlogScreen} exact></Route>
+        <Route path="/blog/:id" component={BlogDetailsScreen} exact></Route>
         <Route path="/blog/:id/edit" component={BlogEditScreen} exact></Route>
 
         {/* Record Routers */}

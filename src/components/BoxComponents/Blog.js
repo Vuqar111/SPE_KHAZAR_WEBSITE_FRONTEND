@@ -1,4 +1,4 @@
-import React, {memo} from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { BsPersonFill } from "react-icons/bs";
@@ -32,7 +32,7 @@ const Blog = (props) => {
   );
 }
 
-export default memo(Blog);
+export default Blog;
 
 const Wrapper = styled.div`
   display: flex;
