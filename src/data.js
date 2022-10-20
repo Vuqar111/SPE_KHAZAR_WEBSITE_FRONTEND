@@ -40,7 +40,7 @@ export const teams = [
   {
     id: 4,
     name: "Anar Bandiyev",
-    status: "Communications Officer",
+    status: "Communications Chairperson",
     img: anar,
   },
   {
@@ -203,6 +203,7 @@ export const faculties = [
   "Chemistry Education",
   "Chemical Engineering",
   "Mathematics Education",
+  "Mathematics and Computer Science",
   "Mechanical Engineering",
   "Geography Education",
   "Veterinary Medicine",

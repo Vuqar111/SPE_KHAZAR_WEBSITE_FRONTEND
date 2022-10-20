@@ -32,7 +32,7 @@ const Wrapper = styled.div`
   align-items: center;
  .card {
   width: 29vw;
-  height: 360px;
+  height: 400px;
   padding: .5em;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -75,7 +75,7 @@ const Wrapper = styled.div`
 .card img {
   background-color: rgb(236, 236, 236);
   width: 100%;
-  height: 220px;
+  height: 260px;
   border-radius: 6px 6px 0 0;
   object-fit: cover;
 }
