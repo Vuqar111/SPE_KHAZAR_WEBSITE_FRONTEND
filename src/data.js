@@ -13,6 +13,7 @@ import aynur from "./assets/images/teamImages/aynur.jpg";
 import elgun from "./assets/images/teamImages/elgun.jpeg";
 import maryam from "./assets/images/teamImages/maryam.jpg";
 import nuray from "./assets/images/teamImages/nuray.jpg";
+import nuray2 from "./assets/images/teamImages/nuray2.jpg";
 import ruslan from "./assets/images/teamImages/ruslan.jpg";
 import aqsin from "./assets/images/teamImages/aqsin.png";
 import rashad from "./assets/images/teamImages/resad.jpg";
@@ -118,24 +119,30 @@ export const teams = [
   },
   {
     id: 17,
+    name: "Nuray Abdullayeva",
+    status: "Designer",
+    img: nuray2,
+  },
+  {
+    id: 18,
     name: "Aysu Mammadli",
     status: "Designer",
     img: aysu,
   },
   {
-    id: 18,
+    id: 19,
     name: "Aqsin Qarashli",
     status: "Former Vice President",
     img: aqsin,
   },
   {
-    id: 19,
+    id: 20,
     name: "Rashad Musayev",
     status: "Former Program Chairperson",
     img: rashad,
   },
   {
-    id: 20,
+    id: 21,
     name: "Zeynab Farzizada",
     status: "Former Social Activities Chair",
     img: zeyneb,
