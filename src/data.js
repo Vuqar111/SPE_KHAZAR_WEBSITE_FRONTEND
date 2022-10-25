@@ -132,7 +132,7 @@ export const teams = [
   },
   {
     id: 19,
-    name: "Fatima",
+    name: "Fatima Ibrahimova",
     status: "Designer",
     img: fatima,
   },
