@@ -19,6 +19,7 @@ import aqsin from "./assets/images/teamImages/aqsin.png";
 import rashad from "./assets/images/teamImages/resad.jpg";
 import zeyneb from "./assets/images/teamImages/zeyneb.jpeg";
 import aysu from "./assets/images/teamImages/aysu.jpg";
+import fatima from "./assets/images/teamImages/fatima.jpg";
 export const teams = [
   {
     id: 1,
@@ -131,18 +132,24 @@ export const teams = [
   },
   {
     id: 19,
+    name: "Fatima",
+    status: "Designer",
+    img: fatima,
+  },
+  {
+    id: 20,
     name: "Aqsin Qarashli",
     status: "Former Vice President",
     img: aqsin,
   },
   {
-    id: 20,
+    id: 21,
     name: "Rashad Musayev",
     status: "Former Program Chairperson",
     img: rashad,
   },
   {
-    id: 21,
+    id: 22,
     name: "Zeynab Farzizada",
     status: "Former Social Activities Chair",
     img: zeyneb,

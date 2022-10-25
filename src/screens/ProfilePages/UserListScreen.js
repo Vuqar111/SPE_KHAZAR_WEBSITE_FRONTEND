@@ -63,14 +63,14 @@ const UserListScreen = (props) => {
                   <td>
                     <button
                       type="button"
-                      className="small edit p-[1rem]"
+                      className="small edit"
                       onClick={() => props.history.push(`/user/${user._id}/edit`)}
                     >
                       Edit
                     </button>
                     <button
                       type="button"
-                      className="small delete p-[1rem]"
+                      className="small delete"
                       onClick={() => deleteHandler(user)}
                     >
                       Delete
