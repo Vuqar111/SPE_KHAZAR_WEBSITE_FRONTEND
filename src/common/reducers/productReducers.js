@@ -17,9 +17,9 @@ const {
   PRODUCT_DELETE_SUCCESS,
   PRODUCT_DELETE_FAIL,
   PRODUCT_DELETE_RESET,
-  PRODUCT_CATEGORY_LIST_REQUEST,
-  PRODUCT_CATEGORY_LIST_SUCCESS,
-  PRODUCT_CATEGORY_LIST_FAIL,
+  PRODUCT_SUMMARY_REQUEST,
+  PRODUCT_SUMMARY_SUCCESS,
+  PRODUCT_SUMMARY_FAIL,
   PRODUCT_REVIEW_CREATE_REQUEST,
   PRODUCT_REVIEW_CREATE_SUCCESS,
   PRODUCT_REVIEW_CREATE_FAIL,
@@ -42,21 +42,22 @@ export const productListReducer = (
   }
 };
 
-export const productCategoryListReducer = (
-  state = { loading: true, products: [] },
+export const productSummaryReducer = (
+  state = { loading: true, summary: {} },
   action
 ) => {
   switch (action.type) {
-    case PRODUCT_CATEGORY_LIST_REQUEST:
+    case PRODUCT_SUMMARY_REQUEST:
       return { loading: true };
-    case PRODUCT_CATEGORY_LIST_SUCCESS:
-      return { loading: false, categories: action.payload };
-    case PRODUCT_CATEGORY_LIST_FAIL:
+    case PRODUCT_SUMMARY_SUCCESS:
+      return { loading: false, summary: action.payload };
+    case PRODUCT_SUMMARY_FAIL:
       return { loading: false, error: action.payload };
     default:
       return state;
   }
 };
+
 
 export const productDetailsReducer = (state = { loading: true }, action) => {
   switch (action.type) {

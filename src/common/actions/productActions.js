@@ -15,9 +15,9 @@ import {
   PRODUCT_DELETE_REQUEST,
   PRODUCT_DELETE_FAIL,
   PRODUCT_DELETE_SUCCESS,
-  PRODUCT_CATEGORY_LIST_SUCCESS,
-  PRODUCT_CATEGORY_LIST_REQUEST,
-  PRODUCT_CATEGORY_LIST_FAIL,
+  PRODUCT_SUMMARY_REQUEST,
+  PRODUCT_SUMMARY_SUCCESS,
+  PRODUCT_SUMMARY_FAIL,
 } from '../constants/productConstants';
 
 export const listProducts = () => async (
@@ -37,18 +37,6 @@ export const listProducts = () => async (
 };
 
 
-
-export const listProductCategories = () => async (dispatch) => {
-  dispatch({
-    type: PRODUCT_CATEGORY_LIST_REQUEST,
-  });
-  try {
-    const { data } = await Axios.get(`https://spekhazarwebsitebackend.vercel.app/api/products/categories`);
-    dispatch({ type: PRODUCT_CATEGORY_LIST_SUCCESS, payload: data });
-  } catch (error) {
-    dispatch({ type: PRODUCT_CATEGORY_LIST_FAIL, payload: error.message });
-  }
-};
 
 
 
@@ -117,6 +105,44 @@ export const updateProduct = (product) => async (dispatch, getState) => {
     dispatch({ type: PRODUCT_UPDATE_FAIL, error: message });
   }
 };
+
+
+
+// export const summaryProduct = () => async (dispatch) => {
+//   dispatch({ type: PRODUCT_SUMMARY_REQUEST });
+//   try {
+//     const { data } = await Axios.get(`https://spekhazarwebsitebackend.vercel.app/api/products/summary`);
+//     dispatch({ type: PRODUCT_SUMMARY_SUCCESS, payload: data });
+//     console.log(data)
+//   } catch (error) {
+//     dispatch({
+//       type: PRODUCT_SUMMARY_FAIL,
+//       payload:
+//         error.response && error.response.data.message
+//           ? error.response.data.message
+//           : error.message,
+//     });
+//   }
+// };
+
+export const summaryProduct = () => async (
+  dispatch
+) => {
+  dispatch({
+    type: PRODUCT_SUMMARY_REQUEST,
+  });
+  try {
+    const { data } = await Axios.get(
+      `https://spekhazarwebsitebackend.vercel.app/api/products/summary`
+    );
+    dispatch({ type: PRODUCT_SUMMARY_SUCCESS, payload: data });
+    console.log(data)
+  } catch (error) {
+    dispatch({ type: PRODUCT_SUMMARY_FAIL, payload: error.message });
+  }
+};
+
+
 export const deleteProduct = (productId) => async (dispatch, getState) => {
   dispatch({ type: PRODUCT_DELETE_REQUEST, payload: productId });
   const {
