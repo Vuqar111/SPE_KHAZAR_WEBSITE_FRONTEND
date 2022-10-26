@@ -137,11 +137,11 @@ button.primary {
 }
 
 button.small {
-  font-size: 15px;
+  font-size: 12px;
   background-color: var(--sky-color);
   color: #fff;
   margin: 5px;
-  padding: 8px 10px;
+  padding: 5px 8px;
 }
 
 button.delete {
@@ -231,13 +231,13 @@ ul li {
   background-color: #0067b1;
   color: #fff;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
   height: 35px;
 }
 
 .tableBody {
   color: #0067b1;
-  font-size: 18px;
+  font-size: 15px;
   height: 35px;
 }
 
@@ -248,8 +248,11 @@ ul li {
 .table td,
 .table th {
   border: 0.1rem solid #e4e4e4;
-  padding: 0 0.5rem;
+  padding: 0 5px;
+  width: auto;
 }
+
+
 
 .gallery {
   width: 90%;
