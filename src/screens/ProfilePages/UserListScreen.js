@@ -1,15 +1,15 @@
-import React, { useEffect, memo } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteUser, listUsers } from "../../common/actions/userActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { USER_DETAILS_RESET } from "../../common/constants/userConstants";
-import uuid from 'react-uuid';
-
 
 const UserListScreen = (props) => {
   const userList = useSelector((state) => state.userList);
   const { loading, error, users } = userList;
+
+  const [id, setId] = useState("");
 
   const userDelete = useSelector((state) => state.userDelete);
   const {
@@ -33,6 +33,13 @@ const UserListScreen = (props) => {
   return (
     <div style={{ minHeight: "60vh" }}>
       <div className="row">
+        <div className="w-[40%] mt-[30px]">
+          <input
+            className="w-[100%] bg-[grey]"
+            type="text"
+            onChange={(e) => setId(e.target.value)}
+          />
+        </div>
         {loadingDelete && <LoadingBox></LoadingBox>}
         {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
         {successDelete && (
@@ -56,34 +63,42 @@ const UserListScreen = (props) => {
               </tr>
             </thead>
             <tbody className="tableBody">
-              {users.map((user) => (
-                <tr key={user._id}>
-                  <td>{uuid().slice(0,6)}</td>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>{user.university}</td>
-                  <td>{user.faculty}</td>
-                  <td>{user.isAdmin ? "YES" : "NO"}</td>
-                  <td>
-                    <button
-                      type="button"
-                      className="small edit"
-                      onClick={() =>
-                        props.history.push(`/user/${user._id}/edit`)
-                      }
-                    >
-                      Edit
-                    </button>
-                    <button
-                      type="button"
-                      className="small delete"
-                      onClick={() => deleteHandler(user)}
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              ))}
+              {users
+                .filter((val) => {
+                  if (id === 0) {
+                    return val;
+                  } else if (val._id.toLowerCase().includes(id.toLowerCase())) {
+                    return val;
+                  }
+                })
+                .map((user) => (
+                  <tr key={user._id}>
+                    <td>{user._id.substr(user._id.length - 6)}</td>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td>{user.university}</td>
+                    <td>{user.faculty}</td>
+                    <td>{user.isAdmin ? "YES" : "NO"}</td>
+                    <td>
+                      <button
+                        type="button"
+                        className="small edit"
+                        onClick={() =>
+                          props.history.push(`/user/${user._id}/edit`)
+                        }
+                      >
+                        Edit
+                      </button>
+                      <button
+                        type="button"
+                        className="small delete"
+                        onClick={() => deleteHandler(user)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         )}
