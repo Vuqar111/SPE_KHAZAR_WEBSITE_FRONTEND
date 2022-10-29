@@ -4,6 +4,8 @@ import { deleteUser, listUsers } from "../../common/actions/userActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { USER_DETAILS_RESET } from "../../common/constants/userConstants";
+import uuid from 'react-uuid';
+
 
 const UserListScreen = (props) => {
   const userList = useSelector((state) => state.userList);
@@ -56,7 +58,7 @@ const UserListScreen = (props) => {
             <tbody className="tableBody">
               {users.map((user) => (
                 <tr key={user._id}>
-                  <td>{user._id.slice(0, 6)}</td>
+                  <td>{uuid().slice(0,6)}</td>
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>{user.university}</td>
