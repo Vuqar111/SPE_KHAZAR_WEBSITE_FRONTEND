@@ -1,9 +1,9 @@
-import React, { useEffect, memo } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { deleteUser, listUsers } from '../../common/actions/userActions';
-import LoadingBox from '../../components/HelperComponents/LoadingBox';
-import MessageBox from '../../components/HelperComponents/MessageBox';
-import { USER_DETAILS_RESET } from '../../common/constants/userConstants';
+import React, { useEffect, memo } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteUser, listUsers } from "../../common/actions/userActions";
+import LoadingBox from "../../components/HelperComponents/LoadingBox";
+import MessageBox from "../../components/HelperComponents/MessageBox";
+import { USER_DETAILS_RESET } from "../../common/constants/userConstants";
 
 const UserListScreen = (props) => {
   const userList = useSelector((state) => state.userList);
@@ -16,7 +16,7 @@ const UserListScreen = (props) => {
     success: successDelete,
   } = userDelete;
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(listUsers());
     dispatch({
@@ -24,13 +24,13 @@ const UserListScreen = (props) => {
     });
   }, [dispatch, successDelete]);
   const deleteHandler = (user) => {
-    if (window.confirm('Are you sure?')) {
+    if (window.confirm("Are you sure?")) {
       dispatch(deleteUser(user._id));
     }
   };
   return (
     <div style={{ minHeight: "60vh" }}>
-      <div className='row'>
+      <div className="row">
         {loadingDelete && <LoadingBox></LoadingBox>}
         {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
         {successDelete && (
@@ -42,8 +42,9 @@ const UserListScreen = (props) => {
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <table className="table">
-            <thead className='tableHeader'>
+            <thead className="tableHeader">
               <tr>
+                <th>ID</th>
                 <th>NAME</th>
                 <th>EMAIL</th>
                 <th>UNIVERSITY</th>
@@ -52,19 +53,22 @@ const UserListScreen = (props) => {
                 <th>ACTIONS</th>
               </tr>
             </thead>
-            <tbody className='tableBody'>
+            <tbody className="tableBody">
               {users.map((user) => (
                 <tr key={user._id}>
+                  <td>{user._id.slice(0, 6)}</td>
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>{user.university}</td>
                   <td>{user.faculty}</td>
-                  <td>{user.isAdmin ? 'YES' : 'NO'}</td>
+                  <td>{user.isAdmin ? "YES" : "NO"}</td>
                   <td>
                     <button
                       type="button"
                       className="small edit"
-                      onClick={() => props.history.push(`/user/${user._id}/edit`)}
+                      onClick={() =>
+                        props.history.push(`/user/${user._id}/edit`)
+                      }
                     >
                       Edit
                     </button>
@@ -84,6 +88,6 @@ const UserListScreen = (props) => {
       </div>
     </div>
   );
-}
+};
 
 export default memo(UserListScreen);
