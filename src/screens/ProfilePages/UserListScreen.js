@@ -33,9 +33,10 @@ const UserListScreen = (props) => {
   return (
     <div style={{ minHeight: "60vh" }}>
       <div className="row">
-        <div className="w-[40%] mt-[30px]">
+        <div className="w-[90%] mx-[auto] mt-[30px] border-[2px] border-solid border-[#0067b1] outline-none">
           <input
-            className="w-[100%] bg-[grey]"
+          placeholder="Type  ID to search"
+            className="w-[100%] outline-none"
             type="text"
             onChange={(e) => setId(e.target.value)}
           />

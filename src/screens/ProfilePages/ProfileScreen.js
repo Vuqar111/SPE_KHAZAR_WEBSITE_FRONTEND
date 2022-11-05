@@ -94,7 +94,7 @@ const ProfileScreen = ()  => {
                       Your SPE Khazar ID
                     </label>
                    <div className="w-[100%] bg-[#E8F0FE] p-[10px] mt-[5px] outline-1 outline-[#0067B1] outline-solid">
-                    {user._id.slice(0,6)}
+                   {user._id.substr(user._id.length - 6)}
                    </div>
                   </div>
                   <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px]">
