@@ -22,7 +22,6 @@ const ProfileScreen = () => {
   const { userInfo } = userSignin;
   const userDetails = useSelector((state) => state.userDetails);
   const { loading, error, user } = userDetails;
-  console.log(user);
   const userUpdateProfile = useSelector((state) => state.userUpdateProfile);
   const {
     success: successUpdate,
@@ -69,6 +68,7 @@ const ProfileScreen = () => {
     }
   };
 
+ 
   return (
     <React.Fragment>
       <div className="flex flex-wrap justify-between items-center m-[auto] pt-[30px] w-[100%] lg:w-[70%] mainuser">
@@ -145,7 +145,7 @@ const ProfileScreen = () => {
                       id="birthday"
                       className="w-[100%] bg-[#E8F0FE] p-[10px] outline-1 outline-[#0067B1] outline-solid"
                       placeholder="Enter birthday"
-                      value={birthday}
+                      value={user.birthday}
                       required
                       onChange={(e) => setBirthday(e.target.value)}
                     ></input>

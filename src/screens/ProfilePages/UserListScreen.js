@@ -29,6 +29,7 @@ const UserListScreen = (props) => {
       dispatch(deleteUser(user._id));
     }
   };
+
   return (
     <div style={{ minHeight: "60vh" }}>
       <div className="row">
@@ -71,6 +72,7 @@ const UserListScreen = (props) => {
                   <th>EMAIL</th>
                   <th>UNIVERSITY</th>
                   <th>FACULTY</th>
+                  <th>Birthday</th>
                   <th>IS ADMIN</th>
                   <th>ACTIONS</th>
                 </tr>
@@ -93,6 +95,7 @@ const UserListScreen = (props) => {
                       <td>{user.email}</td>
                       <td>{user.university}</td>
                       <td>{user.faculty}</td>
+                      <td>{user.birthday}</td>
                       <td>{user.isAdmin ? "YES" : "NO"}</td>
                       <td>
                         <button
