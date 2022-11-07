@@ -4,13 +4,12 @@ import { deleteUser, listUsers } from "../../common/actions/userActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { USER_DETAILS_RESET } from "../../common/constants/userConstants";
-import ReactHtmlTableToExcel from "react-html-table-to-excel";
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 const UserListScreen = (props) => {
   const userList = useSelector((state) => state.userList);
   const { loading, error, users } = userList;
 
   const [id, setId] = useState("");
-  const fileName = "myfile";
   const userDelete = useSelector((state) => state.userDelete);
   const {
     loading: loadingDelete,
@@ -44,7 +43,7 @@ const UserListScreen = (props) => {
           </div>
           
           <div className="w-[100%] pt-[20px]">
-         <ReactHtmlTableToExcel
+         <ReactHTMLTableToExcel
          className="bg-[#0067B1]  text-[white] w-[100%] h-[50px]"
          table="userTable"
          fileName="UserList"
@@ -62,7 +61,8 @@ const UserListScreen = (props) => {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <table className="table" id="userTable">
+          <div className="tableMode">
+            <table className="table" id="userTable">
             <thead className="tableHeader">
               <tr>
                 <th>ID</th>
@@ -113,6 +113,7 @@ const UserListScreen = (props) => {
                 ))}
             </tbody>
           </table>
+          </div>
         )}
       </div>
     </div>

@@ -77,7 +77,7 @@ const ProductListScreen = (props) =>{
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <>
+        <div className="tableMode">
           <table className="table">
             <thead>
               <tr className="tableHeader">
@@ -119,7 +119,7 @@ const ProductListScreen = (props) =>{
               ))}
             </tbody>
           </table>
-        </>
+        </div>
       )}
     </div>
   );

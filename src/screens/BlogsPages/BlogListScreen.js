@@ -78,7 +78,7 @@ const BlogListScreen = (props) => {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <>
+        <div className="tableMode">
           <table className="table">
             <thead>
               <tr>
@@ -117,7 +117,7 @@ const BlogListScreen = (props) => {
               ))}
             </tbody>
           </table>
-        </>
+        </div>
       )}
     </div>
   );
