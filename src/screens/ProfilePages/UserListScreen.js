@@ -4,13 +4,13 @@ import { deleteUser, listUsers } from "../../common/actions/userActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { USER_DETAILS_RESET } from "../../common/constants/userConstants";
-
+import ReactHtmlTableToExcel from "react-html-table-to-excel";
 const UserListScreen = (props) => {
   const userList = useSelector((state) => state.userList);
   const { loading, error, users } = userList;
 
   const [id, setId] = useState("");
-
+  const fileName = "myfile";
   const userDelete = useSelector((state) => state.userDelete);
   const {
     loading: loadingDelete,
@@ -33,13 +33,24 @@ const UserListScreen = (props) => {
   return (
     <div style={{ minHeight: "60vh" }}>
       <div className="row">
-        <div className="w-[90%] mx-[auto] mt-[30px] border-[2px] border-solid border-[#0067b1] outline-none">
+        <div className="w-[100%] lg:w-[90%] mx-[auto]  flex flex-col">
+          <div className="mt-[30px] border-[2px] border-solid border-[#0067b1] outline-none">
           <input
           placeholder="Type  ID to search"
             className="w-[100%] outline-none"
             type="text"
             onChange={(e) => setId(e.target.value)}
           />
+          </div>
+          
+          <div className="w-[100%] pt-[20px]">
+         <ReactHtmlTableToExcel
+         className="bg-[#0067B1]  text-[white] w-[100%] h-[50px]"
+         table="userTable"
+         fileName="UserList"
+         sheet="Sheet"
+         buttonText="Export to Excel"/>
+          </div>
         </div>
         {loadingDelete && <LoadingBox></LoadingBox>}
         {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
@@ -51,7 +62,7 @@ const UserListScreen = (props) => {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <table className="table">
+          <table className="table" id="userTable">
             <thead className="tableHeader">
               <tr>
                 <th>ID</th>
