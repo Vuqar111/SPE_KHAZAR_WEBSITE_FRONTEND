@@ -31,10 +31,7 @@ const ProfileScreen = () => {
   } = userUpdateProfile;
   const dispatch = useDispatch();
 
-  // Age, Month, Year Defining
-  const day = birthday.split("-")[0];
-  const month = birthday.split("-")[1];
-  const year = birthday.split("-")[2];
+
 
   useEffect(() => {
     if (!user) {
@@ -45,6 +42,7 @@ const ProfileScreen = () => {
       setEmail(user.email);
       setUniversity(user.university);
       setFaculty(user.faculty);
+      setBirthday(user.birthday);
     }
   }, [dispatch, userInfo._id, user]);
 
@@ -63,9 +61,7 @@ const ProfileScreen = () => {
           name,
           email,
           university,
-          day,
-          month,
-          year,
+          birthday,
           faculty,
           password,
         })
@@ -149,6 +145,7 @@ const ProfileScreen = () => {
                       id="birthday"
                       className="w-[100%] bg-[#E8F0FE] p-[10px] outline-1 outline-[#0067B1] outline-solid"
                       placeholder="Enter birthday"
+                      value={birthday}
                       required
                       onChange={(e) => setBirthday(e.target.value)}
                     ></input>

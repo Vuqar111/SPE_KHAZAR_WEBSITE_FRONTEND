@@ -19,10 +19,6 @@ const RegisterScreen = (props) => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
 
-    // Age, Month, Year Defining
-    const day = birthday.split("-")[0];
-    const month = birthday.split("-")[1];
-    const year = birthday.split("-")[2];
 
   const redirect = props.location.search
     ? props.location.search.split("=")[1]
@@ -41,7 +37,7 @@ const RegisterScreen = (props) => {
       alert("Password and confirm password are not match");
     } 
     else {
-      dispatch(register(name, email, university, faculty,day, month, year, password));
+      dispatch(register(name, email, university, faculty,birthday, password));
     }
   };
   useEffect(() => {
