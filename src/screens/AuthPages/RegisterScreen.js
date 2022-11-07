@@ -14,9 +14,15 @@ const RegisterScreen = (props) => {
   const [email, setEmail] = useState("");
   const [university, setUniversity] = useState("Khazar University");
   const [faculty, setFaculty] = useState("Petroleum Engineering");
+  const [birthday, setBirthday] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+
+    // Age, Month, Year Defining
+    const day = birthday.split("-")[0];
+    const month = birthday.split("-")[1];
+    const year = birthday.split("-")[2];
 
   const redirect = props.location.search
     ? props.location.search.split("=")[1]
@@ -35,7 +41,7 @@ const RegisterScreen = (props) => {
       alert("Password and confirm password are not match");
     } 
     else {
-      dispatch(register(name, email, university, faculty, password));
+      dispatch(register(name, email, university, faculty,day, month, year, password));
     }
   };
   useEffect(() => {
@@ -43,6 +49,7 @@ const RegisterScreen = (props) => {
       props.history.push(redirect);
     }
   }, [props.history, redirect, userInfo]);
+
 
 
   return (
@@ -79,6 +86,19 @@ const RegisterScreen = (props) => {
                 placeholder="Enter email"
                 required
                 onChange={(e) => setEmail(e.target.value)}
+              ></input>
+            </div>
+            <div className="mt-[10px]">
+              <label className="mt-[15px]" htmlFor="birthday">
+                BirthDay
+              </label>
+              <input
+                type="date"
+                id="birthday"
+                className="w-[100%] bg-[#E8F0FE] p-[10px] outline-1 outline-[#0067B1] outline-solid"
+                placeholder="Enter birthday"
+                required
+                onChange={(e) => setBirthday(e.target.value)}
               ></input>
             </div>
             <div className="mt-[10px]">

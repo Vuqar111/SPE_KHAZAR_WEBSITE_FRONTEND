@@ -15,6 +15,7 @@ const ProfileScreen = ()  => {
   const [email, setEmail] = useState("");
   const [university, setUniversity] = useState("");
   const [faculty, setFaculty] = useState("");
+  const [birthday, setBirthday] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
@@ -29,6 +30,12 @@ const ProfileScreen = ()  => {
     loading: loadingUpdate,
   } = userUpdateProfile;
   const dispatch = useDispatch();
+
+     // Age, Month, Year Defining
+     const day = birthday.split("-")[0];
+     const month = birthday.split("-")[1];
+     const year = birthday.split("-")[2];
+ 
   useEffect(() => {
     if (!user) {
       dispatch({ type: USER_UPDATE_PROFILE_RESET });
@@ -40,6 +47,7 @@ const ProfileScreen = ()  => {
       setFaculty(user.faculty);
     }
   }, [dispatch, userInfo._id, user]);
+
   const submitHandler = (e) => {
     e.preventDefault();
     // dispatch update profile
@@ -55,6 +63,9 @@ const ProfileScreen = ()  => {
           name,
           email,
           university,
+          day,
+          month,
+          year,
           faculty,
           password,
         })

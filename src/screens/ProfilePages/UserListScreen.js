@@ -34,21 +34,22 @@ const UserListScreen = (props) => {
       <div className="row">
         <div className="w-[100%] lg:w-[90%] mx-[auto]  flex flex-col">
           <div className="mt-[30px] border-[2px] border-solid border-[#0067b1] outline-none">
-          <input
-          placeholder="Type  ID to search"
-            className="w-[100%] outline-none"
-            type="text"
-            onChange={(e) => setId(e.target.value)}
-          />
+            <input
+              placeholder="Type  ID to search"
+              className="w-[100%] outline-none"
+              type="text"
+              onChange={(e) => setId(e.target.value)}
+            />
           </div>
-          
+
           <div className="w-[100%] pt-[20px]">
-         <ReactHtmlTableToExcel
-         className="bg-[#0067B1]  text-[white] w-[100%] h-[50px]"
-         table="userTable"
-         fileName="UserList"
-         sheet="Sheet"
-         buttonText="Export to Excel"/>
+            <ReactHtmlTableToExcel
+              className="bg-[#0067B1]  text-[white] w-[100%] h-[50px]"
+              table="userTable"
+              fileName="UserList"
+              sheet="Sheet"
+              buttonText="Export to Excel"
+            />
           </div>
         </div>
         {loadingDelete && <LoadingBox></LoadingBox>}
@@ -63,56 +64,58 @@ const UserListScreen = (props) => {
         ) : (
           <div className="tableMode">
             <table className="table" id="userTable">
-            <thead className="tableHeader">
-              <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>EMAIL</th>
-                <th>UNIVERSITY</th>
-                <th>FACULTY</th>
-                <th>IS ADMIN</th>
-                <th>ACTIONS</th>
-              </tr>
-            </thead>
-            <tbody className="tableBody">
-              {users
-                .filter((val) => {
-                  if (id === 0) {
-                    return val;
-                  } else if (val._id.toLowerCase().includes(id.toLowerCase())) {
-                    return val;
-                  }
-                })
-                .map((user) => (
-                  <tr key={user._id}>
-                    <td>{user._id.substr(user._id.length - 6)}</td>
-                    <td>{user.name}</td>
-                    <td>{user.email}</td>
-                    <td>{user.university}</td>
-                    <td>{user.faculty}</td>
-                    <td>{user.isAdmin ? "YES" : "NO"}</td>
-                    <td>
-                      <button
-                        type="button"
-                        className="small edit"
-                        onClick={() =>
-                          props.history.push(`/user/${user._id}/edit`)
-                        }
-                      >
-                        Edit
-                      </button>
-                      <button
-                        type="button"
-                        className="small delete"
-                        onClick={() => deleteHandler(user)}
-                      >
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
+              <thead className="tableHeader">
+                <tr>
+                  <th>ID</th>
+                  <th>NAME</th>
+                  <th>EMAIL</th>
+                  <th>UNIVERSITY</th>
+                  <th>FACULTY</th>
+                  <th>IS ADMIN</th>
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody className="tableBody">
+                {users
+                  .filter((val) => {
+                    if (id === 0) {
+                      return val;
+                    } else if (
+                      val._id.toLowerCase().includes(id.toLowerCase())
+                    ) {
+                      return val;
+                    }
+                  })
+                  .map((user) => (
+                    <tr key={user._id}>
+                      <td>{user._id.substr(user._id.length - 6)}</td>
+                      <td>{user.name}</td>
+                      <td>{user.email}</td>
+                      <td>{user.university}</td>
+                      <td>{user.faculty}</td>
+                      <td>{user.isAdmin ? "YES" : "NO"}</td>
+                      <td>
+                        <button
+                          type="button"
+                          className="small edit"
+                          onClick={() =>
+                            props.history.push(`/user/${user._id}/edit`)
+                          }
+                        >
+                          Edit
+                        </button>
+                        <button
+                          type="button"
+                          className="small delete"
+                          onClick={() => deleteHandler(user)}
+                        >
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
           </div>
         )}
       </div>
