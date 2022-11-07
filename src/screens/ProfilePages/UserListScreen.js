@@ -39,7 +39,7 @@ const UserListScreen = (props) => {
           <div className="mt-[30px] border-[2px] border-solid border-[#0067b1] outline-none">
           <input
           placeholder="Type  ID to search"
-            className="w-[100%] outline-none"
+            className="w-[100%] outline-none p-[10px]"
             type="text"
             onChange={(e) => setId(e.target.value)}
           />
@@ -52,7 +52,7 @@ const UserListScreen = (props) => {
                     currentTableRef={tableRef.current}
                 >
 
-                   <button> Export excel </button>
+                   <button className="w-[100%] p-[10px] bg-[#0067B1] h-[50px] text-[white]"> Export to excel </button>
 
                 </DownloadTableExcel>
           </div>
