@@ -138,7 +138,7 @@ const ProfileScreen = () => {
                   </div>
                   <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
                     <label className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]" htmlFor="birthday">
-                      BirthDay
+                      BirthDayy
                     </label>
                     <input
                       type="date"
