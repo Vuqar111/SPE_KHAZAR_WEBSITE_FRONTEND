@@ -1,10 +1,10 @@
-import React, { useState, useEffect,useRef, memo } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteUser, listUsers } from "../../common/actions/userActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
 import MessageBox from "../../components/HelperComponents/MessageBox";
 import { USER_DETAILS_RESET } from "../../common/constants/userConstants";
-import { DownloadTableExcel } from 'react-export-table-to-excel';
+import ReactHtmlTableToExcel from "react-html-table-to-excel";
 const UserListScreen = (props) => {
   const userList = useSelector((state) => state.userList);
   const { loading, error, users } = userList;
@@ -29,9 +29,6 @@ const UserListScreen = (props) => {
       dispatch(deleteUser(user._id));
     }
   };
-  
-
-  const tableRef = useRef(null);
   return (
     <div style={{ minHeight: "60vh" }}>
       <div className="row">
@@ -39,22 +36,19 @@ const UserListScreen = (props) => {
           <div className="mt-[30px] border-[2px] border-solid border-[#0067b1] outline-none">
           <input
           placeholder="Type  ID to search"
-            className="w-[100%] outline-none p-[10px]"
+            className="w-[100%] outline-none"
             type="text"
             onChange={(e) => setId(e.target.value)}
           />
           </div>
           
           <div className="w-[100%] pt-[20px]">
-          <DownloadTableExcel
-                    filename="users table"
-                    sheet="users"
-                    currentTableRef={tableRef.current}
-                >
-
-                   <button className="w-[100%] p-[10px] bg-[#0067B1] h-[50px] text-[white]"> Export to excel </button>
-
-                </DownloadTableExcel>
+         <ReactHtmlTableToExcel
+         className="bg-[#0067B1]  text-[white] w-[100%] h-[50px]"
+         table="userTable"
+         fileName="UserList"
+         sheet="Sheet"
+         buttonText="Export to Excel"/>
           </div>
         </div>
         {loadingDelete && <LoadingBox></LoadingBox>}
