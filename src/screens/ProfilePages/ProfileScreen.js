@@ -10,7 +10,7 @@ import { universities } from "../../data";
 import { faculties } from "../../data";
 import { USER_UPDATE_PROFILE_RESET } from "../../common/constants/userConstants";
 
-const ProfileScreen = ()  => {
+const ProfileScreen = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [university, setUniversity] = useState("");
@@ -22,7 +22,7 @@ const ProfileScreen = ()  => {
   const { userInfo } = userSignin;
   const userDetails = useSelector((state) => state.userDetails);
   const { loading, error, user } = userDetails;
-  console.log(user)
+  console.log(user);
   const userUpdateProfile = useSelector((state) => state.userUpdateProfile);
   const {
     success: successUpdate,
@@ -31,11 +31,11 @@ const ProfileScreen = ()  => {
   } = userUpdateProfile;
   const dispatch = useDispatch();
 
-     // Age, Month, Year Defining
-     const day = birthday.split("-")[0];
-     const month = birthday.split("-")[1];
-     const year = birthday.split("-")[2];
- 
+  // Age, Month, Year Defining
+  const day = birthday.split("-")[0];
+  const month = birthday.split("-")[1];
+  const year = birthday.split("-")[2];
+
   useEffect(() => {
     if (!user) {
       dispatch({ type: USER_UPDATE_PROFILE_RESET });
@@ -51,7 +51,7 @@ const ProfileScreen = ()  => {
   const submitHandler = (e) => {
     e.preventDefault();
     // dispatch update profile
-    if(password.length < 6){
+    if (password.length < 6) {
       alert("Password must be at least 6 characters");
     }
     if (password !== confirmPassword) {
@@ -97,16 +97,16 @@ const ProfileScreen = ()  => {
                   </MessageBox>
                 )}
                 <div className="w-[100%] flex flex-col mt-[10px]">
-                <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px]">
+                  <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px]">
                     <label
                       className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]"
                       htmlFor="name"
                     >
                       Your SPE Khazar ID
                     </label>
-                   <div className="w-[100%] bg-[#E8F0FE] p-[10px] mt-[5px] outline-1 outline-[#0067B1] outline-solid">
-                   {user._id.substr(user._id.length - 6)}
-                   </div>
+                    <div className="w-[100%] bg-[#E8F0FE] p-[10px] mt-[5px] outline-1 outline-[#0067B1] outline-solid">
+                      {user._id.substr(user._id.length - 6)}
+                    </div>
                   </div>
                   <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px]">
                     <label
@@ -138,6 +138,19 @@ const ProfileScreen = ()  => {
                       placeholder="Enter email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                    ></input>
+                  </div>
+                  <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
+                    <label className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]" htmlFor="birthday">
+                      BirthDay
+                    </label>
+                    <input
+                      type="date"
+                      id="birthday"
+                      className="w-[100%] bg-[#E8F0FE] p-[10px] outline-1 outline-[#0067B1] outline-solid"
+                      placeholder="Enter birthday"
+                      required
+                      onChange={(e) => setBirthday(e.target.value)}
                     ></input>
                   </div>
                   <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
@@ -225,7 +238,6 @@ const ProfileScreen = ()  => {
       </div>
     </React.Fragment>
   );
-}
+};
 
-
-export default memo(ProfileScreen)
+export default memo(ProfileScreen);
