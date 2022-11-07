@@ -29,6 +29,22 @@ const UserListScreen = (props) => {
       dispatch(deleteUser(user._id));
     }
   };
+  
+ReactHTMLTableToExcel.format = (s, c) => {
+  if (c && c['table']) {
+    const html = c.table;
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const rows = doc.querySelectorAll('tr');
+
+    for (const row of rows) row.removeChild(row.firstChild);
+
+    c.table = doc.querySelector('table').outerHTML;
+  }
+
+  return s.replace(/{(\w+)}/g, (m, p) => c[p]);
+};
+
   return (
     <div style={{ minHeight: "60vh" }}>
       <div className="row">
@@ -43,12 +59,14 @@ const UserListScreen = (props) => {
           </div>
           
           <div className="w-[100%] pt-[20px]">
-         <ReactHTMLTableToExcel
-         className="bg-[#0067B1]  text-[white] w-[100%] h-[50px]"
-         table="userTable"
-         fileName="UserList"
-         sheet="Sheet"
-         buttonText="Export to Excel"/>
+          <ReactHTMLTableToExcel
+        id="userList"
+        className="W-[100%] bg-[red] text-[white]"
+        table="userTable"
+        filename="test"
+        sheet="tablexls"
+        buttonText="Download as XLS"
+      />
           </div>
         </div>
         {loadingDelete && <LoadingBox></LoadingBox>}
