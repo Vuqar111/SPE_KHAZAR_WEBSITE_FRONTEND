@@ -9,6 +9,7 @@ import MessageBox from "../../components/HelperComponents/MessageBox";
 import { universities } from "../../data";
 import { faculties } from "../../data";
 import { USER_UPDATE_PROFILE_RESET } from "../../common/constants/userConstants";
+import emailjs from "@emailjs/browser";
 
 const ProfileScreen = () => {
   const [name, setName] = useState("");
@@ -68,7 +69,10 @@ const ProfileScreen = () => {
     }
   };
 
- 
+
+
+
+
   return (
     <React.Fragment>
       <div className="flex flex-wrap justify-between items-center m-[auto] pt-[30px] w-[100%] lg:w-[70%] mainuser">
@@ -138,14 +142,13 @@ const ProfileScreen = () => {
                   </div>
                   <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
                     <label className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]" htmlFor="birthday">
-                      BirthDayy
+                      BirthDay
                     </label>
                     <input
                       type="date"
                       id="birthday"
                       className="w-[100%] bg-[#E8F0FE] p-[10px] outline-1 outline-[#0067B1] outline-solid"
                       placeholder="Enter birthday"
-                      value={user.birthday}
                       required
                       onChange={(e) => setBirthday(e.target.value)}
                     ></input>
