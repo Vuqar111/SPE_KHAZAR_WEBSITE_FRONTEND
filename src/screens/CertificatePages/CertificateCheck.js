@@ -44,7 +44,7 @@ const CertificateCheck = () => {
           <div>
             <input
               className="w-[100%] bg-[white] p-[10px]  mt-[10px]  text-[16px] lg:text-[18px] text-center border-1 border-solid border-[#0067B1]"
-              type="number"
+              type="text"
               value={code}
               onChange={(e) => setCode(e.target.value)}
               placeholder="Your certificate ID number"
