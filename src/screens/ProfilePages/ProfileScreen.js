@@ -9,7 +9,6 @@ import MessageBox from "../../components/HelperComponents/MessageBox";
 import { universities } from "../../data";
 import { faculties } from "../../data";
 import { USER_UPDATE_PROFILE_RESET } from "../../common/constants/userConstants";
-import emailjs from "@emailjs/browser";
 
 const ProfileScreen = () => {
   const [name, setName] = useState("");
