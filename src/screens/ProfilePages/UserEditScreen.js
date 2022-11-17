@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState,memo } from "react";
+import { useEffect, useState, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { detailsUser, updateUser } from "../../common/actions/userActions";
 import LoadingBox from "../../components/HelperComponents/LoadingBox";
@@ -8,12 +8,14 @@ import { universities } from "../../data";
 import { faculties } from "../../data";
 import { USER_UPDATE_RESET } from "../../common/constants/userConstants";
 
-const UserEditScreen = (props)  =>{
+const UserEditScreen = (props) => {
   const userId = props.match.params.id;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [university, setUniversity] = useState("");
   const [faculty, setFaculty] = useState("");
+  const [course, setCourse] = useState("");
+  const [birthday, setBirthday] = useState("");
   const [isAdmin, setIsAdmin] = useState(false);
 
   const userDetails = useSelector((state) => state.userDetails);
@@ -39,6 +41,7 @@ const UserEditScreen = (props)  =>{
       setEmail(user.email);
       setUniversity(user.university);
       setFaculty(user.faculty);
+      setCourse(user.course);
       setIsAdmin(user.isAdmin);
     }
   }, [dispatch, props.history, successUpdate, user, userId]);
@@ -47,16 +50,25 @@ const UserEditScreen = (props)  =>{
     e.preventDefault();
     // dispatch update user
     dispatch(
-      updateUser({ _id: userId, name, email, university, faculty, isAdmin })
+      updateUser({
+        _id: userId,
+        name,
+        email,
+        university,
+        faculty,
+        course,
+        isAdmin,
+      })
     );
   };
-
 
   return (
     <div>
       <form className="w-[90%] m-[auto] mt-[20px]" onSubmit={submitHandler}>
         <div>
-          <h1 className="text-center text-[16px] lg:text-[24px] font-bold">Edit User {name}</h1>
+          <h1 className="text-center text-[16px] lg:text-[24px] font-bold">
+            Edit User {name}
+          </h1>
           {loadingUpdate && <LoadingBox></LoadingBox>}
           {errorUpdate && (
             <MessageBox variant="danger">{errorUpdate}</MessageBox>
@@ -106,7 +118,7 @@ const UserEditScreen = (props)  =>{
                     return <option value={item}>{item}</option>;
                   })}
                 </select>
-              </div >
+              </div>
               <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label className="mt-[15px]" htmlFor="faculty">
                   Faculty
@@ -126,6 +138,36 @@ const UserEditScreen = (props)  =>{
                 </select>
               </div>
               <div className="w-[100%] flex items-center justify-between mt-[15px]">
+                <label className="mt-[15px]" htmlFor="course">
+                  Course
+                </label>
+                <select
+                  type="text"
+                  id="course"
+                  className="p-[10px] "
+                  placeholder="Enter Course"
+                  value={course}
+                  required
+                  onChange={(e) => setCourse(e.target.value)}
+                >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
+                <label htmlFor="birthday">Birthday</label>
+                <input
+                  id="birthday"
+                  type="date"
+                  value={birthday}
+                  onChange={(e) => setBirthday(e.target.checked)}
+                ></input>
+              </div>
+
+              <div className="w-[100%] flex items-center justify-between mt-[15px]">
                 <label htmlFor="isAdmin">Is Admin</label>
                 <input
                   id="isAdmin"
@@ -135,7 +177,10 @@ const UserEditScreen = (props)  =>{
                 ></input>
               </div>
               <div className="w-[100%]">
-                <button className="primary bg-[#0067b1] w-[100%] p-[10px]" type="submit">
+                <button
+                  className="primary bg-[#0067b1] w-[100%] p-[10px]"
+                  type="submit"
+                >
                   Update User Information
                 </button>
               </div>
@@ -145,6 +190,6 @@ const UserEditScreen = (props)  =>{
       </form>
     </div>
   );
-}
+};
 
 export default memo(UserEditScreen);

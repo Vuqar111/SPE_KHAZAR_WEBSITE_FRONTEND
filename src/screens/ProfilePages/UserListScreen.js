@@ -74,6 +74,7 @@ const UserListScreen = (props) => {
                   <th>EMAIL</th>
                   <th>UNIVERSITY</th>
                   <th>FACULTY</th>
+                  <td>Course</td>
                   <th>Birthday</th>
                   <th>IS ADMIN</th>
                   <th>ACTIONS</th>
@@ -97,6 +98,7 @@ const UserListScreen = (props) => {
                       <td>{user.email}</td>
                       <td>{user.university}</td>
                       <td>{user.faculty}</td>
+                      <td>{user.course}</td>
                       <td>{user.birthday}</td>
                       <td>{user.isAdmin ? "YES" : "NO"}</td>
                       <td>

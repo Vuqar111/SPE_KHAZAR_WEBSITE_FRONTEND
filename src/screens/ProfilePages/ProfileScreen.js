@@ -16,6 +16,7 @@ const ProfileScreen = () => {
   const [university, setUniversity] = useState("");
   const [faculty, setFaculty] = useState("");
   const [birthday, setBirthday] = useState("");
+  const [course, setCourse] = useState(1);
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
@@ -41,6 +42,7 @@ const ProfileScreen = () => {
       setEmail(user.email);
       setUniversity(user.university);
       setFaculty(user.faculty);
+      setCourse(user.course);
       setBirthday(user.birthday);
     }
   }, [dispatch, userInfo._id, user]);
@@ -62,6 +64,7 @@ const ProfileScreen = () => {
           university,
           birthday,
           faculty,
+          course,
           password,
         })
       );
@@ -192,6 +195,28 @@ const ProfileScreen = () => {
                       {faculties.map((item) => {
                         return <option value={item}>{item}</option>;
                       })}
+                    </select>
+                  </div>
+                  <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
+                    <label
+                      className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]"
+                      htmlFor="course"
+                    >
+                      Course
+                    </label>
+                    <select
+                      type="text"
+                      id="faculty"
+                      className="w-[100%] bg-[#E8F0FE] text-[black] mt-[5px] p-[10px] outline-1 outline-[#0067B1] outline-solid"
+                      placeholder="Year of study"
+                      required
+                      value={course}
+                      onChange={(e) => setCourse(e.target.value)}
+                    >
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
                     </select>
                   </div>
                   <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
