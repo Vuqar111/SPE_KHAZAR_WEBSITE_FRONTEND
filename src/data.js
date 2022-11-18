@@ -235,4 +235,8 @@ export const faculties = [
   "Industrial Engineering",
   "System Engineering",
   "Mechatronics",
+  "English philology",
+  "Economics",
+  "Philology english literature",
+  "English teaching",
 ];

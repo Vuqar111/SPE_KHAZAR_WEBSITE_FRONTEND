@@ -4,6 +4,7 @@ import AdminRoute from "./components/Routes/AdminRoute";
 import PrivateRoute from "./components/Routes/PrivateRoute";
 import Footer from "./components/FeatureComponents/Footer";
 import HomeScreen from "./screens/HomeScreen";
+import Dashboard from './screens/Dashboard/Dashboard';
 import ProductListScreen from "./screens/ProductPages/ProductListScreen";
 import ProductScreen from "./screens/ProductPages/ProductDetailsScreen";
 import ProfileScreen from "./screens/ProfilePages/ProfileScreen";
@@ -97,6 +98,10 @@ function App() {
         <Route path="/teams" component={Teams} exact></Route>
 
         <PrivateRoute path="/profile" component={ProfileScreen}></PrivateRoute>
+        <AdminRoute
+          path="/dashboard"
+          component={Dashboard}
+        ></AdminRoute> 
         <AdminRoute
           path="/eventlist"
           component={ProductListScreen}

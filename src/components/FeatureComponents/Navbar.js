@@ -125,6 +125,10 @@ export const Navbar = () => {
               {userInfo && userInfo.isAdmin && (
                 <div>
                   <Dropdown link={button} width="250px">
+                  <Item>
+                      <BsCalendar2Week className="buttondownIcon" />
+                      <Link to="/dashboard">Dashboard</Link>
+                    </Item>
                     <Item>
                       <BsCalendar2Week className="buttondownIcon" />
                       <Link to="/eventlist">Events</Link>

@@ -72,7 +72,7 @@ const GalleryListScreen = (props) => {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <div className="w-[100%] flex items-center justify-center">
+        <div className="tableMode">
           <table className="table">
             <thead>
               <tr className="tableHeader">

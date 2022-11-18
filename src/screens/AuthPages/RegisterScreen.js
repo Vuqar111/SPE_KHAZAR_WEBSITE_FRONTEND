@@ -14,8 +14,11 @@ const RegisterScreen = (props) => {
   const [email, setEmail] = useState("");
   const [university, setUniversity] = useState("Khazar University");
   const [faculty, setFaculty] = useState("Petroleum Engineering");
+  const [course, setCourse] = useState(1);
+  const [birthday, setBirthday] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
 
 
   const redirect = props.location.search
@@ -35,7 +38,7 @@ const RegisterScreen = (props) => {
       alert("Password and confirm password are not match");
     } 
     else {
-      dispatch(register(name, email, university, faculty, password));
+      dispatch(register(name, email, university, faculty,course,birthday, password));
     }
   };
   useEffect(() => {
@@ -43,6 +46,7 @@ const RegisterScreen = (props) => {
       props.history.push(redirect);
     }
   }, [props.history, redirect, userInfo]);
+
 
 
   return (
@@ -82,6 +86,19 @@ const RegisterScreen = (props) => {
               ></input>
             </div>
             <div className="mt-[10px]">
+              <label className="mt-[15px]" htmlFor="birthday">
+                BirthDay
+              </label>
+              <input
+                type="date"
+                id="birthday"
+                className="w-[100%] bg-[#E8F0FE] p-[10px] outline-1 outline-[#0067B1] outline-solid"
+                placeholder="Enter birthday"
+                required
+                onChange={(e) => setBirthday(e.target.value)}
+              ></input>
+            </div>
+            <div className="mt-[10px]">
               <label className="mt-[15px]" htmlFor="university">
                 University
               </label>
@@ -115,6 +132,25 @@ const RegisterScreen = (props) => {
                 {faculties.map((item) => {
                   return <option value={item}>{item}</option>;
                 })}
+              </select>
+            </div>
+            <div className="mt-[10px]">
+              <label className="mt-[15px]" htmlFor="course">
+                Year of study
+              </label>
+              <select
+                type="text"
+                id="course"
+                className="w-[100%] bg-[#E8F0FE] text-[black] p-[10px] outline-1 outline-[#0067B1] outline-solid"
+                placeholder="Enter year of study"
+                required
+                value={course}
+                onChange={(e) => setCourse(e.target.value)}
+              >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
               </select>
             </div>
             <div className="mt-[10px]">

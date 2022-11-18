@@ -252,6 +252,9 @@ ul li {
   width: auto;
 }
 
+.tableMode {
+  overflow: scroll;
+}
 
 
 .gallery {

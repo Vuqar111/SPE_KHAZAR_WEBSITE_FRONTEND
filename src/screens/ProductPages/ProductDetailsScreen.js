@@ -97,7 +97,7 @@ const ProductScreen = (props)  =>{
                 {product.deadline > new Date().toISOString().slice(0, 10) ? (
                   <a href={product.registerLink} target="_blank" rel="noreferrer">
                     <div className="applybtn">
-                      <button>Register for event</button>
+                      <button>Registerr for event</button>
                     </div>
                   </a>
                 ) : (

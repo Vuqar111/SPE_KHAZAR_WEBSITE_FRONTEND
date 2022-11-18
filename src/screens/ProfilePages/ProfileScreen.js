@@ -10,11 +10,13 @@ import { universities } from "../../data";
 import { faculties } from "../../data";
 import { USER_UPDATE_PROFILE_RESET } from "../../common/constants/userConstants";
 
-const ProfileScreen = ()  => {
+const ProfileScreen = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [university, setUniversity] = useState("");
   const [faculty, setFaculty] = useState("");
+  const [birthday, setBirthday] = useState("");
+  const [course, setCourse] = useState(1);
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
@@ -28,6 +30,9 @@ const ProfileScreen = ()  => {
     loading: loadingUpdate,
   } = userUpdateProfile;
   const dispatch = useDispatch();
+
+
+
   useEffect(() => {
     if (!user) {
       dispatch({ type: USER_UPDATE_PROFILE_RESET });
@@ -37,12 +42,15 @@ const ProfileScreen = ()  => {
       setEmail(user.email);
       setUniversity(user.university);
       setFaculty(user.faculty);
+      setCourse(user.course);
+      setBirthday(user.birthday);
     }
   }, [dispatch, userInfo._id, user]);
+
   const submitHandler = (e) => {
     e.preventDefault();
     // dispatch update profile
-    if(password.length < 6){
+    if (password.length < 6) {
       alert("Password must be at least 6 characters");
     }
     if (password !== confirmPassword) {
@@ -54,12 +62,18 @@ const ProfileScreen = ()  => {
           name,
           email,
           university,
+          birthday,
           faculty,
+          course,
           password,
         })
       );
     }
   };
+
+
+
+
 
   return (
     <React.Fragment>
@@ -90,6 +104,17 @@ const ProfileScreen = ()  => {
                       className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]"
                       htmlFor="name"
                     >
+                      Your SPE Khazar ID
+                    </label>
+                    <div className="w-[100%] bg-[#E8F0FE] p-[10px] mt-[5px] outline-1 outline-[#0067B1] outline-solid">
+                      {user._id.substr(user._id.length - 6)}
+                    </div>
+                  </div>
+                  <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px]">
+                    <label
+                      className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]"
+                      htmlFor="name"
+                    >
                       Name
                     </label>
                     <input
@@ -115,6 +140,19 @@ const ProfileScreen = ()  => {
                       placeholder="Enter email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                    ></input>
+                  </div>
+                  <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
+                    <label className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]" htmlFor="birthday">
+                      BirthDay
+                    </label>
+                    <input
+                      type="date"
+                      id="birthday"
+                      className="w-[100%] bg-[#E8F0FE] p-[10px] outline-1 outline-[#0067B1] outline-solid"
+                      placeholder="Enter birthday"
+                      required
+                      onChange={(e) => setBirthday(e.target.value)}
                     ></input>
                   </div>
                   <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
@@ -162,6 +200,28 @@ const ProfileScreen = ()  => {
                   <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
                     <label
                       className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]"
+                      htmlFor="course"
+                    >
+                      Course
+                    </label>
+                    <select
+                      type="text"
+                      id="faculty"
+                      className="w-[100%] bg-[#E8F0FE] text-[black] mt-[5px] p-[10px] outline-1 outline-[#0067B1] outline-solid"
+                      placeholder="Year of study"
+                      required
+                      value={course}
+                      onChange={(e) => setCourse(e.target.value)}
+                    >
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                    </select>
+                  </div>
+                  <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center text-left mt-[10px] ">
+                    <label
+                      className="w-[100%] text-left lg:w-[30%] text-[16px] lg:text-[20px]"
                       htmlFor="password"
                     >
                       Password
@@ -202,7 +262,6 @@ const ProfileScreen = ()  => {
       </div>
     </React.Fragment>
   );
-}
+};
 
-
-export default memo(ProfileScreen)
+export default memo(ProfileScreen);

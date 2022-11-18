@@ -23,14 +23,16 @@ import {
   USER_UPDATE_FAIL,
 } from '../constants/userConstants';
 
-export const register = (name, email,university, faculty, password) => async (dispatch) => {
-  dispatch({ type: USER_REGISTER_REQUEST, payload: { name, email,university, faculty, password, } });
+export const register = (name, email,university, faculty, course, birthday,password) => async (dispatch) => {
+  dispatch({ type: USER_REGISTER_REQUEST, payload: { name, email,university, faculty, course, birthday, password, } });
   try {
     const { data } = await Axios.post('https://spekhazarwebsitebackend.vercel.app/api/users/register', {
       name,
       email,
       university,
       faculty,
+      course,
+      birthday,
       password,
     });
     dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
