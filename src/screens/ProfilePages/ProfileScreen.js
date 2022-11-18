@@ -244,7 +244,7 @@ const ProfileScreen = () => {
                     <input
                       id="confirmPassword"
                       type="password"
-                      className="w-[100%] bg-[#E8F0FE] lg:p-[10px] mt-[5px] outline-1 outline-[#0067B1] outline-solid"
+                      className="w-[100%] bg-[#E8F0FE] p-[10px] mt-[5px] outline-1 outline-[#0067B1] outline-solid"
                       placeholder="Enter confirm password"
                       onChange={(e) => setConfirmPassword(e.target.value)}
                     ></input>
