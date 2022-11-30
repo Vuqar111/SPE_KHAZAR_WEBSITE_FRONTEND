@@ -43,14 +43,14 @@ export const productListReducer = (
 };
 
 export const productSummaryReducer = (
-  state = { loading: true, summary: {} },
+  state = { loading: true, products: {} },
   action
 ) => {
   switch (action.type) {
     case PRODUCT_SUMMARY_REQUEST:
       return { loading: true };
     case PRODUCT_SUMMARY_SUCCESS:
-      return { loading: false, summary: action.payload };
+      return { loading: false, products: action.payload };
     case PRODUCT_SUMMARY_FAIL:
       return { loading: false, error: action.payload };
     default:
