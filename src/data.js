@@ -89,12 +89,6 @@ export const teams = [
     img: elmar,
   },
   {
-    id: 12,
-    name: "Aynur Huseynzade",
-    status: "SMM",
-    img: aynur,
-  },
-  {
     id: 13,
     name: "Elgun Asgarov",
     status: "Petroleum Engineering Coordinator",

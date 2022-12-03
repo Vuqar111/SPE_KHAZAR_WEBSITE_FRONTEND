@@ -108,22 +108,6 @@ export const updateProduct = (product) => async (dispatch, getState) => {
 
 
 
-// export const summaryProduct = () => async (dispatch) => {
-//   dispatch({ type: PRODUCT_SUMMARY_REQUEST });
-//   try {
-//     const { data } = await Axios.get(`https://spekhazarwebsitebackend.vercel.app/api/products/summary`);
-//     dispatch({ type: PRODUCT_SUMMARY_SUCCESS, payload: data });
-//     console.log(data)
-//   } catch (error) {
-//     dispatch({
-//       type: PRODUCT_SUMMARY_FAIL,
-//       payload:
-//         error.response && error.response.data.message
-//           ? error.response.data.message
-//           : error.message,
-//     });
-//   }
-// };
 
 export const summaryProduct = () => async (
   dispatch
@@ -133,9 +117,9 @@ export const summaryProduct = () => async (
   });
   try {
     const { data } = await Axios.get(
-      `https://spekhazarwebsitebackend.vercel.app/api/products/summary`
+      `https://spekhazarwebsitebackend.vercel.app/api/products`
     );
-    dispatch({ type: PRODUCT_SUMMARY_SUCCESS, payload: data });
+    dispatch({ type: PRODUCT_SUMMARY_SUCCESS, payload: data.products });
     console.log(data)
   } catch (error) {
     dispatch({ type: PRODUCT_SUMMARY_FAIL, payload: error.message });
