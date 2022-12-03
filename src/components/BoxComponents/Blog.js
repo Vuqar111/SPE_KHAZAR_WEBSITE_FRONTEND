@@ -38,20 +38,6 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  .card {
-    width: 29vw;
-    height: 400px;
-    padding: .5em;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.5s;
-  }
-
-  .card:hover {
-    transform: scale(0.96);
-    transition: all 0.5s;
-  }
-
   .blog-icon {
     display: flex;
     justify-content: center;
@@ -62,41 +48,63 @@ const Wrapper = styled.div`
   .blog-icon > div {
     margin-left: 5px;
   }
+  .card {
+    width: 100%;
+    height: 55vh;
+    border-bottom: 1px solid #c4c4c4;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0 1px 5px #0067B1, 0 1px 2px #0067B1;
+    transition: all 0.5s ease-in-out;
+  }
 
   .card-body h2 {
     text-transform: uppercase;
     font-size: 1em;
     font-weight: 600;
     color: #0067B1;
-    padding: 10px 7px 0;
+  }
+
+  .card-body {
+    margin: 10px;
+   
   }
   .card-date {
-    font-size: 0.7em;
     color: #0067B1;
-    padding: 0 7px;
-    font-style: italic;
+    font-size: 12px;
+    margin: 8px 0;
   }
   .card-text {
     font-weight: 600;
     color: rgb(88, 87, 87);
-    margin: 5px;
+    margin: 5px 0;
     overflow: hidden;
-    /* text-overflow: ellipsis;
+    text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical; */
+    -webkit-box-orient: vertical;
   }
+
   .card img {
-    background-color: rgb(236, 236, 236);
+    height: 35vh;
     width: 100%;
-    height: 260px;
-    border-radius: 6px 6px 0 0;
     object-fit: cover;
   }
+
   @media (max-width: 768px) {
     .card {
-      width: 95vw;
-      margin: 10px 0;
+      height: 100%;
+      
+    }
+    .card img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
-}
 `;
