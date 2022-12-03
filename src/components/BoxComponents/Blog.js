@@ -102,7 +102,7 @@ const Wrapper = styled.div`
       
     }
     .card img {
-      height: 100%;
+      height: 30vh;
       width: 100%;
       object-fit: cover;
     }
