@@ -37,6 +37,7 @@ import PageNotFound from "./components/HelperComponents/PageNotFound";
 import Teams from "./components/BoxComponents/Teams.js";
 import { Navbar } from "./components/FeatureComponents/Navbar";
 import CertificateCheck from "./screens/CertificatePages/CertificateCheck";
+import Hackathon from "./components/HACKATHON/Hackathon";
 
 function App() {
   return (
@@ -96,6 +97,7 @@ function App() {
         <Route path="/contact" component={Contact} exact></Route>
         <Route path="/faq" component={FAQ} exact></Route>
         <Route path="/teams" component={Teams} exact></Route>
+        <Route path="/hackathon" component={Hackathon} exact></Route>
 
         <PrivateRoute path="/profile" component={ProfileScreen}></PrivateRoute>
         <AdminRoute
