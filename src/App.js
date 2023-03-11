@@ -37,7 +37,7 @@ import PageNotFound from "./components/HelperComponents/PageNotFound";
 import Teams from "./components/BoxComponents/Teams.js";
 import { Navbar } from "./components/FeatureComponents/Navbar";
 import CertificateCheck from "./screens/CertificatePages/CertificateCheck";
-import Hackathon from "./components/HACKATHON/Hackathon";
+import Hackathon from "./components/Hackathon/Hackathon";
 
 function App() {
   return (

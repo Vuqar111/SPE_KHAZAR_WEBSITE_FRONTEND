@@ -54,6 +54,8 @@ export const signin = (email, password) => async (dispatch) => {
   try {
     const { data } = await Axios.post('https://spekhazarwebsitebackend.vercel.app/api/users/signin', { email, password});
     dispatch({ type: USER_SIGNIN_SUCCESS, payload: data });
+    // Define content type as JSON
+    // Set the AUTH token for any request
     localStorage.setItem('userInfo', JSON.stringify(data));
   } catch (error) {
     dispatch({
