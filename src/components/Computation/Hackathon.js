@@ -1,5 +1,5 @@
 import React  from "react";
-import "./hackathon.css";
+import '../..//assets/css/hackathon.css';
 import khazarLogo from "../../assets/images/hackathon/khazar.png";
 import speLogo from "../../assets/images/hackathon/spekhazarlogo.png";
 import mlkLogo from "../../assets/images/hackathon/mlklogo.png";
