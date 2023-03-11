@@ -5,7 +5,7 @@ import speLogo from "../../assets/images/hackathon/spekhazarlogo.png";
 import mlkLogo from "../../assets/images/hackathon/mlklogo.png";
 import codersLogo from "../../assets/images/hackathon/coders.svg";
 import AOS from "aos";
-import "aos/dist/aos.css";
+import "../../../node_modules/aos/dist/aos.css";
 
 const Hackathon = () => {
   useEffect(() => {
