@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React  from "react";
 import "./hackathon.css";
 import khazarLogo from "../../assets/images/hackathon/khazar.png";
 import speLogo from "../../assets/images/hackathon/spekhazarlogo.png";
