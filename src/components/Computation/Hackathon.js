@@ -1,17 +1,11 @@
-import React, {useEffect}  from "react";
+import React  from "react";
 import '../../assets/css/hackathon.css';
 import khazarLogo from "../../assets/images/hackathon/khazar.png";
 import speLogo from "../../assets/images/hackathon/spekhazarlogo.png";
 import mlkLogo from "../../assets/images/hackathon/mlklogo.png";
 import codersLogo from "../../assets/images/hackathon/coders.svg";
-import AOS from "aos";
-import "../../assets/css/aos.css";
 
 const Hackathon = () => {
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
-
 
   return (
     <>
@@ -26,7 +20,7 @@ const Hackathon = () => {
 
         <h2 className="hackathonsubheader">About</h2>
         <div className="hackbox">
-          <div className="hackcontent" data-aos="fade-left">
+          <div className="hackcontent" >
             <p className="hacktext">
               UFAZ Hackathon is a thematic event during which competitors from
               various universities work intensively on different projects with
@@ -61,7 +55,7 @@ const Hackathon = () => {
             className="hackcontentimg"
             src="https://res.cloudinary.com/dmpt1iii5/image/upload/v1665521469/SPE-Events/284470749_564616025105668_5927146446129160428_n_1_edx9by.jpg"
             alt=""
-            data-aos="fade-right"
+            
           />
         </div>
 
@@ -72,9 +66,9 @@ const Hackathon = () => {
             className="hackcontentimg"
             src="https://res.cloudinary.com/dmpt1iii5/image/upload/v1665521469/SPE-Events/284470749_564616025105668_5927146446129160428_n_1_edx9by.jpg"
             alt=""
-            data-aos="fade-left"
+         
           />
-          <div className="hackcontent" data-aos="fade-right">
+          <div className="hackcontent" >
             <ul className="hackList">
               <li className="hacktext">
                 Only students can compete at the Hackathon
