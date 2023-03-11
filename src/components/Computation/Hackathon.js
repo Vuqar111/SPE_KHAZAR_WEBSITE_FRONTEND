@@ -1,11 +1,11 @@
 import React, {useEffect}  from "react";
-import '../..//assets/css/hackathon.css';
+import '../../assets/css/hackathon.css';
 import khazarLogo from "../../assets/images/hackathon/khazar.png";
 import speLogo from "../../assets/images/hackathon/spekhazarlogo.png";
 import mlkLogo from "../../assets/images/hackathon/mlklogo.png";
 import codersLogo from "../../assets/images/hackathon/coders.svg";
 import AOS from "aos";
-import "../../../node_modules/aos/dist/aos.css";
+import "../../assets/css/aos.css";
 
 const Hackathon = () => {
   useEffect(() => {
