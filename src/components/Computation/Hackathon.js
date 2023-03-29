@@ -22,7 +22,7 @@ const Hackathon = () => {
         <div className="hackbox">
           <div className="hackcontent" >
             <p className="hacktext">
-              UFAZ Hackathon is a thematic event during which competitors from
+              SPE Khazar Hackathon is a thematic event during which competitors from
               various universities work intensively on different projects with
               the objective of producing solutions in 48 hours. Competitors in
               this event are groups of three students and each group will be
