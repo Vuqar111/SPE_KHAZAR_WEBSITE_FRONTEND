@@ -22,12 +22,6 @@ import amina2 from "./assets/images/photos/Amina Galachieva Student Officer.png"
 
 export const teams = [
   {
-    id: 10,
-    name: "Asim Mahmudov",
-    status: "Senior Adviser",
-    img: asim,
-  },
-  {
     id: 1,
     name: "Aysu Mammadli",
     status: "President",
