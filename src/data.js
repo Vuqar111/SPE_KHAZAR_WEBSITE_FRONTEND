@@ -9,7 +9,6 @@ import sama from "./assets/images/teamImages/sema.jpg";
 import jahid from "./assets/images/teamImages/jahid.jpg";
 import amina from "./assets/images/teamImages/amina.jpg";
 import elmar from "./assets/images/teamImages/elmar.jpg";
-import aynur from "./assets/images/teamImages/aynur.jpg";
 import elgun from "./assets/images/teamImages/elgun.jpeg";
 import maryam from "./assets/images/teamImages/maryam.jpg";
 import nuray from "./assets/images/teamImages/nuray.jpg";
@@ -23,32 +22,32 @@ import fatima from "./assets/images/teamImages/fatima.jpg";
 export const teams = [
   {
     id: 1,
-    name: "Mahammad Sadigov",
+    name: "Aysu Mammadli",
     status: "President",
     img: mahammad,
   },
   {
     id: 2,
-    name: "Vugar Hasanov",
+    name: "Nuray Guliyeva",
     status: "Vice-President",
     img: vugar,
   },
   {
     id: 3,
-    name: "Diana Ismayilova",
-    status: "Senior Advisor",
-    img: diana,
+    name: "Asim Mahmudov",
+    status: "Senior Adviser",
+    img: asim,
   },
   {
     id: 4,
-    name: "Anar Bandiyev",
-    status: "Communications Chairperson",
-    img: anar,
+    name: "Amina Aliyeva",
+    status: "Head of IT Department",
+    img: amina,
   },
   {
     id: 5,
-    name: "Naiba Garayeva",
-    status: "Program Chairperson",
+    name: "Asiman Alakbarov",
+    status: "Head of Petroleum Department",
     img: naiba,
   },
   {

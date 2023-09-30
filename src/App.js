@@ -67,10 +67,7 @@ function App() {
           exact
         ></Route>
 
-        {/* Books */}
 
-        <Route path="/books" component={BooksSection} exact></Route>
-        <Route path="/book/:id/edit" component={BookEditScreen} exact></Route>
 
         <Route
           path="/certificate/:id/edit"

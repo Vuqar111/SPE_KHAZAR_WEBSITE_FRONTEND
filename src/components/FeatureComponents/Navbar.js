@@ -146,10 +146,6 @@ export const Navbar = () => {
                       <Link to="/recordlist">Recordings</Link>
                     </Item>
                     <Item>
-                      <BsJournalBookmark className="buttondownIcon" />
-                      <Link to="/booklist">Library</Link>
-                    </Item>
-                    <Item>
                       <GrGallery className="buttondownIcon" />
                       <Link to="/gallerylist">Gallery</Link>
                     </Item>

@@ -18,9 +18,6 @@ const SubHeader = () => {
                   <Link to="/records">Records</Link>
                 </div>
                 <div className="m-[5px] text-[14px] lg:text-[18px] lg:ml-[10px]">
-                  <Link to="/books">Library</Link>
-                </div>
-                <div className="m-[5px] text-[14px] lg:text-[18px] lg:ml-[10px]">
                   <Link to="/galleries">Gallery</Link>
                 </div>
                 <div className="m-[5px] text-[14px] lg:text-[18px] lg:ml-[10px]">
