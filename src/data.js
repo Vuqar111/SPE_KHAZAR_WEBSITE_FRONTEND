@@ -1,42 +1,43 @@
-import mahammad from "./assets/images/teamImages/mahammad.jpg";
 import asim from "./assets/images/teamImages/asim.jpg";
-import vugar from "./assets/images/teamImages/vugar.jpg";
-import diana from "./assets/images/teamImages/diana.jpeg";
-import anar from "./assets/images/teamImages/anar.jpeg";
-import naiba from "./assets/images/teamImages/naibe.jpeg";
-import shams from "./assets/images/teamImages/semsimage.jpg";
-import sama from "./assets/images/teamImages/sema.jpg";
-import jahid from "./assets/images/teamImages/jahid.jpg";
-import amina from "./assets/images/teamImages/amina.jpg";
-import elmar from "./assets/images/teamImages/elmar.jpg";
-import elgun from "./assets/images/teamImages/elgun.jpeg";
-import maryam from "./assets/images/teamImages/maryam.jpg";
-import nuray from "./assets/images/teamImages/nuray.jpg";
-import nuray2 from "./assets/images/teamImages/nuray2.jpg";
-import ruslan from "./assets/images/teamImages/ruslan.jpg";
-import aqsin from "./assets/images/teamImages/aqsin.png";
-import rashad from "./assets/images/teamImages/resad.jpg";
-import zeyneb from "./assets/images/teamImages/zeyneb.jpeg";
-import aysu from "./assets/images/teamImages/aysu.jpg";
-import fatima from "./assets/images/teamImages/fatima.jpg";
+import aysu from "./assets/images/photos/President.png";
+import nuray from "./assets/images/photos/Nuray Guliyeva Vice-President.png";
+import amina from "./assets/images/photos/Amina Aliyeva IT team Leader.png";
+import aynur from "./assets/images/photos/Aynur Salahli Student Officer.png";
+import zeynab from "./assets/images/photos/Zeynab Nuruzada IT events cordinator.png";
+import vaqif from "./assets/images/photos/Vaqif Isayev Student Officer.png";
+import vahid from "./assets/images/photos/Vahid Hasanzade Student Officer.png";
+import shafa from "./assets/images/photos/Shafa Yusifova Communication Chairperson.png";
+import shabnam from "./assets/images/photos/Shabnam Mammadli  Events Cordinator of Petroleum Engineers .png";
+import mirsaleh from "./assets/images/photos/Mirsaleh Haydarov Sosial Media Manager.png";
+import khumar from "./assets/images/photos/Khumar Majidova Graphic Designer.png";
+import khadija from "./assets/images/photos/Khadija Seyidamirova Electrical _ Mechanical Event cordinator.png";
+import ilaha from "./assets/images/photos/Ilaha Mammadova IT events cordinator.png";
+import huseyn from "./assets/images/photos/Huseyn Musayev Electrical _ Mechanical Team leader.png";
+import huseyn2 from "./assets/images/photos/Huseyn Moylayev Videographer _ Photographer.png";
+import fidan from "./assets/images/photos/Fidan Aliyeva Chemical ENgineering team.png";
+import aysu2 from "./assets/images/photos/Aysu Mammadova Copywriter.png";
+import aydan from "./assets/images/photos/Aydan Bayramova Secretary.png";
+import asiman from "./assets/images/photos/Asiman Alakbarov  Team Lead (Petroleum engineering).png";
+import amina2 from "./assets/images/photos/Amina Galachieva Student Officer.png";
+
 export const teams = [
+  {
+    id: 10,
+    name: "Asim Mahmudov",
+    status: "Senior Adviser",
+    img: asim,
+  },
   {
     id: 1,
     name: "Aysu Mammadli",
     status: "President",
-    img: mahammad,
+    img: aysu,
   },
   {
     id: 2,
     name: "Nuray Guliyeva",
     status: "Vice-President",
-    img: vugar,
-  },
-  {
-    id: 3,
-    name: "Asim Mahmudov",
-    status: "Senior Adviser",
-    img: asim,
+    img: nuray,
   },
   {
     id: 4,
@@ -48,104 +49,98 @@ export const teams = [
     id: 5,
     name: "Asiman Alakbarov",
     status: "Head of Petroleum Department",
-    img: naiba,
+    img: asiman,
   },
   {
     id: 6,
-    name: "Shams Gadirli",
-    status: "Designer",
-    img: shams,
+    name: "Huseyn Musayev",
+    status: "Head of Electrical - Mechanic Department",
+    img: huseyn,
   },
   {
     id: 7,
-    name: "Sama Bayramova",
-    status: "Photographer",
-    img: sama,
+    name: "Fidan Aliyeva",
+    status: "Head of Chemical Department",
+    img: fidan,
   },
 
   {
     id: 8,
-    name: "Asim Mahmudov",
-    status: "Webmaster",
-    img: asim,
+    name: "Zeynab Nuruzade",
+    status: "IT Events Coordinator",
+    img: zeynab,
   },
   {
     id: 9,
-    name: "Jahid Faramazanov",
-    status: "Chemical Engineering Coordinator",
-    img: jahid,
+    name: "Ilaha Mammadli",
+    status: "IT Events Coordinator",
+    img: ilaha,
   },
   {
     id: 10,
-    name: "Amina Aliyeva",
-    status: "Secretary",
-    img: amina,
+    name: "Shabnam Mammadli",
+    status: "Mechanical Events Coordinator",
+    img: shabnam,
   },
   {
     id: 11,
-    name: "Elmar Suleymanov",
+    name: "Khadija Seyidamirova",
     status: "Membership Chairperson",
-    img: elmar,
+    img: khadija,
   },
   {
     id: 13,
-    name: "Elgun Asgarov",
-    status: "Petroleum Engineering Coordinator",
-    img: elgun,
+    name: "Aynur Salahli",
+    status: "Student Officer",
+    img: aynur,
   },
   {
     id: 14,
-    name: "Maryam Movlanova",
-    status: "Social Activities Chairperson ",
-    img: maryam,
+    name: "Vaqif Isayev",
+    status: "Student Officer",
+    img: vaqif,
   },
   {
     id: 15,
-    name: "Nuray Quliyeva",
-    status: "Designer",
-    img: nuray,
+    name: "Vahid Hasanzada",
+    status: "Student Officer",
+    img: vahid,
   },
   {
     id: 16,
-    name: "Ruslan Abdurahmanov",
-    status: "Treasurer",
-    img: ruslan,
+    name: "Amina Galachieva",
+    status: "Student Officer",
+    img: amina2,
   },
   {
     id: 17,
-    name: "Nuray Abdullayeva",
-    status: "Designer",
-    img: nuray2,
+    name: "Shafa Yusifova ",
+    status: "Communication Chairperson",
+    img: shafa,
   },
   {
     id: 18,
-    name: "Aysu Mammadli",
-    status: "Designer",
-    img: aysu,
+    name: "Khumar Macidova",
+    status: "Graphic Designer",
+    img: khumar,
   },
   {
     id: 19,
-    name: "Fatima Ibrahimova",
-    status: "Designer",
-    img: fatima,
+    name: "Mirsaleh Heydarov",
+    status: "Social Media Manager",
+    img: mirsaleh,
   },
   {
     id: 20,
-    name: "Aqsin Qarashli",
-    status: "Former Vice President",
-    img: aqsin,
+    name: "Huseyn Movlayev",
+    status: "Videographer _ Photographer",
+    img: huseyn2,
   },
   {
     id: 21,
-    name: "Rashad Musayev",
-    status: "Former Program Chairperson",
-    img: rashad,
-  },
-  {
-    id: 22,
-    name: "Zeynab Farzizada",
-    status: "Former Social Activities Chair",
-    img: zeyneb,
+    name: "Aysu Mammadova",
+    status: "CopyWriter",
+    img: aysu2,
   },
 ];
 
